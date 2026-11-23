@@ -5,6 +5,7 @@ import { CarExperience } from "@/components/car/CarExperience";
 import { CarCard } from "@/components/car/CarCard";
 import { getCarBySlug, getRelatedCars, recordView } from "@/lib/cars";
 import { getOwnersOfCar } from "@/lib/icons";
+import { razorpayConfigured } from "@/lib/razorpay";
 
 export const dynamic = "force-dynamic";
 
@@ -23,7 +24,7 @@ export default async function CarPage({ params, searchParams }: Params) {
 
   return (
     <>
-      <CarExperience car={car} initial={{ variant: sp.variant, color: sp.color, interior: sp.interior, caliper: sp.caliper, view: sp.view }} />
+      <CarExperience car={car} paymentsEnabled={razorpayConfigured()} initial={{ variant: sp.variant, color: sp.color, interior: sp.interior, caliper: sp.caliper, view: sp.view }} />
       {owners.length > 0 && (
         <section className="mx-auto max-w-[1480px] px-5 pb-20 md:px-10">
           <p className="eyebrow">Famous owners</p>

@@ -11,6 +11,7 @@ const items = [
   { href: "/admin/brands", label: "Brands" },
   { href: "/admin/auctions", label: "Auctions" },
   { href: "/admin/icons", label: "Icons" },
+  { href: "/admin/payments", label: "Payments" },
   { href: "/admin/inquiries", label: "Inquiries" },
   { href: "/admin/subscribers", label: "Subscribers" },
   { href: "/admin/sheets", label: "Google Sheets" },

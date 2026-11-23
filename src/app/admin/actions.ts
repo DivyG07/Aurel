@@ -7,6 +7,7 @@ import { requireAdmin } from "@/lib/session";
 import { mirror, replaceSheet, sheetsConfigured } from "@/lib/sheets";
 import { broadcast } from "@/lib/auctions";
 import { caliperPalette, interiorPalette } from "@/data/catalog";
+import { inr, refundPayment } from "@/lib/razorpay";
 
 export type ActionState = { ok: boolean; message: string } | null;
 
@@ -255,6 +256,33 @@ export async function reviewListing(f: FormData) {
   revalidatePath("/auctions");
   revalidatePath("/admin/auctions");
   redirect("/admin/auctions");
+}
+
+// ─── Payments ────────────────────────────────────────────────────────────────
+
+export async function refundPaymentAction(f: FormData) {
+  const admin = await requireAdmin();
+  const id = str(f, "id");
+  const p = await db.payment.findUnique({ where: { id }, include: { user: { select: { email: true } } } });
+  if (!p || p.status !== "PAID" || !p.razorpayPaymentId) redirect("/admin/payments?error=" + encodeURIComponent("Only paid payments can be refunded."));
+  let refundId: string;
+  try {
+    refundId = (await refundPayment(p.razorpayPaymentId)).id;
+  } catch (e) {
+    redirect("/admin/payments?error=" + encodeURIComponent(`Razorpay refused the refund: ${(e as Error).message}`));
+  }
+  await db.payment.update({ where: { id }, data: { status: "REFUNDED", refundId, refundedAt: new Date() } });
+  if (p.purpose === "BIDDER_DEPOSIT") {
+    const stillPaid = await db.payment.count({ where: { userId: p.userId, purpose: "BIDDER_DEPOSIT", status: "PAID" } });
+    if (!stillPaid) await db.user.update({ where: { id: p.userId }, data: { verifiedBidder: false } });
+  } else if (p.purpose === "CAR_RESERVATION" && p.carId) {
+    await db.car.updateMany({ where: { id: p.carId, status: "RESERVED" }, data: { status: "AVAILABLE" } });
+  }
+  await db.notification.create({ data: { userId: p.userId, type: "SYSTEM", title: "Refund issued", body: `${inr(p.amountPaise)} is on its way back to your original payment method (5–7 working days).`, href: "/account#payments" } });
+  await audit(admin.id, "payment.refund", "Payment", id, { amountPaise: p.amountPaise, refundId });
+  mirror("Payments", { id, status: "REFUNDED", refundId, refundedAt: new Date() }, "id");
+  revalidatePath("/", "layout");
+  redirect("/admin/payments?saved=" + encodeURIComponent("Refund issued"));
 }
 
 // ─── Users ───────────────────────────────────────────────────────────────────

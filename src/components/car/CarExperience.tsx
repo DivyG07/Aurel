@@ -14,6 +14,7 @@ import { toast } from "@/lib/stores";
 import { PriceChart } from "./PriceChart";
 import { InquiryDialog } from "./InquiryDialog";
 import { Viewer360 } from "./Viewer360";
+import { RazorpayButton } from "@/components/payments/RazorpayButton";
 
 type Initial = { variant?: string; color?: string; interior?: string; caliper?: string; view?: string };
 type Tab = "photos" | "360";
@@ -74,7 +75,7 @@ function Gallery({ car }: { car: CarView }) {
   );
 }
 
-export function CarExperience({ car, initial }: { car: CarView; initial: Initial }) {
+export function CarExperience({ car, initial, paymentsEnabled = false }: { car: CarView; initial: Initial; paymentsEnabled?: boolean }) {
   const groups = useMemo(
     () => ({
       exterior: car.colors.filter((c) => c.kind === "EXTERIOR"),
@@ -228,6 +229,13 @@ export function CarExperience({ car, initial }: { car: CarView; initial: Initial
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={1.5}><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14" /></svg>
               Download spec sheet (PDF)
             </a>
+            {paymentsEnabled && car.status === "AVAILABLE" && (
+              <div className="mt-3 border-t border-white/10 pt-3">
+                <RazorpayButton purpose="CAR_RESERVATION" carSlug={car.slug} label="Reserve this car · ₹1,00,000 refundable" className="btn btn-ghost w-full !text-[10px]" />
+                <p className="mt-1.5 text-center text-[10px] text-mist">Holds the car for you while an advisor prepares the paperwork.</p>
+              </div>
+            )}
+            {car.status === "RESERVED" && <p className="mt-3 text-center text-[11px] uppercase tracking-[0.2em] text-gold">Reserved — join the waiting list via concierge</p>}
           </div>
         </aside>
       </section>

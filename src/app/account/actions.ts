@@ -71,6 +71,10 @@ export async function deleteAccount(_prev: AccountState, f: FormData): Promise<A
   if (str(f, "confirm").toLowerCase() !== s.user.email.toLowerCase()) return { ok: false, message: "Type your email exactly to confirm." };
   const [bids, listings] = await Promise.all([db.bid.count({ where: { userId: s.user.id } }), db.auction.count({ where: { sellerId: s.user.id, bids: { some: {} } } })]);
   if (bids || listings) return { ok: false, message: "You have auction bids or sales on record, which we must keep. Contact the concierge to close your account." };
+  if (await db.payment.count({ where: { userId: s.user.id, status: { in: ["PAID", "REFUNDED"] } } })) {
+    return { ok: false, message: "You have payments on record, which we must keep for accounting. Contact the concierge to close your account." };
+  }
+  await db.payment.deleteMany({ where: { userId: s.user.id } }); // only abandoned/failed attempts remain
   await db.loginEvent.updateMany({ where: { userId: s.user.id }, data: { userId: null } });
   await db.inquiry.updateMany({ where: { userId: s.user.id }, data: { userId: null } });
   await db.auditLog.updateMany({ where: { actorId: s.user.id }, data: { actorId: null } });

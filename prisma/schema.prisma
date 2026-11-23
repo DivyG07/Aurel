@@ -47,6 +47,7 @@ model User {
   votes         ForumVote[]
   uploads       Upload[]
   auctionsListed Auction[] @relation("SellerAuctions")
+  payments      Payment[]
   accounts      Account[]
   sessions      Session[]
   wishlist      WishlistItem[]
@@ -163,6 +164,7 @@ model Car {
   auctions      Auction[]
   forumPosts    ForumPost[]
   garageCars    GarageCar[]
+  payments      Payment[]
   celebrityCars CelebrityCar[]
   inquiries     Inquiry[]
   priceHistory  PriceHistory[]
@@ -326,6 +328,29 @@ model Bid {
   createdAt DateTime @default(now())
 
   @@index([auctionId, amount])
+}
+
+// ─── Payments (Razorpay) ─────────────────────────────────────────────────────
+
+model Payment {
+  id                String    @id @default(cuid())
+  userId            String
+  user              User      @relation(fields: [userId], references: [id])
+  purpose           String // BIDDER_DEPOSIT | CAR_RESERVATION
+  carId             String?
+  car               Car?      @relation(fields: [carId], references: [id], onDelete: SetNull)
+  amountPaise       Int
+  currency          String    @default("INR")
+  status            String    @default("CREATED") // CREATED | PAID | FAILED | REFUNDED
+  razorpayOrderId   String    @unique
+  razorpayPaymentId String?   @unique
+  refundId          String?
+  method            String? // card | upi | netbanking | wallet (from Razorpay)
+  createdAt         DateTime  @default(now())
+  paidAt            DateTime?
+  refundedAt        DateTime?
+
+  @@index([userId, createdAt])
 }
 
 // ─── Uploads (images stored in Postgres; served by /api/uploads/[id]) ────────

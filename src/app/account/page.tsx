@@ -7,6 +7,8 @@ import { getMyListings, phaseOf } from "@/lib/auctions";
 import { parseList } from "@/lib/prefs";
 import { PreferencesForm } from "@/components/account/PreferencesForm";
 import { DeleteAccount, MyListings, ProfileForm } from "./AccountClient";
+import { RazorpayButton } from "@/components/payments/RazorpayButton";
+import { inr, PURPOSES, razorpayConfigured, type Purpose } from "@/lib/razorpay";
 
 export const metadata: Metadata = { title: "My account" };
 export const dynamic = "force-dynamic";
@@ -17,6 +19,7 @@ const nav = [
   ["garage", "My garage"],
   ["listings", "My listings"],
   ["bids", "My bids"],
+  ["payments", "Payments"],
   ["posts", "My posts"],
   ["notifications", "Notifications"],
   ["danger", "Delete account"],
@@ -34,6 +37,10 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
     db.brand.findMany({ select: { slug: true, name: true, accentHex: true }, orderBy: { name: "asc" } }),
   ]);
   const garageCount = await db.garageCar.count({ where: { userId: user.id } });
+  const [payments, bidderStatus] = await Promise.all([
+    db.payment.findMany({ where: { userId: user.id, status: { in: ["PAID", "REFUNDED"] } }, orderBy: { createdAt: "desc" }, include: { car: { select: { model: true, slug: true } } } }),
+    db.user.findUnique({ where: { id: user.id }, select: { verifiedBidder: true } }),
+  ]);
   await db.notification.updateMany({ where: { userId: user.id, readAt: null }, data: { readAt: new Date() } });
 
   const byAuction = new Map<string, (typeof bids)[number]>();
@@ -107,6 +114,33 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
               })}
               {!byAuction.size && <p className="text-sm text-mist">No bids yet. <Link href="/auctions" className="text-gold">See what&apos;s live →</Link></p>}
             </div>
+          </section>
+
+          <section id="payments" className="scroll-mt-28">
+            <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+              <p className="eyebrow">Payments</p>
+              {bidderStatus?.verifiedBidder ? (
+                <span className="border border-emerald-300/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-emerald-300">✓ Verified bidder</span>
+              ) : razorpayConfigured() ? (
+                <RazorpayButton purpose="BIDDER_DEPOSIT" label="Become a verified bidder · ₹5,000" className="btn btn-ghost !px-4 !py-2" />
+              ) : null}
+            </div>
+            <ul className="space-y-2">
+              {payments.map((pm) => (
+                <li key={pm.id} className="flex flex-wrap items-center justify-between gap-3 border border-white/[0.07] bg-onyx px-5 py-4 text-sm">
+                  <span>
+                    {PURPOSES[pm.purpose as Purpose]?.label ?? pm.purpose}
+                    {pm.car && <Link href={`/cars/${pm.car.slug}`} className="ml-2 text-gold">{pm.car.model}</Link>}
+                    <span className="block text-xs text-mist">{pm.paidAt?.toLocaleDateString("en-GB", { dateStyle: "medium" })} · {pm.method ?? "Razorpay"} · {pm.razorpayPaymentId}</span>
+                  </span>
+                  <span className="text-right">
+                    <span className="font-display text-xl">{inr(pm.amountPaise)}</span>
+                    <span className={`block text-[10px] uppercase tracking-[0.2em] ${pm.status === "REFUNDED" ? "text-sky-200" : "text-emerald-300"}`}>{pm.status === "REFUNDED" ? "Refunded" : "Paid · refundable"}</span>
+                  </span>
+                </li>
+              ))}
+              {!payments.length && <li className="text-sm text-mist">No payments yet.</li>}
+            </ul>
           </section>
 
           <section id="posts" className="scroll-mt-28">

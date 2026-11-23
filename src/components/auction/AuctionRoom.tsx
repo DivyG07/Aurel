@@ -13,12 +13,13 @@ import { Countdown, useNow } from "@/components/ui/Countdown";
 import { Counter } from "@/components/ui/Counter";
 import { Viewer360 } from "@/components/car/Viewer360";
 import { ListingTypeBadge, PhaseBadge } from "./AuctionCard";
+import { RazorpayButton } from "@/components/payments/RazorpayButton";
 import { conditionLabel } from "@/lib/types";
 
 const POLL_ONLY = process.env.NEXT_PUBLIC_REALTIME === "poll";
 
 /** Live bidding room: SSE-driven price, bid feed, watcher count and anti-snipe clock. */
-export function AuctionRoom({ initial, userId }: { initial: AuctionView; userId: string | null }) {
+export function AuctionRoom({ initial, userId, needsDeposit = false }: { initial: AuctionView; userId: string | null; needsDeposit?: boolean }) {
   const [a, setA] = useState(initial);
   const [offset, setOffset] = useState(0);
   const [watching, setWatching] = useState(1);
@@ -199,7 +200,14 @@ export function AuctionRoom({ initial, userId }: { initial: AuctionView; userId:
             {userId && a.seller?.id === userId && (
               <p className="mt-6 border border-white/10 px-3 py-3 text-sm text-mist">This is your listing — you can watch bids come in, but you can&apos;t bid on it.</p>
             )}
-            {live && a.seller?.id !== userId && (
+            {needsDeposit && (phase === "LIVE" || phase === "UPCOMING") && a.seller?.id !== userId && (
+              <div className="mt-6 border border-gold/40 bg-gold/[0.06] p-4">
+                <p className="text-sm text-ivory">Become a verified bidder</p>
+                <p className="mt-1 text-xs leading-relaxed text-mist">A one-time refundable deposit of ₹5,000 unlocks bidding in every auction. Refunded on request if you don&apos;t win.</p>
+                <RazorpayButton purpose="BIDDER_DEPOSIT" label="Pay ₹5,000 deposit & bid" className="btn btn-primary mt-4 w-full" />
+              </div>
+            )}
+            {live && a.seller?.id !== userId && !needsDeposit && (
               userId ? (
                 <div className="mt-6 space-y-3">
                   <div className="flex gap-2">

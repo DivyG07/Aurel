@@ -3,6 +3,7 @@ import { EventEmitter } from "node:events";
 import { db } from "./db";
 import { mirror } from "./sheets";
 import { imageUrl, parseIds } from "./uploads";
+import { depositRequired } from "./razorpay";
 import type { AuctionPhase, AuctionView } from "./types";
 
 // ─── Live event bus (single Node process; swap for Redis/Ably when scaling out) ──
@@ -131,6 +132,10 @@ export class BidError extends Error {}
 
 export async function placeBid(auctionId: string, userId: string, amount: number) {
   if (!Number.isInteger(amount) || amount <= 0) throw new BidError("Enter a whole-dollar amount.");
+  if (depositRequired()) {
+    const bidder = await db.user.findUnique({ where: { id: userId }, select: { verifiedBidder: true } });
+    if (!bidder?.verifiedBidder) throw new BidError("Pay the refundable bidder deposit to start bidding.");
+  }
   const result = await db.$transaction(async (tx) => {
     const a = await tx.auction.findUnique({ where: { id: auctionId }, include: { bids: { orderBy: { amount: "desc" }, take: 1 } } });
     if (!a) throw new BidError("Auction not found.");
