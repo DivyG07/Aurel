@@ -4,7 +4,6 @@ import { Archivo, Barlow_Condensed, Cormorant_Garamond, Jost, Manrope, Michroma,
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { SmoothScroll } from "@/components/site/SmoothScroll";
-import { Cursor } from "@/components/site/Cursor";
 import { IntroLoader } from "@/components/site/IntroLoader";
 import { CompareTray } from "@/components/compare/CompareTray";
 import { Toaster } from "@/components/ui/Toaster";
@@ -59,7 +58,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <SmoothScroll>
           {transition ? <TransitionFade label={decodeURIComponent(transition)} /> : <IntroLoader />}
-          <Cursor />
           <Header
             user={user ? { name: user.name ?? null, email: user.email ?? null, image: user.image ?? null, role: user.role } : null}
             brands={brands.map((b) => ({ slug: b.slug, name: b.name, accentHex: b.accentHex, country: b.country, image: b.cars[0]?.heroImage ?? null }))}

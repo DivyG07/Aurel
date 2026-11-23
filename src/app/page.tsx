@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { Hero } from "@/components/home/Hero";
 import { Experiences, LiveAuctionStrip, Marques, Marquee, PrivateClient, Stats } from "@/components/home/Sections";
 import { CarCard } from "@/components/car/CarCard";
+import { CarStrip } from "@/components/home/CarStrip";
 import { SplitHeading } from "@/components/ui/Reveal";
 import { getBrands, getCars } from "@/lib/cars";
 import { getAuctions } from "@/lib/auctions";
@@ -27,7 +28,7 @@ export default async function Home() {
   // Personalised row from the member's onboarding answers (top 3 marques).
   const me = user ? await db.user.findUnique({ where: { id: user.id }, select: { favoriteBrands: true, name: true } }) : null;
   const favs = parseList(me?.favoriteBrands);
-  const picked = favs.length ? cars.filter((c) => favs.includes(c.brand.slug)).sort((a, b) => favs.indexOf(a.brand.slug) - favs.indexOf(b.brand.slug)).slice(0, 6) : [];
+  const picked = favs.length ? cars.filter((c) => favs.includes(c.brand.slug)).sort((a, b) => favs.indexOf(a.brand.slug) - favs.indexOf(b.brand.slug)).slice(0, 3) : [];
   const featured = cars.filter((c) => c.featured);
   const live = auctions.filter((a) => a.phase === "LIVE");
 
@@ -52,16 +53,16 @@ export default async function Home() {
         </section>
       )}
 
-      <section className="mx-auto max-w-[1480px] px-5 py-24 md:px-10">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+      <section className="py-24">
+        <div className="mx-auto flex max-w-[1480px] flex-col justify-between gap-6 px-5 md:flex-row md:items-end md:px-10">
           <div>
             <p className="eyebrow">Now in residence</p>
             <h2 className="mt-4 font-display text-5xl md:text-7xl"><SplitHeading text="The Collection" /></h2>
           </div>
           <Link href="/cars" className="text-[11px] uppercase tracking-[0.25em] text-gold hover:text-gold-soft">Explore all {cars.length} automobiles →</Link>
         </div>
-        <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {featured.slice(0, 6).map((car, i) => <CarCard key={car.id} car={car} priority={i < 3} />)}
+        <div className="mt-14">
+          <CarStrip cars={cars} />
         </div>
       </section>
 

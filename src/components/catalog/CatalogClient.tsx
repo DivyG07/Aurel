@@ -114,7 +114,11 @@ export function CatalogClient({ cars, initialBrand, initialQuery }: { cars: CarV
       {view === "grid" ? (
         <motion.div layout className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           <AnimatePresence mode="popLayout">
-            {results.map((car, i) => <CarCard key={car.id} car={car} priority={i < 3} index={i} />)}
+            {results.map((car, i) => (
+              <motion.div key={car.id} layout initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
+                <CarCard car={car} priority={i < 3} />
+              </motion.div>
+            ))}
           </AnimatePresence>
         </motion.div>
       ) : (

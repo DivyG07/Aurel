@@ -1,4 +1,5 @@
 import "server-only";
+import { unstable_cache } from "next/cache";
 import { db } from "./db";
 import type { CarView } from "./types";
 
@@ -70,13 +71,19 @@ export function toCarView(c: CarRow): CarView {
   };
 }
 
+/** Whole catalogue, cached across requests (tag "catalog" — admin edits and reservations revalidate it). */
+const getAllCars = unstable_cache(
+  async (): Promise<CarView[]> => {
+    const rows = await db.car.findMany({ include, orderBy: [{ featured: "desc" }, { priceFrom: "desc" }] });
+    return rows.map(toCarView);
+  },
+  ["cars-v1"],
+  { tags: ["catalog"], revalidate: 600 },
+);
+
 export async function getCars(filter: { brand?: string } = {}): Promise<CarView[]> {
-  const rows = await db.car.findMany({
-    where: filter.brand ? { brand: { slug: filter.brand } } : undefined,
-    include,
-    orderBy: [{ featured: "desc" }, { priceFrom: "desc" }],
-  });
-  return rows.map(toCarView);
+  const all = await getAllCars();
+  return filter.brand ? all.filter((c) => c.brand.slug === filter.brand) : all;
 }
 
 export async function getCarBySlug(slug: string): Promise<CarView | null> {
@@ -99,12 +106,15 @@ export async function getRelatedCars(car: CarView, take = 3): Promise<CarView[]>
   return rows.map(toCarView);
 }
 
-export async function getBrands() {
-  return db.brand.findMany({
-    orderBy: { name: "asc" },
-    include: { _count: { select: { cars: true } }, cars: { select: { heroImage: true }, where: { heroImage: { not: null } }, take: 1, orderBy: { featured: "desc" } } },
-  });
-}
+export const getBrands = unstable_cache(
+  async () =>
+    db.brand.findMany({
+      orderBy: { name: "asc" },
+      include: { _count: { select: { cars: true } }, cars: { select: { heroImage: true }, where: { heroImage: { not: null } }, take: 1, orderBy: { featured: "desc" } } },
+    }),
+  ["brands-v1"],
+  { tags: ["catalog"], revalidate: 600 },
+);
 
 export async function recordView(slug: string) {
   await db.car.update({ where: { slug }, data: { views: { increment: 1 } } }).catch(() => {});

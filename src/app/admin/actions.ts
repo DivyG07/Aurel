@@ -207,7 +207,10 @@ export async function saveAuction(_prev: ActionState, f: FormData): Promise<Acti
     status: "SCHEDULED",
   };
   const a = id ? await db.auction.update({ where: { id }, data }) : await db.auction.create({ data });
-  if (car.status === "AVAILABLE") await db.car.update({ where: { id: carId }, data: { status: "AUCTION" } });
+  if (car.status === "AVAILABLE") {
+    await db.car.update({ where: { id: carId }, data: { status: "AUCTION" } });
+    revalidateTag("catalog");
+  }
   await audit(admin.id, id ? "auction.update" : "auction.create", "Auction", a.id, { ...data, startsAt: startsAt.toISOString(), endsAt: endsAt.toISOString() });
   mirror("Auctions", { id: a.id, title: a.title, car: `${car.brand.name} ${car.model}`, startsAt, endsAt, startingBid, reserve: a.reservePrice, increment: bidIncrement, status: a.status }, "id");
   await broadcast(a.id);

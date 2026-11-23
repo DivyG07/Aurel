@@ -1,4 +1,5 @@
 import "server-only";
+import { revalidateTag } from "next/cache";
 import { db } from "./db";
 import { mirror } from "./sheets";
 import { PURPOSES, inr, type Purpose } from "./razorpay";
@@ -20,6 +21,7 @@ export async function markPaid(orderId: string, paymentId: string, method?: stri
     await db.notification.create({ data: { userId: p.userId, type: "SYSTEM", title: "You're a verified bidder", body: `Deposit of ${inr(p.amountPaise)} received — you can now bid in every auction.`, href: "/auctions" } });
   } else if (purpose === "CAR_RESERVATION" && p.carId) {
     await db.car.update({ where: { id: p.carId }, data: { status: "RESERVED" } });
+    revalidateTag("catalog");
     await db.inquiry.create({ data: { type: "PURCHASE", status: "NEW", carId: p.carId, userId: p.userId, name: p.user.email ?? "Member", email: p.user.email ?? "", message: `Reservation deposit paid: ${inr(p.amountPaise)} (Razorpay ${paymentId}).` } });
     await db.notification.create({ data: { userId: p.userId, type: "SYSTEM", title: `${p.car?.model ?? "Car"} reserved for you`, body: `Deposit of ${inr(p.amountPaise)} received. A private client advisor will call you within one business day.`, href: p.car ? `/cars/${p.car.slug}` : "/account" } });
   }
