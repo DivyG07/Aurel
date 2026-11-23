@@ -1,0 +1,9 @@
+# Netlify builds Next.js with its OpenNext-based runtime automatically.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Prisma engines for Netlify's Linux functions are added via binaryTargets in schema.prisma.
+  NPM_FLAGS = "--no-audit --no-fund"

@@ -1,0 +1,338 @@
+{
+  "ferrari-sf90-stradale": {
+    "model": {
+      "uid": "833c5e9fb6f945cc82450fffbb96e77b",
+      "name": "Ferrari SF90 Stradale",
+      "author": "thelightning",
+      "authorUrl": "https://sketchfab.com/thelightning",
+      "license": null,
+      "url": "https://sketchfab.com/3d-models/ferrari-sf90-stradale-833c5e9fb6f945cc82450fffbb96e77b",
+      "likes": 478,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "b98147fea0da42d29a2e41a4aba0fc20",
+      "name": "2020 Ferrari SF90 Stradale",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2020-ferrari-sf90-stradale-b98147fea0da42d29a2e41a4aba0fc20",
+      "likes": 96,
+      "interior": true
+    },
+    "configuratorUrl": "https://carconfigurator.ferrari.com/en_EN/ferrari_car_configurator/sf90stradale",
+    "configuratorVerified": true
+  },
+  "lamborghini-revuelto": {
+    "model": {
+      "uid": "4258ff5b559c45f2a470344f0e04c8cd",
+      "name": "Lamborghini Revuelto",
+      "author": "Outlaw Games™",
+      "authorUrl": "https://sketchfab.com/Outlaw_Games",
+      "license": "CC Attribution-NonCommercial",
+      "url": "https://sketchfab.com/3d-models/lamborghini-revuelto-4258ff5b559c45f2a470344f0e04c8cd",
+      "likes": 801,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "9128ccf717f641b9bcdaa5f06a613f01",
+      "name": "2024 Lamborghini Revuelto",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2024-lamborghini-revuelto-9128ccf717f641b9bcdaa5f06a613f01",
+      "likes": 149,
+      "interior": true
+    },
+    "configuratorUrl": "https://configurator.lamborghini.com/configurator/model/32006-20111/MBV-21707-2027",
+    "configuratorVerified": true
+  },
+  "bugatti-chiron-super-sport": {
+    "model": {
+      "uid": "6a7520f6853f433eb200ed10fef96f94",
+      "name": "2022 Bugatti Chiron Super Sport",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2022-bugatti-chiron-super-sport-6a7520f6853f433eb200ed10fef96f94",
+      "likes": 154,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "04c5e3cad9bb49509fa44f16dbee24d8",
+      "name": "Bugatti Chiron Sport 2019",
+      "author": "SQUIR3D",
+      "authorUrl": "https://sketchfab.com/SQUIR3D",
+      "license": "Editorial",
+      "url": "https://sketchfab.com/3d-models/bugatti-chiron-sport-2019-04c5e3cad9bb49509fa44f16dbee24d8",
+      "likes": 253,
+      "interior": true
+    },
+    "configuratorUrl": "https://www.bugatti.com/models/chiron-models/chiron-super-sport/",
+    "configuratorVerified": false
+  },
+  "rolls-royce-phantom": {
+    "model": {
+      "uid": "cfa5f61818aa4c41a8e17c8f66762aa1",
+      "name": "Rolls-Royce Phantom",
+      "author": "VTX",
+      "authorUrl": "https://sketchfab.com/VTX_car",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/rolls-royce-phantom-cfa5f61818aa4c41a8e17c8f66762aa1",
+      "likes": 25,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "1923bdcbc32f442e97dd49201aa2c928",
+      "name": "2022 Rolls-Royce Phantom Extended Series II",
+      "author": "ig.ghazigfx",
+      "authorUrl": "https://sketchfab.com/ig.ghazigfx",
+      "license": "CC Attribution",
+      "url": "https://sketchfab.com/3d-models/2022-rolls-royce-phantom-extended-series-ii-1923bdcbc32f442e97dd49201aa2c928",
+      "likes": 183,
+      "interior": true
+    },
+    "configuratorUrl": "https://www.rolls-roycemotorcars.com/en_GB/bespoke/configure-your-rolls-royce.html",
+    "configuratorVerified": true
+  },
+  "rolls-royce-cullinan": {
+    "model": {
+      "uid": "4f157680d80e400aa0854dbde25b5905",
+      "name": "Rolls-Royce_Cullinan_2019",
+      "author": "SQUIR3D",
+      "authorUrl": "https://sketchfab.com/SQUIR3D",
+      "license": "Editorial",
+      "url": "https://sketchfab.com/3d-models/rolls-royce-cullinan-2019-4f157680d80e400aa0854dbde25b5905",
+      "likes": 58,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "5360b33a199f4b5e8dbadcdbcb3ad1f6",
+      "name": "2026 Rolls- Royce Cullinan",
+      "author": "BMW'S Lost Proxy",
+      "authorUrl": "https://sketchfab.com/Bmws_Lost_Proxy",
+      "license": "CC Attribution",
+      "url": "https://sketchfab.com/3d-models/2026-rolls-royce-cullinan-5360b33a199f4b5e8dbadcdbcb3ad1f6",
+      "likes": 25,
+      "interior": true
+    },
+    "configuratorUrl": "https://www.rolls-roycemotorcars.com/en_GB/bespoke/configure-your-rolls-royce.html",
+    "configuratorVerified": true
+  },
+  "bentley-continental-gt-speed": {
+    "model": {
+      "uid": "950dfe70cd5b4f9ab4c1c13a2693d2a5",
+      "name": "2022 Bentley Continental GT Speed",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2022-bentley-continental-gt-speed-950dfe70cd5b4f9ab4c1c13a2693d2a5",
+      "likes": 109,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "229a4a6d8b7849fea2cf4f23510f9538",
+      "name": "2018 Bentley Continental GT",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2018-bentley-continental-gt-229a4a6d8b7849fea2cf4f23510f9538",
+      "likes": 105,
+      "interior": true
+    },
+    "configuratorUrl": "https://www.bentleymotors.com/en/misc/car-configurator.html/select/continental_gt/continental_gt_speed",
+    "configuratorVerified": true
+  },
+  "aston-martin-db12": {
+    "model": {
+      "uid": "8c4ca9512b5344b394df814642be2f3d",
+      "name": "2024 Aston Martin DB12",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2024-aston-martin-db12-8c4ca9512b5344b394df814642be2f3d",
+      "likes": 46,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "f603d93210c04f2b8a8308afaa9da87d",
+      "name": "2024 Aston Martin DB12",
+      "author": "tonielpro520",
+      "authorUrl": "https://sketchfab.com/tonielpro520",
+      "license": "CC Attribution",
+      "url": "https://sketchfab.com/3d-models/2024-aston-martin-db12-f603d93210c04f2b8a8308afaa9da87d",
+      "likes": 28,
+      "interior": true
+    },
+    "configuratorUrl": "https://configurator.astonmartin.com/INT/model-select/M200/AM578",
+    "configuratorVerified": true
+  },
+  "mclaren-750s": {
+    "model": {
+      "uid": "5c7448447d9643ee9b2f9b8bf46c860f",
+      "name": "McLaren 750S",
+      "author": "Patricars",
+      "authorUrl": "https://sketchfab.com/patricars",
+      "license": null,
+      "url": "https://sketchfab.com/3d-models/mclaren-750s-5c7448447d9643ee9b2f9b8bf46c860f",
+      "likes": 7,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "d9c90e0bb53c450f88544559640143e0",
+      "name": "McLaren 750S",
+      "author": "geyges",
+      "authorUrl": "https://sketchfab.com/geyges",
+      "license": "Free Standard",
+      "url": "https://sketchfab.com/3d-models/mclaren-750s-d9c90e0bb53c450f88544559640143e0",
+      "likes": 15,
+      "interior": true
+    },
+    "configuratorUrl": "https://www.mclaren.com/cars/gl_en/legacy/750s",
+    "configuratorVerified": true
+  },
+  "porsche-911-turbo-s": {
+    "model": {
+      "uid": "b6756fc06654405a839bf14e931e4c83",
+      "name": "2021 Porsche 911 Turbo S (992)",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2021-porsche-911-turbo-s-992-b6756fc06654405a839bf14e931e4c83",
+      "likes": 197,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "ce6819802e2b48b2b72eb4908c7459c7",
+      "name": "Porsche 911 Turbo S 2021",
+      "author": "NLM",
+      "authorUrl": "https://sketchfab.com/NLM-Group",
+      "license": "Standard",
+      "url": "https://sketchfab.com/3d-models/porsche-911-turbo-s-2021-ce6819802e2b48b2b72eb4908c7459c7",
+      "likes": 42,
+      "interior": true
+    },
+    "configuratorUrl": "https://configurator.porsche.com/en-WW/mode/model/992452",
+    "configuratorVerified": true
+  },
+  "maybach-s680": {
+    "model": {
+      "uid": "53c739ff5512413e8d6c373c65b95047",
+      "name": "2021 Mercedes-Benz S-Class Maybach",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial",
+      "url": "https://sketchfab.com/3d-models/2021-mercedes-benz-s-class-maybach-53c739ff5512413e8d6c373c65b95047",
+      "likes": 377,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "0b0f4cb770f24aa1ba2d9a43f64771c4",
+      "name": "Mercedes-Benz S-Class Maybach 2021",
+      "author": "SQUIR3D",
+      "authorUrl": "https://sketchfab.com/SQUIR3D",
+      "license": "Editorial",
+      "url": "https://sketchfab.com/3d-models/mercedes-benz-s-class-maybach-2021-0b0f4cb770f24aa1ba2d9a43f64771c4",
+      "likes": 97,
+      "interior": true
+    },
+    "configuratorUrl": "https://www.mbusa.com/en/vehicles/build/maybach-s-class/sedan",
+    "configuratorVerified": true
+  },
+  "lamborghini-urus-se": {
+    "model": {
+      "uid": "cc113385b7e34481af5e50a2fb8b6b2e",
+      "name": "2025 Lamborghini Urus SE",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution",
+      "url": "https://sketchfab.com/3d-models/2025-lamborghini-urus-se-cc113385b7e34481af5e50a2fb8b6b2e",
+      "likes": 235,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "23dd7730fc244eba997cf60afa70177e",
+      "name": "2023 Lamborghini Urus Performante (fallback: Urus Performante, not SE)",
+      "author": "Outlaw Games™",
+      "authorUrl": "https://sketchfab.com/Outlaw_Games",
+      "license": "CC Attribution-NonCommercial",
+      "url": "https://sketchfab.com/3d-models/2023-lamborghini-urus-performante-23dd7730fc244eba997cf60afa70177e",
+      "likes": 393,
+      "interior": true
+    },
+    "configuratorUrl": "https://configurator.lamborghini.com/configurator/model/32005-20111/MBV-24717-2027",
+    "configuratorVerified": true
+  },
+  "byd-yangwang-u9": {
+    "model": {
+      "uid": "9f9d82e405ca4382a1c9ff442f5862c2",
+      "name": "2024 BYD Yangwang U9",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2024-byd-yangwang-u9-9f9d82e405ca4382a1c9ff442f5862c2",
+      "likes": 187,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "8f944846e426419581df6d0fe9bfb927",
+      "name": "2024 BYD Yangwang U9",
+      "author": "OUTPISTON",
+      "authorUrl": "https://sketchfab.com/outpiston",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2024-byd-yangwang-u9-8f944846e426419581df6d0fe9bfb927",
+      "likes": 76,
+      "interior": true
+    },
+    "configuratorUrl": "https://www.yangwangauto.com/en/car/u9-xtreme",
+    "configuratorVerified": true
+  },
+  "byd-yangwang-u8": {
+    "model": {
+      "uid": "a4990ac098274cb0ae1bc4ddcb977950",
+      "name": "2023 BYD Yangwang U8",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2023-byd-yangwang-u8-a4990ac098274cb0ae1bc4ddcb977950",
+      "likes": 170,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "e8802e15110b45ec9436b4c70e5b4025",
+      "name": "2023_byd_yangwang_u8",
+      "author": "007",
+      "authorUrl": "https://sketchfab.com/tangwang920",
+      "license": "CC Attribution",
+      "url": "https://sketchfab.com/3d-models/2023-byd-yangwang-u8-e8802e15110b45ec9436b4c70e5b4025",
+      "likes": 11,
+      "interior": true
+    },
+    "configuratorUrl": "https://www.yangwangauto.com/en",
+    "configuratorVerified": true
+  },
+  "byd-seal": {
+    "model": {
+      "uid": "2e82d2aaaa3d47debf39b1160d3fe376",
+      "name": "2024 BYD Seal",
+      "author": "Ddiaz Design",
+      "authorUrl": "https://sketchfab.com/ddiaz-design",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "url": "https://sketchfab.com/3d-models/2024-byd-seal-2e82d2aaaa3d47debf39b1160d3fe376",
+      "likes": 177,
+      "interior": true
+    },
+    "alternate": {
+      "uid": "96ec5c34852f4c3090a755d4445f5e98",
+      "name": "2024 BYD Seal Performance AWD",
+      "author": "Nazh Design ✔",
+      "authorUrl": "https://sketchfab.com/NazhDesign",
+      "license": "CC Attribution",
+      "url": "https://sketchfab.com/3d-models/2024-byd-seal-performance-awd-96ec5c34852f4c3090a755d4445f5e98",
+      "likes": 32,
+      "interior": false
+    },
+    "configuratorUrl": "https://www.byd.com/eu/car/seal",
+    "configuratorVerified": true
+  }
+}

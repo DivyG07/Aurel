@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+.env
+.env.local
+*.db
+*.db-journal
+next-env.d.ts
+*.tsbuildinfo
+
+prisma/data-export.json
+.netlify
+
+# local tooling
+.claude/settings.local.json
+*.log

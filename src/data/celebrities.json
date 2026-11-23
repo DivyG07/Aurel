@@ -1,0 +1,452 @@
+[
+  {
+    "slug": "cristiano-ronaldo",
+    "name": "Cristiano Ronaldo",
+    "profession": "Footballer",
+    "country": "Portugal",
+    "bio": "Portuguese forward and five-time Ballon d'Or winner, regarded as one of the greatest footballers of all time.",
+    "cars": [
+      {
+        "make": "Bugatti",
+        "model": "Chiron",
+        "year": 2017,
+        "story": "Reported to have added a Bugatti Chiron to his collection in 2017, and has since been photographed driving it in Lisbon.",
+        "sourceUrl": "https://gtspirit.com/2017/10/08/cristiano-ronaldo-adds-bugatti-chiron-collection/",
+        "sourceName": "GTspirit",
+        "catalogSlug": null
+      },
+      {
+        "make": "Bugatti",
+        "model": "Centodieci",
+        "year": 2020,
+        "story": "Widely reported in 2020 to be among the buyers of the Bugatti Centodieci, a limited run of just ten cars, following a Serie A title with Juventus.",
+        "sourceUrl": "https://paultan.org/2020/08/03/cristiano-ronaldo-purchases-a-limited-edition-bugatti-centodieci-to-celebrate-juventus-latest-serie-a-title",
+        "sourceName": "Paul Tan's Automotive News",
+        "catalogSlug": null
+      },
+      {
+        "make": "Rolls-Royce",
+        "model": "Dawn",
+        "year": 2022,
+        "story": "Received a Rolls-Royce Dawn convertible as a Christmas gift in December 2022, as shown in a video shared on Instagram and reported by the press.",
+        "sourceUrl": "https://hypebeast.com/2022/12/cristiano-ronaldo-georgina-rodriguez-rolls-royce-dawn-christmas-gift",
+        "sourceName": "Hypebeast",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "zlatan-ibrahimovic",
+    "name": "Zlatan Ibrahimović",
+    "profession": "Footballer",
+    "country": "Sweden",
+    "bio": "Swedish striker who won league titles in four countries during a career spanning more than two decades.",
+    "cars": [
+      {
+        "make": "Ferrari",
+        "model": "Monza SP2",
+        "year": 2019,
+        "story": "Reported to have treated himself to a custom Ferrari Monza SP2, one of 499 SP1/SP2 cars, to mark his 38th birthday.",
+        "sourceUrl": "https://www.soccerbible.com/news/2020/05/zlatan-takes-his-ferrari-monza-sp2-out-for-a-spin/",
+        "sourceName": "SoccerBible",
+        "catalogSlug": null
+      },
+      {
+        "make": "Ferrari",
+        "model": "F80",
+        "year": 2025,
+        "story": "Took delivery of a matte-black Ferrari F80 with yellow detailing in October 2025, sharing the moment in a video on social media.",
+        "sourceUrl": "https://it.motor1.com/news/810686/ferrari-f80-ibrahimovic/",
+        "sourceName": "Motor1 Italy",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "max-verstappen",
+    "name": "Max Verstappen",
+    "profession": "Formula 1 Driver",
+    "country": "Netherlands",
+    "bio": "Dutch racing driver and multiple Formula 1 World Champion with Red Bull Racing.",
+    "cars": [
+      {
+        "make": "Aston Martin",
+        "model": "Valkyrie",
+        "year": null,
+        "story": "Tested Valkyrie prototypes during the hypercar's development and is reported to be one of its owners.",
+        "sourceUrl": "https://www.planetf1.com/features/max-verstappen-car-collection",
+        "sourceName": "PlanetF1",
+        "catalogSlug": null
+      },
+      {
+        "make": "Porsche",
+        "model": "911 GT3 RS (991)",
+        "year": 2016,
+        "story": "Reported to have bought a Porsche 911 GT3 RS in 2016, one of his first major purchases after his Formula 1 debut.",
+        "sourceUrl": "https://www.gpblog.com/en/general/max-verstappens-fleet-of-cars-the-dutchmans-collection",
+        "sourceName": "GPblog",
+        "catalogSlug": null
+      },
+      {
+        "make": "Honda",
+        "model": "NSX Type S",
+        "year": 2022,
+        "story": "Was presented with a Honda NSX Type S by Honda at its Racing Thanks Day event in Japan in late 2022.",
+        "sourceUrl": "https://carbuzz.com/news/max-verstappen-gifted-1-of-350-acura-nsx-type-s-by-honda",
+        "sourceName": "CarBuzz",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "lando-norris",
+    "name": "Lando Norris",
+    "profession": "Formula 1 Driver",
+    "country": "United Kingdom",
+    "bio": "British racing driver for McLaren and the 2025 Formula 1 World Champion.",
+    "cars": [
+      {
+        "make": "McLaren",
+        "model": "765LT Spider (MSO one-off)",
+        "year": null,
+        "story": "Reported to own a one-of-one McLaren 765LT Spider commissioned through McLaren Special Operations, developed with the team over 18 months.",
+        "sourceUrl": "https://www.planetf1.com/news/lando-norris-car-collection",
+        "sourceName": "PlanetF1",
+        "catalogSlug": null
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Miura P400",
+        "year": null,
+        "story": "Has described his classic Lamborghini Miura as the car he is most proud to own.",
+        "sourceUrl": "https://www.motorsport.com/f1/news/lando-norris-reveals-the-2million-car-hes-most-proud-to-own-proper-gift-to-myself/10752242/",
+        "sourceName": "Motorsport.com",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "nick-mason",
+    "name": "Nick Mason",
+    "profession": "Musician",
+    "country": "United Kingdom",
+    "bio": "Founding drummer of Pink Floyd and a renowned historic-racing enthusiast and car collector.",
+    "cars": [
+      {
+        "make": "Ferrari",
+        "model": "250 GTO",
+        "year": 1962,
+        "story": "Has owned his 1962 Ferrari 250 GTO since the 1970s and regularly demonstrates it at events such as the Goodwood Revival.",
+        "sourceUrl": "https://www.goodwood.com/grr/event-coverage/goodwood-revival/up-close-with-nick-masons-ferrari-250-gto--goodwood-revival/",
+        "sourceName": "Goodwood Road & Racing",
+        "catalogSlug": null
+      },
+      {
+        "make": "McLaren",
+        "model": "F1 GTR",
+        "year": 1996,
+        "story": "Acquired a 1996-specification McLaren F1 GTR directly from McLaren in 1999 and kept it for more than 25 years before it was offered at RM Sotheby's Monterey sale in 2026.",
+        "sourceUrl": "https://rmsothebys.com/media-center/press-releases/the-pop-art-f1-a-factory-xp-prototype-mclaren-f1-gtr-to-headline-rm-sotheby-s-monterey-sale-with-a-value-in-excess-of-35-million/",
+        "sourceName": "RM Sotheby's",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "jay-kay",
+    "name": "Jay Kay",
+    "profession": "Musician",
+    "country": "United Kingdom",
+    "bio": "Frontman of the British funk and acid-jazz band Jamiroquai and a well-known supercar enthusiast.",
+    "cars": [
+      {
+        "make": "Ferrari",
+        "model": "LaFerrari",
+        "year": 2014,
+        "story": "Ordered a LaFerrari in a unique Signal Green finish, believed to be the only one in that colour; he took delivery in 2014 and sold it in 2019.",
+        "sourceUrl": "https://www.carscoops.com/2026/03/jay-kay-laferrari-auction/",
+        "sourceName": "Carscoops",
+        "catalogSlug": null
+      },
+      {
+        "make": "Ferrari",
+        "model": "Enzo",
+        "year": null,
+        "story": "Has owned a black Ferrari Enzo, the car that inspired the Jamiroquai song \"Black Devil Car\".",
+        "sourceUrl": "https://www.slashgear.com/1265270/cars-owned-by-jamiroquai-jay-kay/",
+        "sourceName": "SlashGear",
+        "catalogSlug": null
+      },
+      {
+        "make": "Gordon Murray Automotive",
+        "model": "T.50",
+        "year": 2024,
+        "story": "Showed off his new Gordon Murray Automotive T.50 in a video on Jamiroquai's Instagram, calling it \"the finest V12 car in the world\".",
+        "sourceUrl": "https://news.dupontregistry.com/gordon-murray-automotive/jaykay-jamiroquai-gordon-murray-t50",
+        "sourceName": "duPont REGISTRY",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "drake",
+    "name": "Drake",
+    "profession": "Musician",
+    "country": "Canada",
+    "bio": "Canadian rapper, singer and songwriter, one of the best-selling music artists of his generation.",
+    "cars": [
+      {
+        "make": "Rolls-Royce",
+        "model": "Cullinan (Chrome Hearts one-off)",
+        "year": 2021,
+        "story": "Collaborated with Chrome Hearts on a one-of-a-kind Rolls-Royce Cullinan, revealed in 2021 around the release of Certified Lover Boy.",
+        "sourceUrl": "https://www.thedrive.com/news/40416/drakes-new-custom-rolls-royce-cullinan-is-an-assault-to-your-eyes",
+        "sourceName": "The Drive",
+        "catalogSlug": "rolls-royce-cullinan"
+      },
+      {
+        "make": "Mercedes-Maybach",
+        "model": "G 650 Landaulet",
+        "year": 2019,
+        "story": "Reported in 2019 to have added a Mercedes-Maybach G 650 Landaulet, one of 99 built, to his fleet.",
+        "sourceUrl": "https://www.thedrive.com/news/28154/drake-snags-north-americas-first-mercedes-maybach-g650-landaulet-to-match-his-private-jet",
+        "sourceName": "The Drive",
+        "catalogSlug": null
+      },
+      {
+        "make": "Mercedes-Maybach",
+        "model": "S 600 Pullman",
+        "year": 2015,
+        "story": "Reported to have owned a rare Mercedes-Maybach S 600 Pullman since 2015, a car he has referenced in his lyrics.",
+        "sourceUrl": "https://hypebeast.com/2019/2/drake-maybach-mercedes-car-collection",
+        "sourceName": "Hypebeast",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "rowan-atkinson",
+    "name": "Rowan Atkinson",
+    "profession": "Actor",
+    "country": "United Kingdom",
+    "bio": "English actor and comedian best known for Mr. Bean and Blackadder, and a long-standing motoring enthusiast.",
+    "cars": [
+      {
+        "make": "McLaren",
+        "model": "F1",
+        "year": 1997,
+        "story": "Bought a McLaren F1 new in 1997 and drove it regularly for around 17 years before selling it in 2015.",
+        "sourceUrl": "https://www.drivencarguide.co.nz/news/rowan-atkinson-sells-prized-mclaren-f1-for-record-8-million-pounds/",
+        "sourceName": "Driven (NZ Herald)",
+        "catalogSlug": null
+      },
+      {
+        "make": "Lexus",
+        "model": "LFA",
+        "year": 2012,
+        "story": "Owned a 2012 Lexus LFA, which was offered for sale in 2024 with under 5,000 km on the clock.",
+        "sourceUrl": "https://www.topgear.com.ph/features/feature-articles/rowan-atkinson-lexus-lfa-for-sale-a5100-20240422",
+        "sourceName": "Top Gear Philippines",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "gordon-ramsay",
+    "name": "Gordon Ramsay",
+    "profession": "Chef & Entrepreneur",
+    "country": "United Kingdom",
+    "bio": "British chef, restaurateur and television personality whose restaurants have earned multiple Michelin stars.",
+    "cars": [
+      {
+        "make": "Ferrari",
+        "model": "LaFerrari Aperta",
+        "year": 2016,
+        "story": "Took delivery of one of the first LaFerrari Apertas in the UK in November 2016, finished in pearlescent white and handed over by H.R. Owen.",
+        "sourceUrl": "https://cardealermagazine.co.uk/h-r-owen-delivers-gordon-ramsays-laferrari-aperta/125595",
+        "sourceName": "Car Dealer Magazine",
+        "catalogSlug": null
+      },
+      {
+        "make": "Ferrari",
+        "model": "Monza SP2",
+        "year": null,
+        "story": "Reported to own a Ferrari Monza SP2 in black with a red stripe, one of 499 SP1 and SP2 models built.",
+        "sourceUrl": "https://www.motor1.com/news/376526/ferrari-monza-sp2-gordon-ramsay/",
+        "sourceName": "Motor1",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "kevin-hart",
+    "name": "Kevin Hart",
+    "profession": "Actor & Comedian",
+    "country": "United States",
+    "bio": "American stand-up comedian, actor and producer known for films such as Jumanji and Central Intelligence.",
+    "cars": [
+      {
+        "make": "Ferrari",
+        "model": "SF90 Spider",
+        "year": 2021,
+        "story": "Showed off his new Ferrari SF90 Spider on Instagram in 2021, saying it was the first delivered in the United States.",
+        "sourceUrl": "https://www.autoevolution.com/news/kevin-hart-matches-his-outfit-to-new-ferrari-sf90-spider-says-its-the-first-in-the-us-175065.html",
+        "sourceName": "autoevolution",
+        "catalogSlug": null
+      },
+      {
+        "make": "Ferrari",
+        "model": "488 Pista",
+        "year": 2021,
+        "story": "Reported in 2021 to have added a Ferrari 488 Pista to a collection that already included several Ferraris.",
+        "sourceUrl": "https://www.motorious.com/articles/news/kevin-hart-ferrari-488-pista",
+        "sourceName": "Motorious",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "shah-rukh-khan",
+    "name": "Shah Rukh Khan",
+    "profession": "Actor",
+    "country": "India",
+    "bio": "Indian actor and producer, one of the most successful stars in the history of Hindi cinema.",
+    "cars": [
+      {
+        "make": "Rolls-Royce",
+        "model": "Cullinan Black Badge",
+        "year": 2023,
+        "story": "Reported to have bought a Rolls-Royce Cullinan Black Badge in Arctic White in 2023, following the success of Pathaan.",
+        "sourceUrl": "https://www.businesstoday.in/trending/entertainment/story/shah-rukh-khan-buys-a-swanky-rolls-royce-cullinan-black-badge-suv-worth-rs-10-crore-after-pathaan-success-375034-2023-03-27",
+        "sourceName": "Business Today",
+        "catalogSlug": "rolls-royce-cullinan"
+      },
+      {
+        "make": "Rolls-Royce",
+        "model": "Phantom Drophead Coupé",
+        "year": null,
+        "story": "A Rolls-Royce Phantom Drophead Coupé is reported to be among the most prized cars in his garage.",
+        "sourceUrl": "https://www.businesstoday.in/latest/trends/photo/shah-rukh-khans-garage-is-pure-luxury-heres-whats-inside-500588-2025-11-03",
+        "sourceName": "Business Today",
+        "catalogSlug": null
+      },
+      {
+        "make": "Bentley",
+        "model": "Continental GT",
+        "year": null,
+        "story": "His garage is reported to include a Bentley Continental GT coupé.",
+        "sourceUrl": "https://www.businesstoday.in/latest/trends/photo/shah-rukh-khans-garage-is-pure-luxury-heres-whats-inside-500588-2025-11-03",
+        "sourceName": "Business Today",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "ranveer-singh",
+    "name": "Ranveer Singh",
+    "profession": "Actor",
+    "country": "India",
+    "bio": "Indian actor known for films such as Padmaavat, Gully Boy and 83.",
+    "cars": [
+      {
+        "make": "Aston Martin",
+        "model": "Rapide S",
+        "year": 2017,
+        "story": "Gifted himself a matte-white Aston Martin Rapide S on his 32nd birthday in July 2017.",
+        "sourceUrl": "https://thequint.com/entertainment/celebrities/ranveer-singh-new-car-aston-martin-birthday-gift-pictures",
+        "sourceName": "The Quint",
+        "catalogSlug": null
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Urus Pearl Capsule (first generation)",
+        "year": 2021,
+        "story": "Reported to have bought a Lamborghini Urus in the Pearl Capsule design edition in May 2021.",
+        "sourceUrl": "https://www.dnaindia.com/bollywood/report-after-lamborghini-urus-ranveer-singh-gifts-himself-luxurious-mercedes-maybach-gls-600-worth-rs-243-see-photo-2899419",
+        "sourceName": "DNA India",
+        "catalogSlug": "lamborghini-urus-se"
+      },
+      {
+        "make": "Mercedes-Maybach",
+        "model": "GLS 600",
+        "year": 2021,
+        "story": "Took delivery of a Mercedes-Maybach GLS 600 in Cavansite Blue as a birthday gift to himself in July 2021, shortly after its India launch.",
+        "sourceUrl": "https://www.cardekho.com/india-car-news/what-sonu-sood-didnt-ranveer-singh-does-buy-the-new-mercedesmaybach-gls-600-27411.htm",
+        "sourceName": "CarDekho",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "virat-kohli",
+    "name": "Virat Kohli",
+    "profession": "Cricketer",
+    "country": "India",
+    "bio": "Former India captain and one of the most prolific batters in international cricket.",
+    "cars": [
+      {
+        "make": "Bentley",
+        "model": "Continental GT",
+        "year": 2018,
+        "story": "Reported in 2018 to have added a Bentley Continental GT to his car collection.",
+        "sourceUrl": "https://www.crictracker.com/the-bentley-continental-an-insight-into-skipper-virat-kohli-and-his-new-found-love",
+        "sourceName": "CricTracker",
+        "catalogSlug": null
+      },
+      {
+        "make": "Bentley",
+        "model": "Flying Spur",
+        "year": null,
+        "story": "A Bentley Flying Spur is reported to be among his most prized drives.",
+        "sourceUrl": "https://www.esquireindia.co.in/amp/story/tech-and-auto/cars-and-bikes/inside-virat-kohlis-enviable-garage",
+        "sourceName": "Esquire India",
+        "catalogSlug": null
+      },
+      {
+        "make": "Audi",
+        "model": "R8 LMX",
+        "year": null,
+        "story": "Reported to own an Audi R8 LMX, a limited-edition supercar of which only 99 were made.",
+        "sourceUrl": "https://www.esquireindia.co.in/amp/story/tech-and-auto/cars-and-bikes/inside-virat-kohlis-enviable-garage",
+        "sourceName": "Esquire India",
+        "catalogSlug": null
+      }
+    ]
+  },
+  {
+    "slug": "hardik-pandya",
+    "name": "Hardik Pandya",
+    "profession": "Cricketer",
+    "country": "India",
+    "bio": "Indian all-rounder and captain of the Mumbai Indians in the IPL.",
+    "cars": [
+      {
+        "make": "Ferrari",
+        "model": "12Cilindri",
+        "year": 2026,
+        "story": "Reported in March 2026 to have bought himself a Ferrari 12Cilindri after India's T20 World Cup win.",
+        "sourceUrl": "https://gulfnews.com/sport/cricket/watch-hardik-pandya-gifts-himself-a-new-rs120-million-ferrari-1.500475120",
+        "sourceName": "Gulf News",
+        "catalogSlug": null
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Urus SE",
+        "year": 2025,
+        "story": "Added a yellow Lamborghini Urus SE, the brand's first plug-in hybrid SUV, to his garage.",
+        "sourceUrl": "https://www.republicworld.com/automobile/hardik-pandya-adds-lamborghini-urus-se-to-his-garage-check-his-car-collection-lamborghini-hurcan-evo-lamborghini-urus-se-mercedes-amg-g63-lexus-lm-range-rover-sport-sv",
+        "sourceName": "Republic World",
+        "catalogSlug": "lamborghini-urus-se"
+      },
+      {
+        "make": "Lamborghini",
+        "model": "Huracán EVO",
+        "year": null,
+        "story": "His collection is reported to include a V10-powered Lamborghini Huracán EVO.",
+        "sourceUrl": "https://www.republicworld.com/automobile/hardik-pandya-adds-lamborghini-urus-se-to-his-garage-check-his-car-collection-lamborghini-hurcan-evo-lamborghini-urus-se-mercedes-amg-g63-lexus-lm-range-rover-sport-sv",
+        "sourceName": "Republic World",
+        "catalogSlug": null
+      }
+    ]
+  }
+]

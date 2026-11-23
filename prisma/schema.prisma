@@ -1,0 +1,408 @@
+// AUREL data model. Covers every planned feature, so later milestones add code, not tables.
+// Hosted Postgres (Neon). DATABASE_URL = pooled connection for the app, DIRECT_URL = direct
+// connection for schema changes. Status/role fields are strings (documented inline).
+
+generator client {
+  provider      = "prisma-client-js"
+  // "native" for this machine, rhel-openssl-3.0.x for Netlify's Linux functions.
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ─── Identity (Auth.js-compatible) ───────────────────────────────────────────
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String? // email/password sign-in; null for OAuth-only users
+  role          String    @default("COLLECTOR") // COLLECTOR | DEALER | ADMIN | SUPERADMIN
+  phone         String?
+  country       String?
+  currency      String    @default("USD")
+  verifiedBidder Boolean  @default(false)
+  banned        Boolean   @default(false)
+  lastLoginAt   DateTime?
+  loginCount    Int       @default(0)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  loginEvents   LoginEvent[]
+  accounts      Account[]
+  sessions      Session[]
+  wishlist      WishlistItem[]
+  comparisons   Comparison[]
+  bids          Bid[]
+  inquiries     Inquiry[]
+  garage        GarageCar[]
+  conversations ChatConversation[]
+  notifications Notification[]
+  auditLogs     AuditLog[]
+  savedConfigs  SavedConfiguration[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model LoginEvent {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  email     String
+  provider  String // google | credentials
+  kind      String   @default("SIGN_IN") // SIGN_IN | SIGN_UP | FAILED
+  ip        String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ─── Catalog ─────────────────────────────────────────────────────────────────
+
+model Brand {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  name      String
+  country   String
+  founded   Int
+  tagline   String?
+  story     String?
+  accentHex String   @default("#c9a96e")
+  cars      Car[]
+}
+
+model Car {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  brandId       String
+  brand         Brand    @relation(fields: [brandId], references: [id])
+  model         String
+  year          Int
+  tagline       String
+  description   String
+  bodyType      String // HYPER | GT | SEDAN | SUV | CONVERTIBLE
+  heroImage     String? // banner photo URL; gallery lives in CarMedia
+  heroCredit    String? // attribution for the banner photo
+  sketchfabUid  String? // embeddable 360° model
+  sketchfabCredit String?
+  sketchfabPaint  String? // comma-separated material names to recolour; blank = auto-detect
+  configuratorUrl String? // manufacturer's official configurator / model page
+  priceFrom     Int // USD, indicative
+  engine        String
+  powerHp       Int
+  torqueNm      Int
+  zeroToHundred Float // seconds, 0-100 km/h
+  topSpeedKmh   Int
+  drivetrain    String
+  transmission  String
+  seats         Int
+  weightKg      Int?
+  status        String   @default("AVAILABLE") // AVAILABLE | RESERVED | SOLD | AUCTION | COMING_SOON
+  featured      Boolean  @default(false)
+  mileageKm     Int      @default(0)
+  vin           String?
+  views         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  variants      CarVariant[]
+  colors        CarColor[]
+  media         CarMedia[]
+  wishlistItems WishlistItem[]
+  auctions      Auction[]
+  celebrityCars CelebrityCar[]
+  inquiries     Inquiry[]
+  priceHistory  PriceHistory[]
+  provenance    ProvenanceEvent[]
+  savedConfigs  SavedConfiguration[]
+}
+
+model CarVariant {
+  id            String  @id @default(cuid())
+  carId         String
+  car           Car     @relation(fields: [carId], references: [id], onDelete: Cascade)
+  name          String
+  priceDelta    Int     @default(0)
+  // nullable overrides of the base car's specs
+  powerHp       Int?
+  torqueNm      Int?
+  zeroToHundred Float?
+  topSpeedKmh   Int?
+  note          String?
+  sortOrder     Int     @default(0)
+}
+
+model CarColor {
+  id         String  @id @default(cuid())
+  carId      String
+  car        Car     @relation(fields: [carId], references: [id], onDelete: Cascade)
+  name       String
+  hex        String
+  finish     String  @default("GLOSS") // GLOSS | METALLIC | MATTE | PEARL
+  kind       String  @default("EXTERIOR") // EXTERIOR | INTERIOR | CALIPER
+  priceDelta Int     @default(0)
+  sortOrder  Int     @default(0)
+}
+
+model CarMedia {
+  id        String @id @default(cuid())
+  carId     String
+  car       Car    @relation(fields: [carId], references: [id], onDelete: Cascade)
+  type      String // IMAGE | VIDEO | MODEL | PANO | AUDIO
+  url       String
+  alt       String?
+  credit    String? // attribution, e.g. Sketchfab CC-BY author
+  sortOrder Int    @default(0)
+}
+
+model PriceHistory {
+  id         String   @id @default(cuid())
+  carId      String
+  car        Car      @relation(fields: [carId], references: [id], onDelete: Cascade)
+  priceUsd   Int
+  source     String?
+  recordedAt DateTime @default(now())
+}
+
+model ProvenanceEvent {
+  id          String   @id @default(cuid())
+  carId       String
+  car         Car      @relation(fields: [carId], references: [id], onDelete: Cascade)
+  date        DateTime
+  title       String
+  description String?
+}
+
+// ─── Collector features ──────────────────────────────────────────────────────
+
+model WishlistItem {
+  id        String   @id @default(cuid())
+  userId    String
+  carId     String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  car       Car      @relation(fields: [carId], references: [id], onDelete: Cascade)
+  priceAlert Boolean @default(false)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, carId])
+}
+
+model Comparison {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String?
+  carIds    String // JSON array of car ids
+  shareCode String   @unique @default(cuid())
+  createdAt DateTime @default(now())
+}
+
+model SavedConfiguration {
+  id        String   @id @default(cuid())
+  userId    String
+  carId     String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  car       Car      @relation(fields: [carId], references: [id], onDelete: Cascade)
+  variantId String?
+  config    String // JSON: { exterior, interior, caliper, ... }
+  shareCode String   @unique @default(cuid())
+  createdAt DateTime @default(now())
+}
+
+model GarageCar {
+  id          String  @id @default(cuid())
+  userId      String
+  user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  make        String
+  model       String
+  year        Int
+  notes       String?
+  estValueUsd Int?
+  isPublic    Boolean @default(false)
+}
+
+// ─── Auctions ────────────────────────────────────────────────────────────────
+
+model Auction {
+  id            String   @id @default(cuid())
+  carId         String
+  car           Car      @relation(fields: [carId], references: [id])
+  title         String
+  startingBid   Int
+  reservePrice  Int?
+  bidIncrement  Int      @default(5000)
+  depositUsd    Int      @default(0)
+  startsAt      DateTime
+  endsAt        DateTime
+  antiSnipeSecs Int      @default(120) // extend end time when a bid lands in the final window
+  status        String   @default("SCHEDULED") // SCHEDULED | LIVE | ENDED | CANCELLED | SETTLED
+  winnerBidId   String?
+  createdAt     DateTime @default(now())
+  bids          Bid[]
+}
+
+model Bid {
+  id        String   @id @default(cuid())
+  auctionId String
+  userId    String
+  auction   Auction  @relation(fields: [auctionId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id])
+  amount    Int
+  maxAuto   Int? // proxy bidding ceiling
+  createdAt DateTime @default(now())
+
+  @@index([auctionId, amount])
+}
+
+// ─── Icons & their cars ──────────────────────────────────────────────────────
+
+model Celebrity {
+  id         String         @id @default(cuid())
+  slug       String         @unique
+  name       String
+  profession String
+  country    String?
+  bio        String?
+  imageUrl   String?
+  cars       CelebrityCar[]
+}
+
+model CelebrityCar {
+  id          String    @id @default(cuid())
+  celebrityId String
+  celebrity   Celebrity @relation(fields: [celebrityId], references: [id], onDelete: Cascade)
+  carId       String? // link to a catalog car when we stock the model
+  car         Car?      @relation(fields: [carId], references: [id])
+  make        String
+  model       String
+  year        Int?
+  story       String?
+  sourceUrl   String // public source for the ownership claim; required
+  sourceName  String?
+  sortOrder   Int       @default(0)
+}
+
+// ─── Leads, concierge, comms ─────────────────────────────────────────────────
+
+model Inquiry {
+  id          String    @id @default(cuid())
+  type        String // VIEWING | TEST_DRIVE | PURCHASE | TRADE_IN | FINANCE | GENERAL
+  status      String    @default("NEW") // NEW | CONTACTED | SCHEDULED | WON | LOST
+  carId       String?
+  car         Car?      @relation(fields: [carId], references: [id])
+  userId      String?
+  user        User?     @relation(fields: [userId], references: [id])
+  name        String
+  email       String
+  phone       String?
+  message     String?
+  preferredAt DateTime?
+  assignedTo  String?
+  createdAt   DateTime  @default(now())
+}
+
+model ChatConversation {
+  id        String        @id @default(cuid())
+  userId    String?
+  user      User?         @relation(fields: [userId], references: [id])
+  channel   String        @default("WEB") // WEB | WHATSAPP
+  handedOff Boolean       @default(false) // escalated to a human advisor
+  createdAt DateTime      @default(now())
+  messages  ChatMessage[]
+}
+
+model ChatMessage {
+  id             String           @id @default(cuid())
+  conversationId String
+  conversation   ChatConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  role           String // USER | ASSISTANT | ADVISOR
+  content        String
+  createdAt      DateTime         @default(now())
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      String // OUTBID | AUCTION_START | PRICE_DROP | INQUIRY_UPDATE | SYSTEM
+  title     String
+  body      String
+  href      String?
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+}
+
+model Subscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  interests String? // JSON array of brand slugs
+  createdAt DateTime @default(now())
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  location    String
+  startsAt    DateTime
+  endsAt      DateTime?
+  capacity    Int?
+  imageUrl    String?
+}
+
+// ─── Admin ───────────────────────────────────────────────────────────────────
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  actor     User?    @relation(fields: [actorId], references: [id])
+  action    String // e.g. car.update, auction.cancel
+  entity    String
+  entityId  String?
+  meta      String? // JSON diff
+  createdAt DateTime @default(now())
+}
+
+model SiteSetting {
+  key   String @id
+  value String
+}
