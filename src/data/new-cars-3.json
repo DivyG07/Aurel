@@ -1,0 +1,998 @@
+{
+  "brands": [],
+  "cars": [
+    {
+      "slug": "porsche-taycan-turbo-gt",
+      "brand": "porsche",
+      "model": "Taycan Turbo GT",
+      "year": 2025,
+      "tagline": "The most powerful series-production Porsche, in four-door form.",
+      "description": "The Taycan Turbo GT uses a stronger rear motor with a silicon-carbide pulse inverter, allowing up to 760 kW on overboost and 815 kW for two seconds under Launch Control. Carbon roof, forged 21-inch wheels, carbon-ceramic brakes and GT-specific Active Ride suspension come as standard, and the car set production-EV lap records at the Nürburgring and Laguna Seca.",
+      "bodyType": "SEDAN",
+      "priceFrom": 230000,
+      "engine": "Dual permanent-magnet synchronous motors, 105 kWh (gross) 800 V battery",
+      "powerHp": 1020,
+      "torqueNm": 1240,
+      "zeroToHundred": 2.3,
+      "topSpeedKmh": 290,
+      "drivetrain": "AWD",
+      "transmission": "Front 1-speed, rear 2-speed",
+      "seats": 4,
+      "weightKg": 2295,
+      "weightType": "kerb",
+      "estimated": [],
+      "specNotes": "Power converted from 1,034 PS overboost with Launch Control x 0.9863 = 1,020 hp (Porsche quotes 760 kW; up to 815 kW / 1,108 PS for 2 s during launch). 0-100 is 2.3 s and top speed 290 km/h for the standard car; the Weissach package gives 2.2 s and 305 km/h. Kerb weight is the DIN figure (Weissach: 2,220 kg). Price is the 2025 US MSRP (excl. destination). Colour price deltas are indicative US option prices.",
+      "specSource": "https://newsroom.porsche.com/en/2024/products/porsche-the-new-taycan-turbo-gt-35479.html",
+      "exterior": [
+        {
+          "name": "Purple Sky Metallic",
+          "hex": "#5b3fa8",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Pale Blue Metallic",
+          "hex": "#9fb7cc",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Ice Grey Metallic",
+          "hex": "#a9adb0",
+          "finish": "METALLIC",
+          "priceDelta": 900
+        },
+        {
+          "name": "Volcano Grey Metallic",
+          "hex": "#5e5f5e",
+          "finish": "METALLIC",
+          "priceDelta": 900
+        },
+        {
+          "name": "Carrara White Metallic",
+          "hex": "#eceae4",
+          "finish": "METALLIC",
+          "priceDelta": 900
+        },
+        {
+          "name": "Jet Black Metallic",
+          "hex": "#16181b",
+          "finish": "METALLIC",
+          "priceDelta": 900
+        }
+      ],
+      "variants": [
+        {
+          "name": "Taycan Turbo GT with Weissach package",
+          "priceDelta": 0,
+          "note": "Two seats, fixed rear wing, 70 kg lighter; 2.2 s and 305 km/h. No-cost option in the US"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/2024_Porsche_Taycan_Turbo_GT_Weissach.jpg/1920px-2024_Porsche_Taycan_Turbo_GT_Weissach.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2024_Porsche_Taycan_Turbo_GT_Weissach.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1356,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Porsche_Taycan_Turbo_GT_MYLE_Festival_2025_DSC_9441.jpg/1920px-Porsche_Taycan_Turbo_GT_MYLE_Festival_2025_DSC_9441.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Porsche_Taycan_Turbo_GT_MYLE_Festival_2025_DSC_9441.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1097,
+          "angle": "rear-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Porsche_9J1.2_Taycan_Turbo_GT_Purple_Sky_Metallic_%281%29.jpg/1920px-Porsche_9J1.2_Taycan_Turbo_GT_Purple_Sky_Metallic_%281%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Porsche_9J1.2_Taycan_Turbo_GT_Purple_Sky_Metallic_(1).jpg",
+          "author": "Damian B Oh",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1440,
+          "angle": "front"
+        }
+      ],
+      "sketchfab": {
+        "uid": "4e1abafe7cf5413587a421377624ba08",
+        "name": "2025 Porsche Taycan Turbo GT Weissach Package",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2025-porsche-taycan-turbo-gt-weissach-package-4e1abafe7cf5413587a421377624ba08"
+      },
+      "configuratorUrl": "https://configurator.porsche.com/en-US/mode/model/Y1AFT1",
+      "video": null
+    },
+    {
+      "slug": "porsche-911-gt3-rs",
+      "brand": "porsche",
+      "model": "911 GT3 RS",
+      "year": 2025,
+      "tagline": "A road-legal 911 shaped around downforce.",
+      "description": "The 992-generation GT3 RS pairs a 4.0-litre naturally aspirated flat-six revving to 9,000 rpm with a swan-neck rear wing and active aerodynamics that generate up to 860 kg of downforce at 285 km/h. A drag-reduction system, a central radiator in place of the front luggage compartment and cockpit-adjustable dampers and differential carry its motorsport lineage directly onto the road.",
+      "bodyType": "GT",
+      "priceFrom": 241300,
+      "engine": "4.0L naturally aspirated flat-six",
+      "powerHp": 518,
+      "torqueNm": 465,
+      "zeroToHundred": 3.2,
+      "topSpeedKmh": 296,
+      "drivetrain": "RWD",
+      "transmission": "7-speed dual-clutch (PDK)",
+      "seats": 2,
+      "weightKg": 1450,
+      "weightType": "kerb",
+      "estimated": [],
+      "specNotes": "Power converted from 525 PS x 0.9863 = 518 hp (matches Porsche US rating). 465 Nm = 342 lb-ft. Kerb weight is the EU DIN figure (US curb weight is quoted at 3,268 lb / 1,482 kg). Price is the 2025 US MSRP (excl. destination). Colour and Weissach package prices are indicative US option prices.",
+      "specSource": "https://www.cars.com/research/porsche-911-2025/specs/462821",
+      "exterior": [
+        {
+          "name": "Python Green",
+          "hex": "#3f9b3a",
+          "finish": "GLOSS",
+          "priceDelta": 4000
+        },
+        {
+          "name": "Shark Blue",
+          "hex": "#1a6fc4",
+          "finish": "GLOSS",
+          "priceDelta": 4000
+        },
+        {
+          "name": "Guards Red",
+          "hex": "#c8102e",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Arctic Grey",
+          "hex": "#9da3a6",
+          "finish": "GLOSS",
+          "priceDelta": 4000
+        },
+        {
+          "name": "GT Silver Metallic",
+          "hex": "#b5b6b4",
+          "finish": "METALLIC",
+          "priceDelta": 900
+        },
+        {
+          "name": "Black",
+          "hex": "#0d0d0f",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Weissach package",
+          "priceDelta": 33520,
+          "note": "Exposed carbon bonnet, roof and wing, magnesium wheels optional; about 15 kg lighter (indicative US option price)"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Porsche_992_GT3_RS_MYLE_Festival_2025_DSC_9584.jpg/1920px-Porsche_992_GT3_RS_MYLE_Festival_2025_DSC_9584.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Porsche_992_GT3_RS_MYLE_Festival_2025_DSC_9584.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1283,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/2024_Porsche_911_GT3_RS_992.jpg/1920px-2024_Porsche_911_GT3_RS_992.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2024_Porsche_911_GT3_RS_992.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1211,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Black_Porsche_992_GT3_RS_in_Los_Gatos_dllu.jpg/1920px-Black_Porsche_992_GT3_RS_in_Los_Gatos_dllu.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Black_Porsche_992_GT3_RS_in_Los_Gatos_dllu.jpg",
+          "author": "Daniel Lu (User:dllu)",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1080,
+          "angle": "side"
+        }
+      ],
+      "sketchfab": {
+        "uid": "bbb0f6181a52416bb776713cfd4987dd",
+        "name": "2023 Porsche 911 GT3 RS (992)",
+        "author": "DisneyCars",
+        "license": "CC Attribution",
+        "url": "https://sketchfab.com/3d-models/2023-porsche-911-gt3-rs-992-bbb0f6181a52416bb776713cfd4987dd"
+      },
+      "configuratorUrl": "https://www.porsche.com/international/models/911/911-gt3-rs/911-gt3-rs/",
+      "video": null
+    },
+    {
+      "slug": "maybach-gls-600",
+      "brand": "maybach",
+      "model": "Mercedes-Maybach GLS 600 4MATIC",
+      "year": 2025,
+      "tagline": "A full-size SUV finished to S-Class standards.",
+      "description": "The GLS 600 pairs a 4.0-litre twin-turbo V8 with a 48-volt integrated starter-generator and E-Active Body Control suspension that reads the road ahead with a stereo camera. The standard four-seat layout gives the rear cabin individual reclining executive seats, a fixed centre console with refrigerated compartment and its own climate zone.",
+      "bodyType": "SUV",
+      "priceFrom": 179500,
+      "engine": "4.0L twin-turbo V8 with 48V EQ Boost mild hybrid",
+      "powerHp": 550,
+      "torqueNm": 730,
+      "zeroToHundred": 4.9,
+      "topSpeedKmh": 250,
+      "drivetrain": "AWD",
+      "transmission": "9-speed automatic (9G-TRONIC)",
+      "seats": 4,
+      "weightKg": 2785,
+      "weightType": "kerb",
+      "estimated": [
+        "weightKg"
+      ],
+      "specNotes": "Power converted from 557 PS x 0.9863 = 549 hp; Mercedes-Benz USA rates it at 550 hp. Torque 730 Nm from the V8, plus up to 250 Nm short-term from EQ Boost (US figure 568 lb-ft = 770 Nm combined). Top speed electronically limited. Five-seat layout optional. Kerb weight is an approximate EU figure. Price is the 2025 US MSRP (excl. destination). Two-tone and MANUFAKTUR paint deltas are indicative.",
+      "specSource": "https://www.cars.com/research/mercedes_benz-maybach_gls_600-2025/specs",
+      "exterior": [
+        {
+          "name": "Obsidian Black Metallic",
+          "hex": "#111214",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "MANUFAKTUR Diamond White Bright",
+          "hex": "#f1f0ec",
+          "finish": "METALLIC",
+          "priceDelta": 1750
+        },
+        {
+          "name": "Selenite Grey Metallic",
+          "hex": "#6c6e70",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "MANUFAKTUR Côte d'Azur Light Blue",
+          "hex": "#a9c3d6",
+          "finish": "METALLIC",
+          "priceDelta": 3950
+        },
+        {
+          "name": "Obsidian Black / Mojave Silver two-tone",
+          "hex": "#8e9093",
+          "finish": "METALLIC",
+          "priceDelta": 14000
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Mercedes-Maybach_X167_GLS_600_two-tone.jpg/1920px-Mercedes-Maybach_X167_GLS_600_two-tone.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Maybach_X167_GLS_600_two-tone.jpg",
+          "author": "Ethan Llamas",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1166,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Mercedes-Maybach_X167_GLS_600_Obsidian_Black_rear.jpg/1920px-Mercedes-Maybach_X167_GLS_600_Obsidian_Black_rear.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Maybach_X167_GLS_600_Obsidian_Black_rear.jpg",
+          "author": "Ethan Llamas",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1234,
+          "angle": "rear-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Mercedes-Maybach_GLS-Klasse_%28X167%29_GLS_600_4MATIC_%282022%29_%2853321808347%29.jpg/1920px-Mercedes-Maybach_GLS-Klasse_%28X167%29_GLS_600_4MATIC_%282022%29_%2853321808347%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Maybach_GLS-Klasse_(X167)_GLS_600_4MATIC_(2022)_(53321808347).jpg",
+          "author": "Charles from Port Chester, New York",
+          "license": "CC BY 2.0",
+          "width": 1920,
+          "height": 1280,
+          "angle": "side"
+        }
+      ],
+      "sketchfab": {
+        "uid": "34c4687ba8204efaa7551afea9f5689f",
+        "name": "Mersedes- Benz Maybach GLS 600",
+        "author": "Black Snow",
+        "license": "CC Attribution",
+        "url": "https://sketchfab.com/3d-models/mersedes-benz-maybach-gls-600-34c4687ba8204efaa7551afea9f5689f"
+      },
+      "configuratorUrl": "https://www.mbusa.com/en/vehicles/model/gls/maybach/gls600z4",
+      "video": null
+    },
+    {
+      "slug": "maybach-sl-680",
+      "brand": "maybach",
+      "model": "Mercedes-Maybach SL 680 Monogram Series",
+      "year": 2026,
+      "tagline": "The SL roadster, reinterpreted as a Maybach.",
+      "description": "The SL 680 Monogram Series is the first Maybach-badged SL, built on the AMG SL platform with a retuned, comfort-oriented suspension, rear-axle steering and additional sound insulation. It is a strict two-seater with a soft top, a pinstriped Maybach grille, a stand-up bonnet star and an optional bonnet finished in the Maybach monogram pattern.",
+      "bodyType": "GT",
+      "priceFrom": 224900,
+      "engine": "4.0L twin-turbo V8",
+      "powerHp": 577,
+      "torqueNm": 800,
+      "zeroToHundred": 4.1,
+      "topSpeedKmh": 260,
+      "drivetrain": "AWD",
+      "transmission": "9-speed automatic (AMG Speedshift MCT 9G)",
+      "seats": 2,
+      "weightKg": 2050,
+      "weightType": "kerb",
+      "estimated": [],
+      "specNotes": "Power converted from 585 PS x 0.9863 = 577 hp (matches Mercedes-Benz USA rating; 430 kW). Top speed electronically limited. Kerb weight as reported by Top Gear / EU data. Price is the 2026 US MSRP (excl. destination). The launch colours are two-tone \"Ambience\" schemes; option price deltas are indicative.",
+      "specSource": "https://www.motor1.com/news/730519/mercedes-maybach-sl-680-monogram-series-debuts/",
+      "exterior": [
+        {
+          "name": "Red Ambience (MANUFAKTUR Garnet Red / Obsidian Black)",
+          "hex": "#7d1424",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "White Ambience (MANUFAKTUR Opalite White Magno / Obsidian Black)",
+          "hex": "#e6e5e0",
+          "finish": "MATTE",
+          "priceDelta": 0
+        },
+        {
+          "name": "Obsidian Black Metallic",
+          "hex": "#111214",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "MANUFAKTUR Alpine Grey Uni",
+          "hex": "#9a9d9e",
+          "finish": "GLOSS",
+          "priceDelta": 1750
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Mercedes-Maybach_SL_680_Monogram_IMG_2927.jpg/1920px-Mercedes-Maybach_SL_680_Monogram_IMG_2927.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Maybach_SL_680_Monogram_IMG_2927.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1135,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Mercedes-Maybach_SL_680_Monogram_DSC_8439.jpg/1920px-Mercedes-Maybach_SL_680_Monogram_DSC_8439.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Maybach_SL_680_Monogram_DSC_8439.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1136,
+          "angle": "rear-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Mercedes-Maybach_SL_680_Monogram_IAA_2025_DSC_2095.jpg/1920px-Mercedes-Maybach_SL_680_Monogram_IAA_2025_DSC_2095.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Maybach_SL_680_Monogram_IAA_2025_DSC_2095.jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1215,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": null,
+      "configuratorUrl": "https://www.mbusa.com/en/vehicles/model/sl/maybach/sl680z4",
+      "video": null
+    },
+    {
+      "slug": "maserati-granturismo",
+      "brand": "maserati",
+      "model": "GranTurismo Trofeo",
+      "year": 2025,
+      "tagline": "A four-seat grand tourer with the Nettuno V6 at its heart.",
+      "description": "The second-generation GranTurismo uses a mixed aluminium, magnesium and steel structure engineered to take either the 3.0-litre Nettuno twin-turbo V6 or the three-motor Folgore electric drivetrain. In Trofeo form it sends 550 CV through an eight-speed automatic and all-wheel drive, while keeping four genuine seats and a long-bonnet silhouette true to the original.",
+      "bodyType": "GT",
+      "priceFrom": 189000,
+      "engine": "3.0L twin-turbo V6 (Nettuno, MTC pre-chamber)",
+      "powerHp": 542,
+      "torqueNm": 650,
+      "zeroToHundred": 3.5,
+      "topSpeedKmh": 320,
+      "drivetrain": "AWD",
+      "transmission": "8-speed automatic",
+      "seats": 4,
+      "weightKg": 1795,
+      "weightType": "kerb",
+      "estimated": [],
+      "specNotes": "Power converted from 550 CV x 0.9863 = 542 hp. Kerb weight per Maserati EU data. Price is the 2025 US MSRP for the Trofeo coupé as listed by cars.com; other US listings show figures between about $174,000 and $189,000 after 2025 price changes. Folgore delta is indicative. Colour deltas are indicative.",
+      "specSource": "https://www.kbb.com/maserati/granturismo/2025/specs",
+      "exterior": [
+        {
+          "name": "Bianco Astro",
+          "hex": "#f0efea",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Nero Assoluto",
+          "hex": "#0f1012",
+          "finish": "METALLIC",
+          "priceDelta": 3000
+        },
+        {
+          "name": "Blu Nobile",
+          "hex": "#1d2b45",
+          "finish": "METALLIC",
+          "priceDelta": 3000
+        },
+        {
+          "name": "Grigio Lava",
+          "hex": "#5c5f63",
+          "finish": "METALLIC",
+          "priceDelta": 3000
+        },
+        {
+          "name": "Rosso Folgore",
+          "hex": "#9b1b24",
+          "finish": "METALLIC",
+          "priceDelta": 3000
+        },
+        {
+          "name": "Grigio Cangiante",
+          "hex": "#8e8f8c",
+          "finish": "MATTE",
+          "priceDelta": 6000
+        }
+      ],
+      "variants": [
+        {
+          "name": "GranTurismo Folgore",
+          "priceDelta": 16000,
+          "note": "Three-motor 800 V electric version, 761 CV / 1,350 Nm (indicative US MSRP about $205,000)"
+        },
+        {
+          "name": "GranTurismo Modena",
+          "priceDelta": -32000,
+          "note": "490 CV V6, AWD (indicative)"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Maserati_GranTurismo_Trofeo_IMG_7283.jpg/1920px-Maserati_GranTurismo_Trofeo_IMG_7283.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Maserati_GranTurismo_Trofeo_IMG_7283.jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 977,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Maserati_GranTurismo_Trofeo_1X7A0829.jpg/1920px-Maserati_GranTurismo_Trofeo_1X7A0829.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Maserati_GranTurismo_Trofeo_1X7A0829.jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1281,
+          "angle": "rear-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Maserati_GranTurismo_Trofeo_2023.jpg/1920px-Maserati_GranTurismo_Trofeo_2023.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Maserati_GranTurismo_Trofeo_2023.jpg",
+          "author": "Stefan Oberreuter",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1440,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": null,
+      "configuratorUrl": "https://www.maserati.com/us/en/models/granturismo",
+      "video": null
+    },
+    {
+      "slug": "maserati-grecale",
+      "brand": "maserati",
+      "model": "Grecale Trofeo",
+      "year": 2025,
+      "tagline": "Maserati’s mid-size SUV with the MC20’s V6.",
+      "description": "The Grecale Trofeo carries a 3.0-litre Nettuno twin-turbo V6 derived from the MC20, with dry-sump lubrication omitted in favour of a wet sump for SUV packaging. Air suspension, a limited-slip rear differential and a Corsa drive mode set it apart from the four-cylinder GT and Modena versions.",
+      "bodyType": "SUV",
+      "priceFrom": 117500,
+      "engine": "3.0L twin-turbo V6 (Nettuno)",
+      "powerHp": 523,
+      "torqueNm": 620,
+      "zeroToHundred": 3.8,
+      "topSpeedKmh": 285,
+      "drivetrain": "AWD",
+      "transmission": "8-speed automatic",
+      "seats": 5,
+      "weightKg": 2027,
+      "weightType": "kerb",
+      "estimated": [],
+      "specNotes": "Power converted from 530 CV x 0.9863 = 523 hp. Kerb weight per Maserati EU data. Price is the 2025 US MSRP (excl. destination). Colour deltas are indicative.",
+      "specSource": "https://www.cars.com/research/maserati-grecale-2025/specs/470363",
+      "exterior": [
+        {
+          "name": "Bianco",
+          "hex": "#efeee9",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Nero Tempesta",
+          "hex": "#121316",
+          "finish": "METALLIC",
+          "priceDelta": 2500
+        },
+        {
+          "name": "Grigio Lava",
+          "hex": "#5c5f63",
+          "finish": "METALLIC",
+          "priceDelta": 2500
+        },
+        {
+          "name": "Blu Intenso",
+          "hex": "#1f3a8a",
+          "finish": "METALLIC",
+          "priceDelta": 2500
+        },
+        {
+          "name": "Giallo Corse",
+          "hex": "#f2c400",
+          "finish": "GLOSS",
+          "priceDelta": 2500
+        },
+        {
+          "name": "Grigio Cangiante",
+          "hex": "#8e8f8c",
+          "finish": "MATTE",
+          "priceDelta": 5000
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Maserati_Grecale_Trofeo_1X7A5784.jpg/1920px-Maserati_Grecale_Trofeo_1X7A5784.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Maserati_Grecale_Trofeo_1X7A5784.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1121,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Maserati_Grecale_Trofeo_1X7A6383.jpg/1920px-Maserati_Grecale_Trofeo_1X7A6383.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Maserati_Grecale_Trofeo_1X7A6383.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1128,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/2023_Maserati_Grecale_Trofeo.jpg/1920px-2023_Maserati_Grecale_Trofeo.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2023_Maserati_Grecale_Trofeo.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1261,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": null,
+      "configuratorUrl": "https://www.maserati.com/us/en/models/grecale",
+      "video": null
+    },
+    {
+      "slug": "koenigsegg-gemera",
+      "brand": "koenigsegg",
+      "model": "Gemera HV8",
+      "year": 2025,
+      "tagline": "A four-seat hypercar with a hybrid twin-turbo V8.",
+      "description": "The production Gemera pairs a 5.0-litre twin-turbo V8 with the axial-flux Dark Matter e-motor, sending a combined 2,300 hp through the nine-speed Light Speed Tourbillon Transmission to all four wheels. Its long, pillarless body opens on two dihedral synchro-helix doors to four equally sized heated bucket seats and 200 litres of luggage space.",
+      "bodyType": "HYPER",
+      "priceFrom": 2100000,
+      "engine": "5.0L twin-turbo V8 + Dark Matter e-motor (hybrid)",
+      "powerHp": 2300,
+      "torqueNm": 2750,
+      "zeroToHundred": 1.9,
+      "topSpeedKmh": 400,
+      "drivetrain": "AWD",
+      "transmission": "9-speed multi-clutch (Light Speed Tourbillon Transmission)",
+      "seats": 4,
+      "weightKg": 2022,
+      "weightType": "kerb",
+      "estimated": [
+        "zeroToHundred",
+        "topSpeedKmh",
+        "priceFrom"
+      ],
+      "specNotes": "Power is Koenigsegg's combined figure in hp (1,500 hp V8 on E85 + 800 hp e-motor; about 1,715 kW). Kerb weight as stated on Koenigsegg's technical specifications page. 0-100 km/h and top speed are not published for the HV8; figures shown are Koenigsegg's claims for the original 2020 Gemera. Price is not officially published: around $1.7M base reported at launch plus about $400,000 for the HV8 powertrain. Koenigsegg paints to order, so colours are representative.",
+      "specSource": "https://www.koenigsegg.com/technical-specifications-gemera-2023",
+      "exterior": [
+        {
+          "name": "Representative: Emerald Green Metallic",
+          "hex": "#0f6b5c",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Satin Grey",
+          "hex": "#7d8183",
+          "finish": "MATTE",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Champagne Gold",
+          "hex": "#b59a6b",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Naked Carbon",
+          "hex": "#1e2023",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Arctic White",
+          "hex": "#eeeeea",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Gemera (TFG three-cylinder hybrid)",
+          "priceDelta": -400000,
+          "note": "2.0L Tiny Friendly Giant three-cylinder + three e-motors, 1,400 hp (indicative)"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/2023_Koenigsegg_Gemera.jpg/1920px-2023_Koenigsegg_Gemera.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2023_Koenigsegg_Gemera.jpg",
+          "author": "Calreyn88",
+          "license": "CC0",
+          "width": 1920,
+          "height": 1193,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Koenigsegg_Gemera_MYLE_Festival_2025_DSC_9624.jpg/1920px-Koenigsegg_Gemera_MYLE_Festival_2025_DSC_9624.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Koenigsegg_Gemera_MYLE_Festival_2025_DSC_9624.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1283,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Koenigsegg_Gemera_%282022%29_%2852570943097%29.jpg/1920px-Koenigsegg_Gemera_%282022%29_%2852570943097%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Koenigsegg_Gemera_(2022)_(52570943097).jpg",
+          "author": "Charles from Port Chester, New York",
+          "license": "CC BY 2.0",
+          "width": 1920,
+          "height": 1280,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "2f34cd0605e64581b29265877fa5d9da",
+        "name": "2025 Koenigsegg Gemera",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2025-koenigsegg-gemera-2f34cd0605e64581b29265877fa5d9da"
+      },
+      "configuratorUrl": "https://www.koenigsegg.com/model/gemera",
+      "video": null
+    },
+    {
+      "slug": "koenigsegg-regera",
+      "brand": "koenigsegg",
+      "model": "Regera",
+      "year": 2022,
+      "tagline": "A single-gear hybrid megacar.",
+      "description": "The Regera replaces a conventional gearbox with Koenigsegg Direct Drive, coupling a twin-turbo V8 to the rear axle through a single fixed ratio and filling the gaps with three electric motors fed by an 800-volt battery. It was the first car with a fully robotised body, opening doors, bonnet and boot automatically, and production ended at 80 cars.",
+      "bodyType": "HYPER",
+      "priceFrom": 1900000,
+      "engine": "5.0L twin-turbo V8 + three electric motors (hybrid)",
+      "powerHp": 1500,
+      "torqueNm": 2000,
+      "zeroToHundred": 2.8,
+      "topSpeedKmh": 410,
+      "drivetrain": "RWD",
+      "transmission": "Single-speed Koenigsegg Direct Drive",
+      "seats": 2,
+      "weightKg": 1590,
+      "weightType": "kerb",
+      "estimated": [
+        "zeroToHundred",
+        "topSpeedKmh",
+        "priceFrom"
+      ],
+      "specNotes": "Power and torque are Koenigsegg's combined figures (\"over 1,500 hp / 1.11 MW\", \"over 2,000 Nm\"; V8 alone 1,100 hp on premium fuel, 1,280 Nm). Kerb weight is with fluids and full fuel (dry 1,420 kg). 0-100 km/h and top speed come from Koenigsegg launch claims, not the technical specification page. Price is the reported original list price (just under $2M); all 80 cars are sold, so only pre-owned examples are available. Colours are representative of customer cars.",
+      "specSource": "https://www.koenigsegg.com/technical-specifications-regera",
+      "exterior": [
+        {
+          "name": "Representative: Crystal White",
+          "hex": "#f0f0ec",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Tinted Blue Carbon",
+          "hex": "#1c2a4a",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Naked Carbon",
+          "hex": "#1a1b1e",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Purple Carbon",
+          "hex": "#3d2350",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Graphite Grey",
+          "hex": "#4e5257",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/2019_Koenigsegg_Regera_White_HCC23.jpg/1920px-2019_Koenigsegg_Regera_White_HCC23.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2019_Koenigsegg_Regera_White_HCC23.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1062,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Koenigsegg_Regera.jpg/1920px-Koenigsegg_Regera.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Koenigsegg_Regera.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1243,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Regera_Goodwood_2019.jpg/1920px-Regera_Goodwood_2019.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Regera_Goodwood_2019.jpg",
+          "author": "Neil",
+          "license": "CC BY 2.0",
+          "width": 1920,
+          "height": 1188,
+          "angle": "side"
+        }
+      ],
+      "sketchfab": {
+        "uid": "da2a656bf0714c1caac0863786764729",
+        "name": "2015 Koenigsegg Regera",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution",
+        "url": "https://sketchfab.com/3d-models/2015-koenigsegg-regera-da2a656bf0714c1caac0863786764729"
+      },
+      "configuratorUrl": "https://www.koenigsegg.com/model/regera",
+      "video": null
+    },
+    {
+      "slug": "pagani-huayra-r",
+      "brand": "pagani",
+      "model": "Huayra R",
+      "year": 2021,
+      "tagline": "A track-only Pagani with a naturally aspirated V12.",
+      "description": "The Huayra R uses a 6.0-litre naturally aspirated V12 developed with HWA AG, revving to 9,000 rpm and driving through a six-speed sequential dog-ring gearbox. Built for circuit use only and limited to 30 cars, it rides on a carbo-titanium and carbo-triax monocoque with a dry weight of 1,050 kg.",
+      "bodyType": "HYPER",
+      "priceFrom": 3100000,
+      "engine": "6.0L naturally aspirated V12 (Pagani V12-R)",
+      "powerHp": 838,
+      "torqueNm": 750,
+      "zeroToHundred": 2.8,
+      "topSpeedKmh": 350,
+      "drivetrain": "RWD",
+      "transmission": "6-speed sequential (non-synchronised dog ring)",
+      "seats": 2,
+      "weightKg": 1050,
+      "weightType": "dry",
+      "estimated": [
+        "zeroToHundred",
+        "topSpeedKmh",
+        "priceFrom"
+      ],
+      "specNotes": "Power converted from 850 CV x 0.9863 = 838 hp. Pagani does not publish 0-100 km/h or top speed for the Huayra R; the figures shown are estimates. Price converted from the published EUR 2.6M + tax (about $3.1M before tax). Track-only, not road-registrable. Pagani finishes each car to order, so colours are representative.",
+      "specSource": "https://www.pagani.com/huayra-r/",
+      "exterior": [
+        {
+          "name": "Representative: Blu Tricolore Carbon",
+          "hex": "#1a2a5e",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Nero Carbon with Oro stripes",
+          "hex": "#121212",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Blu Francia",
+          "hex": "#1e5bb8",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Grigio Opaco",
+          "hex": "#3a3c3f",
+          "finish": "MATTE",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Bianco Perla",
+          "hex": "#eeede6",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Huayra R Evo",
+          "priceDelta": 600000,
+          "note": "900 CV V12, revised aero and longtail rear (2024); price not published, delta indicative"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Pagani_Huayra_R_%282%29.jpg/1920px-Pagani_Huayra_R_%282%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Pagani_Huayra_R_(2).jpg",
+          "author": "Alexandre Prevot",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1280,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Pagani_Huayra_R_%282021%29_%2855082923708%29.jpg/1920px-Pagani_Huayra_R_%282021%29_%2855082923708%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Pagani_Huayra_R_(2021)_(55082923708).jpg",
+          "author": "Charles from Port Chester, New York",
+          "license": "CC0",
+          "width": 1920,
+          "height": 1261,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/2022_Pagani_Huayra_R_SCD26.jpg/1920px-2022_Pagani_Huayra_R_SCD26.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2022_Pagani_Huayra_R_SCD26.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 999,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "1dd0905daca245cb865a9e5affd61e4b",
+        "name": "Pagani Huayra R",
+        "author": "kevin (ケビン)",
+        "license": "CC Attribution",
+        "url": "https://sketchfab.com/3d-models/pagani-huayra-r-1dd0905daca245cb865a9e5affd61e4b"
+      },
+      "configuratorUrl": "https://www.pagani.com/huayra-r/",
+      "video": null
+    },
+    {
+      "slug": "pagani-huayra-roadster-bc",
+      "brand": "pagani",
+      "model": "Huayra Roadster BC",
+      "year": 2020,
+      "tagline": "The open-top Huayra in its most focused form.",
+      "description": "The Huayra Roadster BC uses a 6.0-litre twin-turbo AMG V12 and a seven-speed Xtrac automated manual with electro-hydraulic differential, wrapped in carbo-triax HP62 G2 bodywork with an active aero package. Named for Benny Caiola, Pagani’s first customer, it was limited to 40 cars with a removable carbon roof.",
+      "bodyType": "HYPER",
+      "priceFrom": 3400000,
+      "engine": "6.0L twin-turbo V12 (Mercedes-AMG M158)",
+      "powerHp": 791,
+      "torqueNm": 1050,
+      "zeroToHundred": 2.9,
+      "topSpeedKmh": 350,
+      "drivetrain": "RWD",
+      "transmission": "7-speed automated manual (Xtrac)",
+      "seats": 2,
+      "weightKg": 1250,
+      "weightType": "dry",
+      "estimated": [
+        "zeroToHundred",
+        "topSpeedKmh",
+        "priceFrom"
+      ],
+      "specNotes": "Power converted from 802 CV x 0.9863 = 791 hp. Pagani does not publish 0-100 km/h or top speed; figures shown are estimates. Price converted from the reported EUR 3.085M + VAT base (about $3.4M before tax); all 40 cars are sold. Pagani finishes each car to order, so colours are representative.",
+      "specSource": "https://www.pagani.com/huayra-roadster-bc/",
+      "exterior": [
+        {
+          "name": "Representative: Blu Carbon",
+          "hex": "#1c2c5a",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Argento with Rosso stripes",
+          "hex": "#b9bbbd",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Bianco with Blu accents",
+          "hex": "#eeeeea",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Nero Carbon",
+          "hex": "#141416",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Representative: Grigio Titanio",
+          "hex": "#5d6166",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/2020_Pagani_Huayra_Roadster_BC_in_Blue_and_Carbon_Fibre%2C_front_right_%28Greenwich_2024%29.jpg/1920px-2020_Pagani_Huayra_Roadster_BC_in_Blue_and_Carbon_Fibre%2C_front_right_%28Greenwich_2024%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2020_Pagani_Huayra_Roadster_BC_in_Blue_and_Carbon_Fibre,_front_right_(Greenwich_2024).jpg",
+          "author": "Mr.choppers",
+          "license": "CC BY-SA 3.0",
+          "width": 1920,
+          "height": 1078,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/2021_Pagani_Huayra_BC_Roadster_SP25.jpg/1920px-2021_Pagani_Huayra_BC_Roadster_SP25.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2021_Pagani_Huayra_BC_Roadster_SP25.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1312,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/2020_Pagani_Huayra_Roadster_BC_in_Blue_and_Carbon_Fibre%2C_rear_left_%28Greenwich_2024%29.jpg/1920px-2020_Pagani_Huayra_Roadster_BC_in_Blue_and_Carbon_Fibre%2C_rear_left_%28Greenwich_2024%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2020_Pagani_Huayra_Roadster_BC_in_Blue_and_Carbon_Fibre,_rear_left_(Greenwich_2024).jpg",
+          "author": "Mr.choppers",
+          "license": "CC BY-SA 3.0",
+          "width": 1920,
+          "height": 1076,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "7e97741c5a034ca4944aa41cae4a3b2c",
+        "name": "2020 Pagani Huayra Roadster BC",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2020-pagani-huayra-roadster-bc-7e97741c5a034ca4944aa41cae4a3b2c"
+      },
+      "configuratorUrl": "https://www.pagani.com/huayra-roadster-bc/",
+      "video": null
+    }
+  ]
+}

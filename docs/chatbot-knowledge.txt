@@ -22,21 +22,21 @@ AUREL is a private virtual showroom and auction house for luxury and exotic cars
 - **Account:** https://aurel-showroom-divy.netlify.app/account — profile photo, preferences, listings, bids, payments, posts, notifications and account deletion.
 
 ## Brands (13)
-- **Aston Martin** (United Kingdom, founded 1913) — Intensity. Driven by soul · 1 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/aston-martin
+- **Aston Martin** (United Kingdom, founded 1913) — Intensity. Driven by soul · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/aston-martin
 - **BYD** (China, founded 1995) — Build your dreams · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/byd
-- **Bentley** (United Kingdom, founded 1919) — Extraordinary journeys · 1 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/bentley
-- **Bugatti** (France, founded 1909) — Molsheim, without compromise · 1 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/bugatti
-- **Ferrari** (Italy, founded 1947) — Born in Maranello · 2 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/ferrari
-- **Koenigsegg** (Sweden, founded 1994) — Engineered in Ängelholm · 1 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/koenigsegg
+- **Bentley** (United Kingdom, founded 1919) — Extraordinary journeys · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/bentley
+- **Bugatti** (France, founded 1909) — Molsheim, without compromise · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/bugatti
+- **Ferrari** (Italy, founded 1947) — Born in Maranello · 4 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/ferrari
+- **Koenigsegg** (Sweden, founded 1994) — Engineered in Ängelholm · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/koenigsegg
 - **Lamborghini** (Italy, founded 1963) — Expect the unexpected · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/lamborghini
-- **Maserati** (Italy, founded 1914) — The Trident of Modena · 1 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/maserati
-- **McLaren** (United Kingdom, founded 1963) — Fearlessly forward · 1 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/mclaren
-- **Mercedes-Maybach** (Germany, founded 1909) — Exclusive by nature · 1 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/maybach
-- **Pagani** (Italy, founded 1992) — Art and science, by hand · 1 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/pagani
-- **Porsche** (Germany, founded 1931) — There is no substitute · 1 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/porsche
+- **Maserati** (Italy, founded 1914) — The Trident of Modena · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/maserati
+- **McLaren** (United Kingdom, founded 1963) — Fearlessly forward · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/mclaren
+- **Mercedes-Maybach** (Germany, founded 1909) — Exclusive by nature · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/maybach
+- **Pagani** (Italy, founded 1992) — Art and science, by hand · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/pagani
+- **Porsche** (Germany, founded 1931) — There is no substitute · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/porsche
 - **Rolls-Royce** (United Kingdom, founded 1904) — The pinnacle of luxury · 3 car(s) in the collection · https://aurel-showroom-divy.netlify.app/brands/rolls-royce
 
-## Cars in the collection (20)
+## Cars in the collection (40)
 
 ### Aston Martin DB12 (2024)
 The world's first Super Tourer. 680 PS from a twin-turbo V8, an electronic rear differential and a chassis tuned for agility. Unmistakably DB, decisively sharper.
@@ -46,6 +46,22 @@ The world's first Super Tourer. 680 PS from a twin-turbo V8, an electronic rear 
 - Variants: Coupé, Volante (+$17,000)
 - Exterior colours: Aston Martin Racing Green, Magneto Bronze, Onyx Black, Iridescent Emerald
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/aston-martin-db12
+
+### Aston Martin DBX707 (2025)
+A 707 PS performance SUV with a wet-clutch nine-speed gearbox.. The DBX707 takes the DBX's 4.0-litre twin-turbo V8 to 707 PS and 900 Nm, routed through a nine-speed wet-clutch automatic in place of the standard torque converter. Carbon-ceramic brakes are standard, and the 2025 update added a redesigned cabin with Aston Martin's in-house infotainment system.
+- Price from: $249,000 (indicative) · Status: available
+- Engine: 4.0L twin-turbo V8 · Power: 697 hp · Torque: 900 Nm · 0–100 km/h: 3.3 s · Top speed: 310 km/h
+- Drivetrain: AWD · Transmission: 9-speed wet-clutch automatic · Seats: 5 · Weight: 2,245 kg
+- Exterior colours: Plasma Blue, Xenon Grey, Onyx Black, Lunar White, Aston Martin Racing Green, Magnetic Silver
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/aston-martin-dbx707
+
+### Aston Martin Vantage (2025)
+A front-engined V8 sports car with 665 PS.. The 2024-on Vantage uses a reworked 4.0-litre twin-turbo V8 with larger turbochargers and revised camshafts for 665 PS, around 30 percent more than its predecessor. Its bonded aluminium structure is stiffer than before, and the cabin adopts Aston Martin's in-house infotainment system while keeping physical switchgear.
+- Price from: $191,000 (indicative) · Status: available
+- Engine: 4.0L twin-turbo V8 · Power: 656 hp · Torque: 800 Nm · 0–100 km/h: 3.5 s · Top speed: 325 km/h
+- Drivetrain: RWD · Transmission: 8-speed automatic · Seats: 2 · Weight: 1,605 kg
+- Exterior colours: Podium Green, Onyx Black, Lunar White, Skyfall Silver, Plasma Blue, Satin Xenon Grey
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/aston-martin-vantage
 
 ### BYD Seal Excellence AWD (2025)
 The ocean-inspired performance saloon. Cell-to-body battery, 530 PS dual-motor AWD and a sub-4-second sprint. BYD's answer to the premium electric saloon, beautifully finished.
@@ -73,6 +89,14 @@ BYD's electric hypercar that can dance. Four in-wheel-adjacent motors deliver 1,
 - Exterior colours: Storm Grey, Lightning Blue, Obsidian, Glacier White
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/byd-yangwang-u9
 
+### Bentley Bentayga EWB Azure (2025)
+A long-wheelbase luxury SUV built around the rear cabin.. The extended-wheelbase Bentayga adds 180 mm between the axles, all of it given to rear legroom, and offers an optional Airline Seat Specification with 22-way adjustable rear seats. It is powered by Bentley's 4.0-litre twin-turbo V8, and all-wheel steering gives it a tighter turning circle than the standard-wheelbase car.
+- Price from: $275,250 (indicative) · Status: available
+- Engine: 4.0L twin-turbo V8 · Power: 542 hp · Torque: 770 Nm · 0–100 km/h: 4.6 s · Top speed: 290 km/h
+- Drivetrain: AWD · Transmission: 8-speed automatic · Seats: 5 · Weight: 2,514 kg
+- Exterior colours: Glacier White, Beluga, Moonbeam, Cumbrian Green, Dark Sapphire, Burgundy
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/bentley-bentayga
+
 ### Bentley Continental GT Speed (2025)
 The most powerful Bentley road car yet. A new hybrid V8 powertrain delivers 782 PS and 1,000 Nm. Hand-finished cabin, rotating display and a grand tourer's appetite for continents.
 - Price from: $300,000 (indicative) · Status: available
@@ -82,6 +106,14 @@ The most powerful Bentley road car yet. A new hybrid V8 powertrain delivers 782 
 - Exterior colours: British Racing Green, Beluga, Glacier White, Moonbeam, Dragon Red
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/bentley-continental-gt-speed
 
+### Bentley Flying Spur Speed (2025)
+Bentley's four-door flagship, now a 782 PS plug-in hybrid.. The fourth-generation Flying Spur Speed replaces the W12 with Bentley's Ultra Performance Hybrid powertrain, combining a 4.0-litre twin-turbo V8 with an electric motor for 782 PS and 1,000 Nm. A 25.9 kWh battery provides up to 76 km of electric driving, and all-wheel steering and active anti-roll control are standard.
+- Price from: $276,450 (indicative) · Status: available
+- Engine: 4.0L twin-turbo V8 plug-in hybrid (Ultra Performance Hybrid) · Power: 771 hp · Torque: 1000 Nm · 0–100 km/h: 3.5 s · Top speed: 285 km/h
+- Drivetrain: AWD · Transmission: 8-speed dual-clutch · Seats: 5 · Weight: 2,646 kg
+- Exterior colours: Glacier White, Beluga, Verdant, Silver Tempest, Dark Sapphire, Cambrian Grey
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/bentley-flying-spur
+
 ### Bugatti Chiron Super Sport (2022)
 1,600 PS, built for the long road to 440 km/h. The longtail Chiron. Extended rear bodywork, a reprofiled W16 and a top speed of 440 km/h make the Super Sport the ultimate expression of the Chiron lineage.
 - Price from: $3,900,000 (indicative) · Status: auction
@@ -89,6 +121,38 @@ The most powerful Bentley road car yet. A new hybrid V8 powertrain delivers 782 
 - Drivetrain: AWD · Transmission: 7-speed DCT · Seats: 2 · Weight: 1,995 kg
 - Exterior colours: Atlantic Blue, Nocturne Carbon, French Racing Blue, Silver
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/bugatti-chiron-super-sport
+
+### Bugatti Tourbillon (2026)
+Bugatti's V16 plug-in hybrid successor to the Chiron.. The Tourbillon combines a Cosworth-developed 8.3-litre naturally aspirated V16 with three electric motors for 1,800 PS, with all-wheel drive and around 60 km of electric range. Its instrument cluster is a mechanical assembly developed with Swiss watchmakers, and production is limited to 250 cars.
+- Price from: $4,100,000 (indicative) · Status: available
+- Engine: 8.3L naturally aspirated V16 + three electric motors (plug-in hybrid) · Power: 1775 hp · Torque: 900 Nm · 0–100 km/h: 2 s · Top speed: 445 km/h
+- Drivetrain: AWD · Transmission: 8-speed dual-clutch · Seats: 2 · Weight: 1,995 kg
+- Exterior colours: Nocturne, French Racing Blue, Atlantic Blue, Quartz White, Italian Red
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/bugatti-tourbillon
+
+### Bugatti W16 Mistral (2025)
+The final W16 Bugatti, a 99-car roadster.. The W16 Mistral is the last production car to use Bugatti's 8.0-litre quad-turbocharged W16, here in the 1,600 PS form first seen in the Chiron Super Sport. A removable roof, a wider and deeper horseshoe grille and X-shaped tail lights distinguish it, and production is limited to 99 examples.
+- Price from: $5,400,000 (indicative) · Status: available
+- Engine: 8.0L quad-turbo W16 · Power: 1578 hp · Torque: 1600 Nm · 0–100 km/h: 2.4 s · Top speed: 420 km/h
+- Drivetrain: AWD · Transmission: 7-speed dual-clutch · Seats: 2 · Weight: 1,995 kg
+- Exterior colours: Nocturne, French Racing Blue, Atlantic Blue, Quartz White, Italian Red
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/bugatti-mistral
+
+### Ferrari 12Cilindri (2025)
+A front-mid-engined V12 berlinetta that revs to 9,500 rpm.. The 12Cilindri succeeds the 812 Superfast with a 6.5-litre naturally aspirated V12 producing 830 CV, paired with an eight-speed dual-clutch gearbox. Its design references the 365 GTB/4 Daytona, with a black band linking the headlights and active aerodynamic flaps integrated into the rear bodywork.
+- Price from: $472,000 (indicative) · Status: available
+- Engine: 6.5L naturally aspirated V12 (F140HD) · Power: 819 hp · Torque: 678 Nm · 0–100 km/h: 2.9 s · Top speed: 340 km/h
+- Drivetrain: RWD · Transmission: 8-speed dual-clutch · Seats: 2 · Weight: 1,560 kg
+- Exterior colours: Rosso Corsa, Rosso Imola, Giallo Modena, Nero Daytona, Grigio Titanio, Blu Pozzi
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/ferrari-12cilindri
+
+### Ferrari 296 GTB (2025)
+A plug-in hybrid V6 berlinetta with 830 CV.. The 296 GTB pairs Ferrari's first V6 road-car engine, a 3.0-litre twin-turbo unit with a 120-degree bank angle, with a rear-mounted electric motor for a combined 830 CV. Its 7.45 kWh battery allows up to 25 km in all-electric eDrive mode, and the short-wheelbase body draws on the 1963 250 LM.
+- Price from: $343,000 (indicative) · Status: available
+- Engine: 3.0L twin-turbo 120° V6 plug-in hybrid · Power: 819 hp · Torque: 740 Nm · 0–100 km/h: 2.9 s · Top speed: 330 km/h
+- Drivetrain: RWD · Transmission: 8-speed dual-clutch · Seats: 2 · Weight: 1,470 kg
+- Exterior colours: Rosso Corsa, Giallo Modena, Rosso Imola, Argento Nürburgring, Nero Daytona, Blu Tour de France
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/ferrari-296-gtb
 
 ### Ferrari Purosangue (2025)
 Four doors, four seats and a naturally aspirated V12.. The Purosangue is Ferrari's first four-door, four-seat model, powered by a front-mid-mounted 6.5-litre naturally aspirated V12 driving all four wheels. Rear-hinged rear doors and active suspension with Multimatic valves set it apart from conventional performance SUVs.
@@ -107,6 +171,14 @@ A plug-in hybrid that rewrote Maranello's rulebook. Three electric motors and a 
 - Exterior colours: Rosso Corsa, Giallo Modena, Nero Daytona, Bianco Avus, Blu Pozzi
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/ferrari-sf90-stradale
 
+### Koenigsegg Gemera HV8 (2025)
+A four-seat hypercar with a hybrid twin-turbo V8.. The production Gemera pairs a 5.0-litre twin-turbo V8 with the axial-flux Dark Matter e-motor, sending a combined 2,300 hp through the nine-speed Light Speed Tourbillon Transmission to all four wheels. Its long, pillarless body opens on two dihedral synchro-helix doors to four equally sized heated bucket seats and 200 litres of luggage space.
+- Price from: $2,100,000 (indicative) · Status: available
+- Engine: 5.0L twin-turbo V8 + Dark Matter e-motor (hybrid) · Power: 2300 hp · Torque: 2750 Nm · 0–100 km/h: 1.9 s · Top speed: 400 km/h
+- Drivetrain: AWD · Transmission: 9-speed multi-clutch (Light Speed Tourbillon Transmission) · Seats: 4 · Weight: 2,022 kg
+- Exterior colours: Representative: Emerald Green Metallic, Representative: Satin Grey, Representative: Champagne Gold, Representative: Naked Carbon, Representative: Arctic White
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/koenigsegg-gemera
+
 ### Koenigsegg Jesko Attack (2024)
 A track-focused hypercar with a nine-speed Light Speed Transmission.. Named after Christian von Koenigsegg's father, the Jesko Attack uses a 5.0-litre twin-turbo flat-plane V8 rated at 1,280 hp on petrol and 1,600 hp on E85. Its active aerodynamics generate up to 1,400 kg of downforce, and production of all Jesko variants is limited to 125 cars.
 - Price from: $3,000,000 (indicative) · Status: available
@@ -114,6 +186,14 @@ A track-focused hypercar with a nine-speed Light Speed Transmission.. Named afte
 - Drivetrain: RWD · Transmission: 9-speed Light Speed Transmission (multi-clutch) · Seats: 2 · Weight: 1,420 kg
 - Exterior colours: Naked Carbon, Crystal White, Racing Blue, Tang Orange, Graphite Grey
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/koenigsegg-jesko
+
+### Koenigsegg Regera (2022)
+A single-gear hybrid megacar.. The Regera replaces a conventional gearbox with Koenigsegg Direct Drive, coupling a twin-turbo V8 to the rear axle through a single fixed ratio and filling the gaps with three electric motors fed by an 800-volt battery. It was the first car with a fully robotised body, opening doors, bonnet and boot automatically, and production ended at 80 cars.
+- Price from: $1,900,000 (indicative) · Status: available
+- Engine: 5.0L twin-turbo V8 + three electric motors (hybrid) · Power: 1500 hp · Torque: 2000 Nm · 0–100 km/h: 2.8 s · Top speed: 410 km/h
+- Drivetrain: RWD · Transmission: Single-speed Koenigsegg Direct Drive · Seats: 2 · Weight: 1,590 kg
+- Exterior colours: Representative: Crystal White, Representative: Tinted Blue Carbon, Representative: Naked Carbon, Representative: Purple Carbon, Representative: Graphite Grey
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/koenigsegg-regera
 
 ### Lamborghini Revuelto (2024)
 The first V12 hybrid HPEV from Sant'Agata. A naturally aspirated 6.5L V12 joined by three electric motors. Carbon monofuselage, scissor doors and over 1,000 cv — the Aventador's successor in every sense.
@@ -139,6 +219,23 @@ The super SUV, electrified. Lamborghini's first plug-in hybrid Urus pairs a twin
 - Exterior colours: Giallo Auge, Verde Gea, Nero Helene, Bianco Monocerus
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/lamborghini-urus-se
 
+### Maserati GranTurismo Trofeo (2025)
+A four-seat grand tourer with the Nettuno V6 at its heart.. The second-generation GranTurismo uses a mixed aluminium, magnesium and steel structure engineered to take either the 3.0-litre Nettuno twin-turbo V6 or the three-motor Folgore electric drivetrain. In Trofeo form it sends 550 CV through an eight-speed automatic and all-wheel drive, while keeping four genuine seats and a long-bonnet silhouette true to the original.
+- Price from: $189,000 (indicative) · Status: available
+- Engine: 3.0L twin-turbo V6 (Nettuno, MTC pre-chamber) · Power: 542 hp · Torque: 650 Nm · 0–100 km/h: 3.5 s · Top speed: 320 km/h
+- Drivetrain: AWD · Transmission: 8-speed automatic · Seats: 4 · Weight: 1,795 kg
+- Variants: GranTurismo Folgore (+$16,000), GranTurismo Modena (−$32,000)
+- Exterior colours: Bianco Astro, Nero Assoluto, Blu Nobile, Grigio Lava, Rosso Folgore, Grigio Cangiante
+- 360° view: no · Page: https://aurel-showroom-divy.netlify.app/cars/maserati-granturismo
+
+### Maserati Grecale Trofeo (2025)
+Maserati’s mid-size SUV with the MC20’s V6.. The Grecale Trofeo carries a 3.0-litre Nettuno twin-turbo V6 derived from the MC20, with dry-sump lubrication omitted in favour of a wet sump for SUV packaging. Air suspension, a limited-slip rear differential and a Corsa drive mode set it apart from the four-cylinder GT and Modena versions.
+- Price from: $117,500 (indicative) · Status: available
+- Engine: 3.0L twin-turbo V6 (Nettuno) · Power: 523 hp · Torque: 620 Nm · 0–100 km/h: 3.8 s · Top speed: 285 km/h
+- Drivetrain: AWD · Transmission: 8-speed automatic · Seats: 5 · Weight: 2,027 kg
+- Exterior colours: Bianco, Nero Tempesta, Grigio Lava, Blu Intenso, Giallo Corse, Grigio Cangiante
+- 360° view: no · Page: https://aurel-showroom-divy.netlify.app/cars/maserati-grecale
+
 ### Maserati MC20 (2024)
 A carbon-tub coupé built around the Nettuno V6.. The MC20 pairs a carbon-fibre monocoque with Maserati's in-house 3.0-litre Nettuno V6, which uses Formula 1-derived pre-chamber combustion. Butterfly doors, a dry weight under 1,500 kg and an 8-speed dual-clutch gearbox make it the marque's first mid-engined supercar since the MC12.
 - Price from: $239,000 (indicative) · Status: available
@@ -156,6 +253,38 @@ Lighter, stronger, faster. Evolved from the 720S with 30% new parts, the 750S we
 - Exterior colours: Papaya Spark, Silica White, Lantana Purple, Onyx Black
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/mclaren-750s
 
+### McLaren Artura (2025)
+McLaren's plug-in hybrid V6 supercar on a new carbon architecture.. The Artura is built on McLaren's Carbon Lightweight Architecture and pairs a 3.0-litre twin-turbo V6 with an axial-flux electric motor housed in its eight-speed dual-clutch gearbox. For 2025 combined output rose to 700 PS, and a 7.4 kWh battery provides around 30 km of electric range.
+- Price from: $254,100 (indicative) · Status: available
+- Engine: 3.0L twin-turbo 120° V6 plug-in hybrid (M630) · Power: 690 hp · Torque: 720 Nm · 0–100 km/h: 3 s · Top speed: 330 km/h
+- Drivetrain: RWD · Transmission: 8-speed dual-clutch · Seats: 2 · Weight: 1,395 kg
+- Exterior colours: McLaren Orange, Flux Green, Ludus Blue, Silica White, Onyx Black, Volcano Red
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/mclaren-artura
+
+### McLaren W1 (2025)
+A 1,275 PS hybrid successor to the F1 and P1.. The W1 combines a new 4.0-litre twin-turbo V8 with an electric module for 1,275 PS, driving the rear wheels through an eight-speed dual-clutch gearbox. Its Aerocell carbon monocoque fixes the seats to the tub, with the pedals and steering wheel adjusting to the driver instead, and production is limited to 399 cars.
+- Price from: $2,100,000 (indicative) · Status: available
+- Engine: 4.0L twin-turbo V8 (MHP-8) + electric motor (hybrid) · Power: 1258 hp · Torque: 1340 Nm · 0–100 km/h: 2.7 s · Top speed: 350 km/h
+- Drivetrain: RWD · Transmission: 8-speed dual-clutch · Seats: 2 · Weight: 1,399 kg
+- Exterior colours: McLaren Orange, Onyx Black, Silica White, Volcano Red, Ludus Blue
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/mclaren-w1
+
+### Mercedes-Maybach Mercedes-Maybach GLS 600 4MATIC (2025)
+A full-size SUV finished to S-Class standards.. The GLS 600 pairs a 4.0-litre twin-turbo V8 with a 48-volt integrated starter-generator and E-Active Body Control suspension that reads the road ahead with a stereo camera. The standard four-seat layout gives the rear cabin individual reclining executive seats, a fixed centre console with refrigerated compartment and its own climate zone.
+- Price from: $179,500 (indicative) · Status: available
+- Engine: 4.0L twin-turbo V8 with 48V EQ Boost mild hybrid · Power: 550 hp · Torque: 730 Nm · 0–100 km/h: 4.9 s · Top speed: 250 km/h
+- Drivetrain: AWD · Transmission: 9-speed automatic (9G-TRONIC) · Seats: 4 · Weight: 2,785 kg
+- Exterior colours: Obsidian Black Metallic, MANUFAKTUR Diamond White Bright, Selenite Grey Metallic, MANUFAKTUR Côte d'Azur Light Blue, Obsidian Black / Mojave Silver two-tone
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/maybach-gls-600
+
+### Mercedes-Maybach Mercedes-Maybach SL 680 Monogram Series (2026)
+The SL roadster, reinterpreted as a Maybach.. The SL 680 Monogram Series is the first Maybach-badged SL, built on the AMG SL platform with a retuned, comfort-oriented suspension, rear-axle steering and additional sound insulation. It is a strict two-seater with a soft top, a pinstriped Maybach grille, a stand-up bonnet star and an optional bonnet finished in the Maybach monogram pattern.
+- Price from: $224,900 (indicative) · Status: available
+- Engine: 4.0L twin-turbo V8 · Power: 577 hp · Torque: 800 Nm · 0–100 km/h: 4.1 s · Top speed: 260 km/h
+- Drivetrain: AWD · Transmission: 9-speed automatic (AMG Speedshift MCT 9G) · Seats: 2 · Weight: 2,050 kg
+- Exterior colours: Red Ambience (MANUFAKTUR Garnet Red / Obsidian Black), White Ambience (MANUFAKTUR Opalite White Magno / Obsidian Black), Obsidian Black Metallic, MANUFAKTUR Alpine Grey Uni
+- 360° view: no · Page: https://aurel-showroom-divy.netlify.app/cars/maybach-sl-680
+
 ### Mercedes-Maybach S 680 (2024)
 Twelve cylinders of absolute calm. The flagship Maybach: a 6.0L V12, executive rear seats that recline to 43.5° and a cabin that turns any journey into a private lounge.
 - Price from: $240,000 (indicative) · Status: available
@@ -163,6 +292,22 @@ Twelve cylinders of absolute calm. The flagship Maybach: a 6.0L V12, executive r
 - Drivetrain: AWD · Transmission: 9-speed automatic · Seats: 4 · Weight: 2,350 kg
 - Exterior colours: Obsidian Black, Kalahari Gold / Onyx, Diamond White, Rubellite Red
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/maybach-s680
+
+### Pagani Huayra R (2021)
+A track-only Pagani with a naturally aspirated V12.. The Huayra R uses a 6.0-litre naturally aspirated V12 developed with HWA AG, revving to 9,000 rpm and driving through a six-speed sequential dog-ring gearbox. Built for circuit use only and limited to 30 cars, it rides on a carbo-titanium and carbo-triax monocoque with a dry weight of 1,050 kg.
+- Price from: $3,100,000 (indicative) · Status: available
+- Engine: 6.0L naturally aspirated V12 (Pagani V12-R) · Power: 838 hp · Torque: 750 Nm · 0–100 km/h: 2.8 s · Top speed: 350 km/h
+- Drivetrain: RWD · Transmission: 6-speed sequential (non-synchronised dog ring) · Seats: 2 · Weight: 1,050 kg
+- Exterior colours: Representative: Blu Tricolore Carbon, Representative: Nero Carbon with Oro stripes, Representative: Blu Francia, Representative: Grigio Opaco, Representative: Bianco Perla
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/pagani-huayra-r
+
+### Pagani Huayra Roadster BC (2020)
+The open-top Huayra in its most focused form.. The Huayra Roadster BC uses a 6.0-litre twin-turbo AMG V12 and a seven-speed Xtrac automated manual with electro-hydraulic differential, wrapped in carbo-triax HP62 G2 bodywork with an active aero package. Named for Benny Caiola, Pagani’s first customer, it was limited to 40 cars with a removable carbon roof.
+- Price from: $3,400,000 (indicative) · Status: available
+- Engine: 6.0L twin-turbo V12 (Mercedes-AMG M158) · Power: 791 hp · Torque: 1050 Nm · 0–100 km/h: 2.9 s · Top speed: 350 km/h
+- Drivetrain: RWD · Transmission: 7-speed automated manual (Xtrac) · Seats: 2 · Weight: 1,250 kg
+- Exterior colours: Representative: Blu Carbon, Representative: Argento with Rosso stripes, Representative: Bianco with Blu accents, Representative: Nero Carbon, Representative: Grigio Titanio
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/pagani-huayra-roadster-bc
 
 ### Pagani Utopia (2024)
 A V12 hypercar offered with a seven-speed manual gearbox.. The Utopia is Pagani's third hypercar, built around a bespoke AMG 6.0-litre twin-turbo V12 and a carbo-titanium chassis. It is offered with a seven-speed Xtrac manual or automated manual, and coupé production is limited to 99 cars.
@@ -172,6 +317,14 @@ A V12 hypercar offered with a seven-speed manual gearbox.. The Utopia is Pagani'
 - Exterior colours: Carbonio Nudo, Argento, Blu Francia, Giallo, Verde Militare
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/pagani-utopia
 
+### Porsche 911 GT3 RS (2025)
+A road-legal 911 shaped around downforce.. The 992-generation GT3 RS pairs a 4.0-litre naturally aspirated flat-six revving to 9,000 rpm with a swan-neck rear wing and active aerodynamics that generate up to 860 kg of downforce at 285 km/h. A drag-reduction system, a central radiator in place of the front luggage compartment and cockpit-adjustable dampers and differential carry its motorsport lineage directly onto the road.
+- Price from: $241,300 (indicative) · Status: available
+- Engine: 4.0L naturally aspirated flat-six · Power: 518 hp · Torque: 465 Nm · 0–100 km/h: 3.2 s · Top speed: 296 km/h
+- Drivetrain: RWD · Transmission: 7-speed dual-clutch (PDK) · Seats: 2 · Weight: 1,450 kg
+- Exterior colours: Python Green, Shark Blue, Guards Red, Arctic Grey, GT Silver Metallic, Black
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/porsche-911-gt3-rs
+
 ### Porsche 911 Turbo S (2025)
 The everyday hypercar, now T-Hybrid. The 992.2 Turbo S introduces T-Hybrid electric turbocharging to the flat-six for 711 PS and the quickest 911 Turbo launch yet.
 - Price from: $272,000 (indicative) · Status: coming soon
@@ -180,6 +333,14 @@ The everyday hypercar, now T-Hybrid. The 992.2 Turbo S introduces T-Hybrid elect
 - Variants: Coupé, Cabriolet (+$14,000)
 - Exterior colours: GT Silver, Guards Red, Shade Green, Gentian Blue
 - 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/porsche-911-turbo-s
+
+### Porsche Taycan Turbo GT (2025)
+The most powerful series-production Porsche, in four-door form.. The Taycan Turbo GT uses a stronger rear motor with a silicon-carbide pulse inverter, allowing up to 760 kW on overboost and 815 kW for two seconds under Launch Control. Carbon roof, forged 21-inch wheels, carbon-ceramic brakes and GT-specific Active Ride suspension come as standard, and the car set production-EV lap records at the Nürburgring and Laguna Seca.
+- Price from: $230,000 (indicative) · Status: available
+- Engine: Dual permanent-magnet synchronous motors, 105 kWh (gross) 800 V battery · Power: 1020 hp · Torque: 1240 Nm · 0–100 km/h: 2.3 s · Top speed: 290 km/h
+- Drivetrain: AWD · Transmission: Front 1-speed, rear 2-speed · Seats: 4 · Weight: 2,295 kg
+- Exterior colours: Purple Sky Metallic, Pale Blue Metallic, Ice Grey Metallic, Volcano Grey Metallic, Carrara White Metallic, Jet Black Metallic
+- 360° view: yes · Page: https://aurel-showroom-divy.netlify.app/cars/porsche-taycan-turbo-gt
 
 ### Rolls-Royce Cullinan Series II (2025)
 Effortless, everywhere. An SUV conceived as a Rolls-Royce first. Magic Carpet Ride suspension, a three-box silhouette and a 6.75L V12 for any terrain, in absolute composure.

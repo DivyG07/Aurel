@@ -14,7 +14,10 @@ import { ZapierChatbot } from "@/components/site/ZapierChatbot";
 import { site } from "@/lib/site";
 import { COOKIE, themeFor, themeVars } from "@/lib/themes";
 import { currentUser } from "@/lib/session";
-import { db } from "@/lib/db";
+import { getShellData } from "@/lib/shell";
+import { TransitionFade } from "@/components/site/TransitionFade";
+
+const TRANSITION_COOKIE = "aurel-transition";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["300", "400", "500", "600"], style: ["normal", "italic"], variable: "--font-cormorant" });
@@ -44,15 +47,10 @@ function BrandBackdrop({ slug, name }: { slug: string; name: string }) {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const brandSlug = (await cookies()).get(COOKIE)?.value ?? null;
-  const [user, brands, montage] = await Promise.all([
-    currentUser(),
-    db.brand.findMany({
-      orderBy: { name: "asc" },
-      select: { slug: true, name: true, accentHex: true, country: true, cars: { select: { heroImage: true }, where: { heroImage: { not: null } }, orderBy: { featured: "desc" }, take: 1 } },
-    }),
-    db.car.findMany({ where: { heroImage: { not: null } }, select: { heroImage: true }, take: 18 }).then((r) => r.map((c) => c.heroImage!)),
-  ]);
+  const jar = await cookies();
+  const brandSlug = jar.get(COOKIE)?.value ?? null;
+  const transition = jar.get(TRANSITION_COOKIE)?.value;
+  const [user, { brands, montage }] = await Promise.all([currentUser(), getShellData()]);
   const active = brands.find((b) => b.slug === brandSlug);
   const theme = themeFor(active?.slug, active?.accentHex, active?.name);
 
@@ -60,7 +58,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en" className={fontVars} data-brand={theme.slug} style={themeVars(theme) as React.CSSProperties}>
       <body>
         <SmoothScroll>
-          <IntroLoader />
+          {transition ? <TransitionFade label={decodeURIComponent(transition)} /> : <IntroLoader />}
           <Cursor />
           <Header
             user={user ? { name: user.name ?? null, email: user.email ?? null, image: user.image ?? null, role: user.role } : null}

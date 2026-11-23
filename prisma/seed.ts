@@ -69,7 +69,9 @@ async function main() {
   }
 
   // Additional researched cars & brands (src/data/new-cars.json): photos, 360° model and specs in one file.
-  const newPath = join(__dirname, "..", "src", "data", "new-cars.json");
+  // Later batches live in new-cars-2.json, new-cars-3.json… in the same shape.
+  for (const file of ["new-cars.json", "new-cars-2.json", "new-cars-3.json"]) {
+  const newPath = join(__dirname, "..", "src", "data", file);
   if (existsSync(newPath)) {
     type NewCar = {
       slug: string; brand: string; model: string; year: number; tagline: string; description: string; bodyType: string; priceFrom: number;
@@ -78,7 +80,7 @@ async function main() {
       photos: Photo[]; sketchfab: SketchModel | null; configuratorUrl?: string;
     };
     const extra = JSON.parse(readFileSync(newPath, "utf8").replace(/^﻿/, "")) as { brands: { slug: string; name: string; country: string; founded: number; accentHex: string; tagline: string }[]; cars: NewCar[] };
-    for (const b of extra.brands) await prisma.brand.upsert({ where: { slug: b.slug }, update: b, create: b });
+    for (const b of extra.brands ?? []) await prisma.brand.upsert({ where: { slug: b.slug }, update: b, create: b });
     for (const c of extra.cars) {
       const brand = await prisma.brand.findUniqueOrThrow({ where: { slug: c.brand } });
       const data = {
@@ -116,7 +118,8 @@ async function main() {
         }),
       });
     }
-    console.log(`Seeded ${extra.brands.length} extra brands and ${extra.cars.length} extra cars.`);
+    console.log(`${file}: seeded ${extra.brands?.length ?? 0} extra brands and ${extra.cars.length} extra cars.`);
+  }
   }
 
   // Icons & their cars — every claim carries a public source URL. Rebuilt each run.

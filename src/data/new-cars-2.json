@@ -1,0 +1,1032 @@
+{
+  "brands": [],
+  "cars": [
+    {
+      "slug": "ferrari-12cilindri",
+      "brand": "ferrari",
+      "model": "12Cilindri",
+      "year": 2025,
+      "tagline": "A front-mid-engined V12 berlinetta that revs to 9,500 rpm.",
+      "description": "The 12Cilindri succeeds the 812 Superfast with a 6.5-litre naturally aspirated V12 producing 830 CV, paired with an eight-speed dual-clutch gearbox. Its design references the 365 GTB/4 Daytona, with a black band linking the headlights and active aerodynamic flaps integrated into the rear bodywork.",
+      "bodyType": "GT",
+      "priceFrom": 472000,
+      "engine": "6.5L naturally aspirated V12 (F140HD)",
+      "powerHp": 819,
+      "torqueNm": 678,
+      "zeroToHundred": 2.9,
+      "topSpeedKmh": 340,
+      "drivetrain": "RWD",
+      "transmission": "8-speed dual-clutch",
+      "seats": 2,
+      "weightKg": 1560,
+      "weightType": "dry",
+      "estimated": [],
+      "specNotes": "Power converted from 830 CV x 0.9863 = 819 hp (at 9,250 rpm). Top speed is Ferrari's \">340 km/h\". Price is the 2025 US starting sticker reported by KBB.",
+      "specSource": "https://www.kbb.com/ferrari/12-cilindri/2025/specs",
+      "exterior": [
+        {
+          "name": "Rosso Corsa",
+          "hex": "#c8102e",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Rosso Imola",
+          "hex": "#8f1d2c",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Giallo Modena",
+          "hex": "#f6c400",
+          "finish": "GLOSS",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Nero Daytona",
+          "hex": "#0f0f12",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Grigio Titanio",
+          "hex": "#6d7075",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Blu Pozzi",
+          "hex": "#1d2c4c",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        }
+      ],
+      "variants": [
+        {
+          "name": "12Cilindri Spider",
+          "priceDelta": 43000,
+          "note": "Retractable hard-top; 2025 US starting price $515,000"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/2025_Ferrari_12Cilindri_in_Rosso_Imola%2C_front_left.jpg/1920px-2025_Ferrari_12Cilindri_in_Rosso_Imola%2C_front_left.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2025_Ferrari_12Cilindri_in_Rosso_Imola,_front_left.jpg",
+          "author": "Mr.choppers",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1241,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/2024_Ferrari_12_Cilindri.jpg/1920px-2024_Ferrari_12_Cilindri.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2024_Ferrari_12_Cilindri.jpg",
+          "author": "TTTNIS",
+          "license": "CC0",
+          "width": 1920,
+          "height": 960,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/2025_Ferrari_12Cilindri_in_Rosso_Imola%2C_rear_left.jpg/1920px-2025_Ferrari_12Cilindri_in_Rosso_Imola%2C_rear_left.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2025_Ferrari_12Cilindri_in_Rosso_Imola,_rear_left.jpg",
+          "author": "Mr.choppers",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1090,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "cb0b42a5bda844bd8ccd62451f1db427",
+        "name": "2025 Ferrari 12Cilindri",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution",
+        "url": "https://sketchfab.com/3d-models/2025-ferrari-12cilindri-cb0b42a5bda844bd8ccd62451f1db427"
+      },
+      "configuratorUrl": "https://carconfigurator.ferrari.com/en_EN/ferrari_car_configurator/12cilindri",
+      "video": null
+    },
+    {
+      "slug": "ferrari-296-gtb",
+      "brand": "ferrari",
+      "model": "296 GTB",
+      "year": 2025,
+      "tagline": "A plug-in hybrid V6 berlinetta with 830 CV.",
+      "description": "The 296 GTB pairs Ferrari's first V6 road-car engine, a 3.0-litre twin-turbo unit with a 120-degree bank angle, with a rear-mounted electric motor for a combined 830 CV. Its 7.45 kWh battery allows up to 25 km in all-electric eDrive mode, and the short-wheelbase body draws on the 1963 250 LM.",
+      "bodyType": "HYPER",
+      "priceFrom": 343000,
+      "engine": "3.0L twin-turbo 120° V6 plug-in hybrid",
+      "powerHp": 819,
+      "torqueNm": 740,
+      "zeroToHundred": 2.9,
+      "topSpeedKmh": 330,
+      "drivetrain": "RWD",
+      "transmission": "8-speed dual-clutch",
+      "seats": 2,
+      "weightKg": 1470,
+      "weightType": "dry",
+      "estimated": [],
+      "specNotes": "Combined 830 CV (663 CV V6 + 167 CV electric motor) x 0.9863 = 819 hp. Top speed is Ferrari's \">330 km/h\". Price is the 2025 US MSRP excl. destination ($351,950 KBB sticker incl. destination).",
+      "specSource": "https://www.kbb.com/ferrari/296-gtb/2025/specs/",
+      "exterior": [
+        {
+          "name": "Rosso Corsa",
+          "hex": "#c8102e",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Giallo Modena",
+          "hex": "#f6c400",
+          "finish": "GLOSS",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Rosso Imola",
+          "hex": "#8f1d2c",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Argento Nürburgring",
+          "hex": "#a9adb1",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Nero Daytona",
+          "hex": "#0f0f12",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Blu Tour de France",
+          "hex": "#1c2a5a",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        }
+      ],
+      "variants": [
+        {
+          "name": "296 GTS",
+          "priceDelta": 33000,
+          "note": "Retractable hard-top spider; KBB sticker $384,950 vs $351,950 for the GTB"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/2022_Ferrari_296.jpg/1920px-2022_Ferrari_296.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2022_Ferrari_296.jpg",
+          "author": "Max Baillie",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1080,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Ferrari_296_GTB_1X7A6377.jpg/1920px-Ferrari_296_GTB_1X7A6377.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Ferrari_296_GTB_1X7A6377.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 957,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Ferrari_296_GTB_IMG_8865_%28cropped%29.jpg/1920px-Ferrari_296_GTB_IMG_8865_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Ferrari_296_GTB_IMG_8865_(cropped).jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1109,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "269f4fd01b584dd38f7e512de60c4645",
+        "name": "2022 Ferrari 296 GTB",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2022-ferrari-296-gtb-269f4fd01b584dd38f7e512de60c4645"
+      },
+      "configuratorUrl": "https://carconfigurator.ferrari.com/en_EN/ferrari_car_configurator/296gtb",
+      "video": null
+    },
+    {
+      "slug": "bugatti-tourbillon",
+      "brand": "bugatti",
+      "model": "Tourbillon",
+      "year": 2026,
+      "tagline": "Bugatti's V16 plug-in hybrid successor to the Chiron.",
+      "description": "The Tourbillon combines a Cosworth-developed 8.3-litre naturally aspirated V16 with three electric motors for 1,800 PS, with all-wheel drive and around 60 km of electric range. Its instrument cluster is a mechanical assembly developed with Swiss watchmakers, and production is limited to 250 cars.",
+      "bodyType": "HYPER",
+      "priceFrom": 4100000,
+      "engine": "8.3L naturally aspirated V16 + three electric motors (plug-in hybrid)",
+      "powerHp": 1775,
+      "torqueNm": 900,
+      "zeroToHundred": 2,
+      "topSpeedKmh": 445,
+      "drivetrain": "AWD",
+      "transmission": "8-speed dual-clutch",
+      "seats": 2,
+      "weightKg": 1995,
+      "weightType": "kerb",
+      "estimated": [
+        "torqueNm",
+        "priceFrom"
+      ],
+      "specNotes": "Combined 1,800 PS x 0.9863 = 1,775 hp (V16 1,000 PS + 800 PS from three electric motors). 900 Nm is the V16-only figure; Bugatti does not publish combined system torque. Top speed is 380 km/h as standard and 445 km/h with the Speed Key. 25 kWh battery. Kerb weight is Bugatti's \"<1,995 kg\" (DIN). Price converted from the EUR 3.8M net list (approx. $4.1M).",
+      "specSource": "https://newsroom.bugatti.com/press-releases/a-spark-of-genius",
+      "exterior": [
+        {
+          "name": "Nocturne",
+          "hex": "#0b0c0f",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "French Racing Blue",
+          "hex": "#1d4ea0",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Atlantic Blue",
+          "hex": "#1f2f4f",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Quartz White",
+          "hex": "#eeeeea",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Italian Red",
+          "hex": "#a3161f",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Bugatti_Tourbillon_-_01.jpg/1920px-Bugatti_Tourbillon_-_01.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bugatti_Tourbillon_-_01.jpg",
+          "author": "Y.Leclercq",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1280,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Bugatti_Tourbillon.jpg/1920px-Bugatti_Tourbillon.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bugatti_Tourbillon.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1127,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Bugatti_Tourbillon_-_02.jpg/1920px-Bugatti_Tourbillon_-_02.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bugatti_Tourbillon_-_02.jpg",
+          "author": "Y.Leclercq",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1280,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "c18b3cc96c6342d5a22315289f901706",
+        "name": "Bugatti Tourbillon 2026 | www.vecarz.com",
+        "author": "vecarz",
+        "license": "CC Attribution",
+        "url": "https://sketchfab.com/3d-models/bugatti-tourbillon-2026-wwwvecarzcom-c18b3cc96c6342d5a22315289f901706"
+      },
+      "configuratorUrl": "https://www.bugatti.com/en/models/tourbillon",
+      "video": null
+    },
+    {
+      "slug": "bugatti-mistral",
+      "brand": "bugatti",
+      "model": "W16 Mistral",
+      "year": 2025,
+      "tagline": "The final W16 Bugatti, a 99-car roadster.",
+      "description": "The W16 Mistral is the last production car to use Bugatti's 8.0-litre quad-turbocharged W16, here in the 1,600 PS form first seen in the Chiron Super Sport. A removable roof, a wider and deeper horseshoe grille and X-shaped tail lights distinguish it, and production is limited to 99 examples.",
+      "bodyType": "HYPER",
+      "priceFrom": 5400000,
+      "engine": "8.0L quad-turbo W16",
+      "powerHp": 1578,
+      "torqueNm": 1600,
+      "zeroToHundred": 2.4,
+      "topSpeedKmh": 420,
+      "drivetrain": "AWD",
+      "transmission": "7-speed dual-clutch",
+      "seats": 2,
+      "weightKg": 1995,
+      "weightType": "kerb",
+      "estimated": [
+        "zeroToHundred",
+        "weightKg",
+        "priceFrom"
+      ],
+      "specNotes": "1,600 PS x 0.9863 = 1,578 hp; 1,600 Nm. 420 km/h is Bugatti's figure in Top Speed mode (a Mistral set an open-car record of 453.91 km/h in 2024). Bugatti publishes no 0-100 or weight for the Mistral; 2.4 s is the widely reported figure and ~1,995 kg is derived from the Chiron (some sources quote 2,040 kg). Price converted from the EUR 5M net list (approx. $5.4M); all 99 cars are sold.",
+      "specSource": "https://newsroom.bugatti.com/press-releases/bugatti-w16-mistral-elegance-at-extremes",
+      "exterior": [
+        {
+          "name": "Nocturne",
+          "hex": "#0b0c0f",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "French Racing Blue",
+          "hex": "#1d4ea0",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Atlantic Blue",
+          "hex": "#1f2f4f",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Quartz White",
+          "hex": "#eeeeea",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Italian Red",
+          "hex": "#a3161f",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/2025_Bugatti_W16_Mistral.jpg/1920px-2025_Bugatti_W16_Mistral.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2025_Bugatti_W16_Mistral.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1280,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Bugatti_Mistral_%282025%29_%2855215057289%29.jpg/1920px-Bugatti_Mistral_%282025%29_%2855215057289%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bugatti_Mistral_(2025)_(55215057289).jpg",
+          "author": "Charles from Port Chester, New York",
+          "license": "CC0",
+          "width": 1920,
+          "height": 1280,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Bugatti_Mistral_at_Quail_2023_%28cropped%29.jpg/1920px-Bugatti_Mistral_at_Quail_2023_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bugatti_Mistral_at_Quail_2023_(cropped).jpg",
+          "author": "Prova MO",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1007,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "7e2e68144e6c49a0bef8f887886be8b9",
+        "name": "Bugatti W16 Mistral",
+        "author": "kevin (ケビン)",
+        "license": "CC Attribution",
+        "url": "https://sketchfab.com/3d-models/bugatti-w16-mistral-7e2e68144e6c49a0bef8f887886be8b9"
+      },
+      "configuratorUrl": "https://www.bugatti.com/en/models/w16-mistral",
+      "video": null
+    },
+    {
+      "slug": "bentley-bentayga",
+      "brand": "bentley",
+      "model": "Bentayga EWB Azure",
+      "year": 2025,
+      "tagline": "A long-wheelbase luxury SUV built around the rear cabin.",
+      "description": "The extended-wheelbase Bentayga adds 180 mm between the axles, all of it given to rear legroom, and offers an optional Airline Seat Specification with 22-way adjustable rear seats. It is powered by Bentley's 4.0-litre twin-turbo V8, and all-wheel steering gives it a tighter turning circle than the standard-wheelbase car.",
+      "bodyType": "SUV",
+      "priceFrom": 275250,
+      "engine": "4.0L twin-turbo V8",
+      "powerHp": 542,
+      "torqueNm": 770,
+      "zeroToHundred": 4.6,
+      "topSpeedKmh": 290,
+      "drivetrain": "AWD",
+      "transmission": "8-speed automatic",
+      "seats": 5,
+      "weightKg": 2514,
+      "weightType": "kerb",
+      "estimated": [],
+      "specNotes": "550 PS x 0.9863 = 542 hp. 0-60 mph is 4.5 s (0-100 km/h 4.6 s). Kerb weight 5,542 lb (US spec). Price is the 2025 US MSRP for the Bentayga EWB Azure V8.",
+      "specSource": "https://www.kbb.com/bentley/bentayga-ewb/2025/azure-v8/",
+      "exterior": [
+        {
+          "name": "Glacier White",
+          "hex": "#f2f2ee",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Beluga",
+          "hex": "#0b0b0c",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Moonbeam",
+          "hex": "#c2c4c6",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Cumbrian Green",
+          "hex": "#1f3a33",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Dark Sapphire",
+          "hex": "#1b2436",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#4a1621",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Bentayga V8 (standard wheelbase)",
+          "priceDelta": -68200,
+          "note": "2025 US starting price $207,050"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/2022_Bentley_Bentayga_EWB_Azure.jpg/1920px-2022_Bentley_Bentayga_EWB_Azure.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2022_Bentley_Bentayga_EWB_Azure.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1353,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Bentley_Bentayga_EWB_Auto_Zuerich_2023_1X7A1234.jpg/1920px-Bentley_Bentayga_EWB_Auto_Zuerich_2023_1X7A1234.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bentley_Bentayga_EWB_Auto_Zuerich_2023_1X7A1234.jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1192,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/2023_Bentley_Bentayga_EWB_Azure_in_Snow_Quartz%2C_rear_right%2C_07-18-2023.jpg/1920px-2023_Bentley_Bentayga_EWB_Azure_in_Snow_Quartz%2C_rear_right%2C_07-18-2023.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2023_Bentley_Bentayga_EWB_Azure_in_Snow_Quartz,_rear_right,_07-18-2023.jpg",
+          "author": "Cutlass",
+          "license": "CC0",
+          "width": 1920,
+          "height": 1244,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "56e7edf34ee64dbb8108b9f33234f762",
+        "name": "Bentley Bentayga Speed 2021",
+        "author": "SQUIR3D",
+        "license": "Editorial",
+        "url": "https://sketchfab.com/3d-models/bentley-bentayga-speed-2021-56e7edf34ee64dbb8108b9f33234f762"
+      },
+      "configuratorUrl": "https://www.bentleymotors.com/en/misc/car-configurator.html/select/bentayga/bentayga_ewb_azure",
+      "video": null
+    },
+    {
+      "slug": "bentley-flying-spur",
+      "brand": "bentley",
+      "model": "Flying Spur Speed",
+      "year": 2025,
+      "tagline": "Bentley's four-door flagship, now a 782 PS plug-in hybrid.",
+      "description": "The fourth-generation Flying Spur Speed replaces the W12 with Bentley's Ultra Performance Hybrid powertrain, combining a 4.0-litre twin-turbo V8 with an electric motor for 782 PS and 1,000 Nm. A 25.9 kWh battery provides up to 76 km of electric driving, and all-wheel steering and active anti-roll control are standard.",
+      "bodyType": "SEDAN",
+      "priceFrom": 276450,
+      "engine": "4.0L twin-turbo V8 plug-in hybrid (Ultra Performance Hybrid)",
+      "powerHp": 771,
+      "torqueNm": 1000,
+      "zeroToHundred": 3.5,
+      "topSpeedKmh": 285,
+      "drivetrain": "AWD",
+      "transmission": "8-speed dual-clutch",
+      "seats": 5,
+      "weightKg": 2646,
+      "weightType": "kerb",
+      "estimated": [],
+      "specNotes": "782 PS combined (600 PS V8 + 190 PS electric motor) x 0.9863 = 771 hp. 0-60 mph 3.3 s. Electric range up to 76 km (WLTP). Kerb weight 5,833 lb. Price is the 2025 US starting price reported by KBB.",
+      "specSource": "https://www.kbb.com/bentley/flying-spur/2025/speed",
+      "exterior": [
+        {
+          "name": "Glacier White",
+          "hex": "#f2f2ee",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Beluga",
+          "hex": "#0b0b0c",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Verdant",
+          "hex": "#1f3b2e",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Silver Tempest",
+          "hex": "#9b9fa3",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Dark Sapphire",
+          "hex": "#1b2436",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Cambrian Grey",
+          "hex": "#5f6468",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Flying Spur Mulliner",
+          "priceDelta": 21800,
+          "note": "Same 782 PS hybrid with Mulliner specification; 2025 US starting price $298,250"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/2025_Bentley_Flying_Spur_Speed_Hybrid_Auto.jpg/1920px-2025_Bentley_Flying_Spur_Speed_Hybrid_Auto.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2025_Bentley_Flying_Spur_Speed_Hybrid_Auto.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1082,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/2025_Bentley_Flying_Spur_-_02.jpg/1920px-2025_Bentley_Flying_Spur_-_02.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2025_Bentley_Flying_Spur_-_02.jpg",
+          "author": "Oleg Yunakov",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1440,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Bentley_Flying_Spur_Mulliner_%282024%29_IMG_4168_%28cropped%29.jpg/1920px-Bentley_Flying_Spur_Mulliner_%282024%29_IMG_4168_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bentley_Flying_Spur_Mulliner_(2024)_IMG_4168_(cropped).jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 966,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "d2161a5b0dfd478abdce11cda5d564d4",
+        "name": "Bentley Flying Spur 2020",
+        "author": "SQUIR3D",
+        "license": "Editorial",
+        "url": "https://sketchfab.com/3d-models/bentley-flying-spur-2020-d2161a5b0dfd478abdce11cda5d564d4"
+      },
+      "configuratorUrl": "https://www.bentleymotors.com/en/misc/car-configurator.html/select/flying_spur/flying_spur_speed",
+      "video": null
+    },
+    {
+      "slug": "aston-martin-vantage",
+      "brand": "aston-martin",
+      "model": "Vantage",
+      "year": 2025,
+      "tagline": "A front-engined V8 sports car with 665 PS.",
+      "description": "The 2024-on Vantage uses a reworked 4.0-litre twin-turbo V8 with larger turbochargers and revised camshafts for 665 PS, around 30 percent more than its predecessor. Its bonded aluminium structure is stiffer than before, and the cabin adopts Aston Martin's in-house infotainment system while keeping physical switchgear.",
+      "bodyType": "GT",
+      "priceFrom": 191000,
+      "engine": "4.0L twin-turbo V8",
+      "powerHp": 656,
+      "torqueNm": 800,
+      "zeroToHundred": 3.5,
+      "topSpeedKmh": 325,
+      "drivetrain": "RWD",
+      "transmission": "8-speed automatic",
+      "seats": 2,
+      "weightKg": 1605,
+      "weightType": "dry",
+      "estimated": [],
+      "specNotes": "665 PS x 0.9863 = 656 hp. 0-60 mph 3.4 s. Dry weight 1,605 kg (US kerb approx. 1,745 kg). Price is the 2025 US MSRP for the coupé.",
+      "specSource": "https://www.edmunds.com/car-news/2025-aston-martin-vantage-pricing-announced.html",
+      "exterior": [
+        {
+          "name": "Podium Green",
+          "hex": "#0e7d63",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Onyx Black",
+          "hex": "#0d0d0f",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Lunar White",
+          "hex": "#ecebe6",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Skyfall Silver",
+          "hex": "#a8acaf",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Plasma Blue",
+          "hex": "#1f4fa0",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Satin Xenon Grey",
+          "hex": "#5b5f63",
+          "finish": "MATTE",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Vantage Roadster",
+          "priceDelta": 18400,
+          "note": "Z-fold fabric roof; US price $209,400 incl. destination, so the delta is approximate"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Aston_Martin_Vantage_%282024%29_IMG_0002.jpg/1920px-Aston_Martin_Vantage_%282024%29_IMG_0002.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aston_Martin_Vantage_(2024)_IMG_0002.jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1038,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2024_Aston_Martin_V8_Vantage.jpg/1920px-2024_Aston_Martin_V8_Vantage.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2024_Aston_Martin_V8_Vantage.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1095,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Aston_Martin_Vantage_%282024%29_IMG_0015.jpg/1920px-Aston_Martin_Vantage_%282024%29_IMG_0015.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aston_Martin_Vantage_(2024)_IMG_0015.jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1004,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "3667b1c93a784cb9b55f4ea3f7ba1aec",
+        "name": "2025 Aston Martin Vantage",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2025-aston-martin-vantage-3667b1c93a784cb9b55f4ea3f7ba1aec"
+      },
+      "configuratorUrl": "https://www.astonmartin.com/en-us/models/vantage-coupe",
+      "video": null
+    },
+    {
+      "slug": "aston-martin-dbx707",
+      "brand": "aston-martin",
+      "model": "DBX707",
+      "year": 2025,
+      "tagline": "A 707 PS performance SUV with a wet-clutch nine-speed gearbox.",
+      "description": "The DBX707 takes the DBX's 4.0-litre twin-turbo V8 to 707 PS and 900 Nm, routed through a nine-speed wet-clutch automatic in place of the standard torque converter. Carbon-ceramic brakes are standard, and the 2025 update added a redesigned cabin with Aston Martin's in-house infotainment system.",
+      "bodyType": "SUV",
+      "priceFrom": 249000,
+      "engine": "4.0L twin-turbo V8",
+      "powerHp": 697,
+      "torqueNm": 900,
+      "zeroToHundred": 3.3,
+      "topSpeedKmh": 310,
+      "drivetrain": "AWD",
+      "transmission": "9-speed wet-clutch automatic",
+      "seats": 5,
+      "weightKg": 2245,
+      "weightType": "kerb",
+      "estimated": [],
+      "specNotes": "707 PS x 0.9863 = 697 hp. 0-60 mph 3.1 s. Kerb weight 2,245 kg (EU; US curb 4,940 lb). Price is the 2025 US MSRP excl. $3,000 destination.",
+      "specSource": "https://www.edmunds.com/aston-martin/dbx707/2025/suv",
+      "exterior": [
+        {
+          "name": "Plasma Blue",
+          "hex": "#1f4fa0",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Xenon Grey",
+          "hex": "#5d6166",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Onyx Black",
+          "hex": "#0d0d0f",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Lunar White",
+          "hex": "#ecebe6",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Aston Martin Racing Green",
+          "hex": "#0f3b2c",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Magnetic Silver",
+          "hex": "#9ea3a8",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/2022_Aston_Martin_DBX707.jpg/1920px-2022_Aston_Martin_DBX707.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2022_Aston_Martin_DBX707.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1097,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Aston_Martin_DBX707_-_03.jpg/1920px-Aston_Martin_DBX707_-_03.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aston_Martin_DBX707_-_03.jpg",
+          "author": "Y.Leclercq©",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1280,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Aston_Martin_DBX707_1X7A0203.jpg/1920px-Aston_Martin_DBX707_1X7A0203.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aston_Martin_DBX707_1X7A0203.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1111,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "9bac603fbbc740dc92a34811f0fe46d9",
+        "name": "2023 Aston Martin DBX707",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2023-aston-martin-dbx707-9bac603fbbc740dc92a34811f0fe46d9"
+      },
+      "configuratorUrl": "https://www.astonmartin.com/en-us/models/dbx707",
+      "video": null
+    },
+    {
+      "slug": "mclaren-artura",
+      "brand": "mclaren",
+      "model": "Artura",
+      "year": 2025,
+      "tagline": "McLaren's plug-in hybrid V6 supercar on a new carbon architecture.",
+      "description": "The Artura is built on McLaren's Carbon Lightweight Architecture and pairs a 3.0-litre twin-turbo V6 with an axial-flux electric motor housed in its eight-speed dual-clutch gearbox. For 2025 combined output rose to 700 PS, and a 7.4 kWh battery provides around 30 km of electric range.",
+      "bodyType": "HYPER",
+      "priceFrom": 254100,
+      "engine": "3.0L twin-turbo 120° V6 plug-in hybrid (M630)",
+      "powerHp": 690,
+      "torqueNm": 720,
+      "zeroToHundred": 3,
+      "topSpeedKmh": 330,
+      "drivetrain": "RWD",
+      "transmission": "8-speed dual-clutch",
+      "seats": 2,
+      "weightKg": 1395,
+      "weightType": "dry",
+      "estimated": [],
+      "specNotes": "700 PS combined (605 PS V6 + 95 PS electric motor) x 0.9863 = 690 hp. Dry weight is the lightest 1,395 kg (DIN kerb approx. 1,498 kg). Price is the 2025 US starting price listed by KBB (may include destination).",
+      "specSource": "https://www.kbb.com/mclaren/artura/2025/specs",
+      "exterior": [
+        {
+          "name": "McLaren Orange",
+          "hex": "#ff7a1a",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Flux Green",
+          "hex": "#9db32a",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Ludus Blue",
+          "hex": "#2a4e9b",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Silica White",
+          "hex": "#ecedeb",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Onyx Black",
+          "hex": "#0d0e10",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Volcano Red",
+          "hex": "#8e1a1e",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Artura Spider",
+          "priceDelta": 24700,
+          "note": "Retractable hard-top; 2025 US starting price $278,800"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/McLaren_Artura_IMG_0534.jpg/1920px-McLaren_Artura_IMG_0534.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:McLaren_Artura_IMG_0534.jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1126,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/2024_McLaren_Artura_4.jpg/1920px-2024_McLaren_Artura_4.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2024_McLaren_Artura_4.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1158,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/McLaren_Artura_IMG_0527.jpg/1920px-McLaren_Artura_IMG_0527.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:McLaren_Artura_IMG_0527.jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1039,
+          "angle": "rear-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "d393abd807f04d62b96b1bd82119b5d4",
+        "name": "2023 McLaren Artura",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution",
+        "url": "https://sketchfab.com/3d-models/2023-mclaren-artura-d393abd807f04d62b96b1bd82119b5d4"
+      },
+      "configuratorUrl": "https://www.mclaren.com/cars/gl_en/artura",
+      "video": null
+    },
+    {
+      "slug": "mclaren-w1",
+      "brand": "mclaren",
+      "model": "W1",
+      "year": 2025,
+      "tagline": "A 1,275 PS hybrid successor to the F1 and P1.",
+      "description": "The W1 combines a new 4.0-litre twin-turbo V8 with an electric module for 1,275 PS, driving the rear wheels through an eight-speed dual-clutch gearbox. Its Aerocell carbon monocoque fixes the seats to the tub, with the pedals and steering wheel adjusting to the driver instead, and production is limited to 399 cars.",
+      "bodyType": "HYPER",
+      "priceFrom": 2100000,
+      "engine": "4.0L twin-turbo V8 (MHP-8) + electric motor (hybrid)",
+      "powerHp": 1258,
+      "torqueNm": 1340,
+      "zeroToHundred": 2.7,
+      "topSpeedKmh": 350,
+      "drivetrain": "RWD",
+      "transmission": "8-speed dual-clutch",
+      "seats": 2,
+      "weightKg": 1399,
+      "weightType": "dry",
+      "estimated": [
+        "priceFrom"
+      ],
+      "specNotes": "1,275 PS combined (928 PS V8 + 347 PS E-module) x 0.9863 = 1,258 hp. Top speed electronically limited to 350 km/h; 0-200 km/h 5.8 s. McLaren publishes no US price; the widely reported GBP 2M is approx. $2.1M.",
+      "specSource": "https://paultan.org/2024/10/08/mclaren-w1-debuts-1275-ps-1340-nm-v8-turbo-hybrid-rear-wheel-drive-f1-inspired-chassis-and-aero",
+      "exterior": [
+        {
+          "name": "McLaren Orange",
+          "hex": "#ff7a1a",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Onyx Black",
+          "hex": "#0d0e10",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Silica White",
+          "hex": "#ecedeb",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Volcano Red",
+          "hex": "#8e1a1e",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Ludus Blue",
+          "hex": "#2a4e9b",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/2024_McLaren_W1_SP25.jpg/1920px-2024_McLaren_W1_SP25.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2024_McLaren_W1_SP25.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1004,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/2025_McLaren_W1_FOS25.jpg/1920px-2025_McLaren_W1_FOS25.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2025_McLaren_W1_FOS25.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 956,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/McLaren_W1_%2855129817900%29.jpg/1920px-McLaren_W1_%2855129817900%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:McLaren_W1_(55129817900).jpg",
+          "author": "Mustang Joe",
+          "license": "CC0",
+          "width": 1920,
+          "height": 1282,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "519ee6f9089b4d548cd4384ef159f62e",
+        "name": "2025 McLaren W1",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2025-mclaren-w1-519ee6f9089b4d548cd4384ef159f62e"
+      },
+      "configuratorUrl": "https://www.mclaren.com/cars/gl_en/W1",
+      "video": null
+    }
+  ]
+}

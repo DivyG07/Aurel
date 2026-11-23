@@ -1,6 +1,12 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath as revalidatePathBase, revalidateTag } from "next/cache";
+
+/** Layout-wide edits also drop the cached catalog shell (brands, montage) used by every page. */
+function revalidatePath(path: string, type?: "layout" | "page") {
+  if (type === "layout") revalidateTag("catalog");
+  revalidatePathBase(path, type);
+}
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { requireAdmin } from "@/lib/session";
