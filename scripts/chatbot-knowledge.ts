@@ -1,4 +1,4 @@
-// Generates docs/chatbot-knowledge.md from the live database — upload it to your Zapier chatbot
+// Generates docs/chatbot-knowledge.txt from the live database — upload it to your Zapier chatbot
 // as a knowledge source. Re-run after catalogue changes:  npx tsx scripts/chatbot-knowledge.ts
 import { writeFileSync } from "node:fs";
 import { PrismaClient } from "@prisma/client";
@@ -61,8 +61,8 @@ async function main() {
   for (const p of icons) L.push(`- **${p.name}** (${p.profession}): ${p.cars.map((c) => `${c.make} ${c.model}`).join(", ")}`);
   L.push(``, `## Guidance for the assistant`, `Answer only from this knowledge base and general automotive knowledge. Give prices as indicative USD figures. Never promise availability, discounts or delivery dates — offer a private viewing via the concierge instead. For payments, refunds or account problems, direct people to concierge@aurel.example. Keep answers short, warm and refined.`);
 
-  writeFileSync("docs/chatbot-knowledge.md", L.join("\n"));
-  console.log(`Wrote docs/chatbot-knowledge.md — ${cars.length} cars, ${brands.length} brands, ${auctions.length} open auctions, ${icons.length} icons.`);
+  writeFileSync("docs/chatbot-knowledge.txt", L.join("\r\n"));
+  console.log(`Wrote docs/chatbot-knowledge.txt — ${cars.length} cars, ${brands.length} brands, ${auctions.length} open auctions, ${icons.length} icons.`);
   await db.$disconnect();
 }
 main();
