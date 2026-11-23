@@ -14,6 +14,7 @@ export const dynamic = "force-dynamic";
 const nav = [
   ["profile", "Profile"],
   ["preferences", "Preferences"],
+  ["garage", "My garage"],
   ["listings", "My listings"],
   ["bids", "My bids"],
   ["posts", "My posts"],
@@ -32,6 +33,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
     db.forumPost.findMany({ where: { authorId: user.id, deletedAt: null }, orderBy: { createdAt: "desc" }, take: 20, select: { id: true, title: true, score: true, commentCount: true, createdAt: true, flair: true } }),
     db.brand.findMany({ select: { slug: true, name: true, accentHex: true }, orderBy: { name: "asc" } }),
   ]);
+  const garageCount = await db.garageCar.count({ where: { userId: user.id } });
   await db.notification.updateMany({ where: { userId: user.id, readAt: null }, data: { readAt: new Date() } });
 
   const byAuction = new Map<string, (typeof bids)[number]>();
@@ -65,6 +67,14 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
               isAdmin={isAdmin}
               initial={{ accountType: me?.role === "DEALER" ? "DEALER" : "COLLECTOR", brands: parseList(me?.favoriteBrands), budget: me?.budget ?? "", interests: parseList(me?.interests), carsOwned: me?.carsOwned ?? "" }}
             />
+          </section>
+
+          <section id="garage" className="scroll-mt-28">
+            <div className="mb-6 flex items-center justify-between">
+              <p className="eyebrow">My garage</p>
+              <Link href="/garage" className="btn btn-ghost !px-4 !py-2">Manage garage →</Link>
+            </div>
+            <p className="text-sm text-mist">{garageCount ? `${garageCount} ${garageCount === 1 ? "car" : "cars"} in your collection.` : "Add the cars you own — pick from our catalogue or enter any car."}</p>
           </section>
 
           <section id="listings" className="scroll-mt-28">

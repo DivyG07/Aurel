@@ -22,7 +22,10 @@ export function Footer() {
           <p className="eyebrow mb-5">Members</p>
           <ul className="space-y-3 text-sm text-ivory/70">
             <li><Link href="/auctions" className="hover:text-gold">Live auctions</Link></li>
-            <li><Link href="/account" className="hover:text-gold">My bids</Link></li>
+            <li><Link href="/account" className="hover:text-gold">My account</Link></li>
+            <li><Link href="/garage" className="hover:text-gold">My garage</Link></li>
+            <li><Link href="/garages" className="hover:text-gold">Collectors&apos; Garages</Link></li>
+            <li><Link href="/forum" className="hover:text-gold">The Paddock forum</Link></li>
             <li><Link href="/login" className="hover:text-gold">Sign in</Link></li>
           </ul>
         </div>

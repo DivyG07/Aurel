@@ -162,6 +162,7 @@ model Car {
   wishlistItems WishlistItem[]
   auctions      Auction[]
   forumPosts    ForumPost[]
+  garageCars    GarageCar[]
   celebrityCars CelebrityCar[]
   inquiries     Inquiry[]
   priceHistory  PriceHistory[]
@@ -262,15 +263,23 @@ model SavedConfiguration {
 }
 
 model GarageCar {
-  id          String  @id @default(cuid())
-  userId      String
-  user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-  make        String
-  model       String
-  year        Int
-  notes       String?
-  estValueUsd Int?
-  isPublic    Boolean @default(false)
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  carId        String? // when it's a model we stock, link it for photos/specs
+  car          Car?     @relation(fields: [carId], references: [id], onDelete: SetNull)
+  make         String
+  model        String
+  year         Int
+  color        String?
+  mileageKm    Int?
+  acquiredYear Int?
+  notes        String?
+  estValueUsd  Int?
+  imageIds     String? // JSON array of Upload ids
+  isPublic     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @default(now()) @updatedAt
 }
 
 // ─── Auctions ────────────────────────────────────────────────────────────────

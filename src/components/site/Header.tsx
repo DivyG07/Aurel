@@ -130,10 +130,12 @@ export function Header({ user, brands, activeBrand, montage }: Props) {
                       <p className="truncate px-3 py-2 text-xs text-mist">{user.email}</p>
                       {user.role === "ADMIN" && <MenuLink href="/admin" label="Admin console" accent />}
                       <MenuLink href="/account" label="My account" />
+                      <MenuLink href="/garage" label="My garage" />
                       <MenuLink href="/auctions/sell" label="Sell a car" />
                       <MenuLink href="/forum/new" label="New forum post" />
                       <MenuLink href="/wishlist" label="Wishlist" />
                       <MenuLink href="/compare" label="Compare" />
+                      <MenuLink href="/account#danger" label="Delete account" />
                       <button onClick={() => signOut({ redirectTo: "/" })} className="w-full px-3 py-2 text-left text-sm text-ivory/80 hover:bg-white/5 hover:text-ivory">
                         Sign out
                       </button>
