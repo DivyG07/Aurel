@@ -159,7 +159,7 @@ export function Hero({ cars, videos = [], cutEveryMs = 0, eyebrow, title, cta = 
           </div>
 
           {!useVideo && slides.length > 1 && (
-            <div className="flex gap-2 md:w-[380px]">
+            <div className="flex gap-2 md:mr-44 md:w-[340px]">
               {slides.map((s, n) => (
                 <button key={s.slug} onClick={() => setI(n)} className="group flex-1 text-left" aria-label={`Show ${s.model}`}>
                   <span className="relative block h-[2px] overflow-hidden bg-white/20">
@@ -174,7 +174,7 @@ export function Hero({ cars, videos = [], cutEveryMs = 0, eyebrow, title, cta = 
             </div>
           )}
           {useVideo && videos.length > 1 && (
-            <div className="flex gap-2">
+            <div className="flex gap-2 md:mr-44">
               {videos.map((vid, n) => (
                 <button key={vid.src} onClick={() => setV(n)} className={`h-[3px] w-10 transition ${n === v ? "bg-gold" : "bg-white/30 hover:bg-white/60"}`} aria-label={vid.title} />
               ))}
