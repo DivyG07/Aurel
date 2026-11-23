@@ -42,8 +42,6 @@ function readListing(f: FormData) {
   const startingBid = int(f, "startingBid");
   const reservePrice = int(f, "reservePrice");
   const durationDays = int(f, "durationDays") ?? 3;
-  const startMode = str(f, "startMode");
-  const startsAtRaw = str(f, "startsAt");
 
   const thisYear = new Date().getFullYear();
   if (!make || !model) return { error: "Tell us the make and model." };
@@ -54,14 +52,9 @@ function readListing(f: FormData) {
   if (reservePrice != null && reservePrice < startingBid) return { error: "The reserve can't be lower than the starting bid." };
   if (![1, 3, 5, 7].includes(durationDays)) return { error: "Choose an auction length." };
 
-  let startsAt = new Date(Date.now() + 60 * 60 * 1000); // default: an hour after approval-ish
-  if (startMode === "scheduled") {
-    const d = new Date(startsAtRaw);
-    if (Number.isNaN(d.getTime())) return { error: "Choose when bidding should open." };
-    if (d.getTime() < Date.now() + 10 * 60 * 1000) return { error: "Bidding must open at least 10 minutes from now." };
-    if (d.getTime() > Date.now() + 60 * 864e5) return { error: "Bidding must open within the next 60 days." };
-    startsAt = d;
-  }
+  // No scheduling: bidding opens the moment an admin approves (approval resets these to "now").
+  // Stored now only so the requested length (endsAt − startsAt) travels with the listing.
+  const startsAt = new Date();
   const endsAt = new Date(startsAt.getTime() + durationDays * 864e5);
   const bidIncrement = Math.max(500, Math.round(startingBid * 0.01 / 500) * 500);
   return {

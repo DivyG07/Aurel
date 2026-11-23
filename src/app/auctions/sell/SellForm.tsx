@@ -37,16 +37,9 @@ export function SellForm({ brands, defaultType, initial }: { brands: string[]; d
   const editing = !!initial;
   const [state, action, pending] = useActionState(editing ? updateListing : createListing, null);
   const [type, setType] = useState(initial?.listingType === "DEALER" ? "DEALER" : initial ? "COLLECTOR" : defaultType);
-  const [startMode, setStartMode] = useState(initial ? "scheduled" : "asap");
-  const [startLocal, setStartLocal] = useState("");
   const [start, setStart] = useState(initial?.startingBid ?? 0);
   const [keep, setKeep] = useState((initial?.images ?? []).map((i) => i.id));
 
-  useEffect(() => {
-    const d = initial ? new Date(initial.startsAt) : new Date(Date.now() + 864e5);
-    const pad = (n: number) => String(n).padStart(2, "0");
-    setStartLocal(`${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`);
-  }, [initial]);
   useEffect(() => {
     if (state?.ok) toast(state.message, "success");
   }, [state]);
@@ -55,8 +48,6 @@ export function SellForm({ brands, defaultType, initial }: { brands: string[]; d
     <form action={action} className="mt-10 space-y-8">
       {initial && <input type="hidden" name="id" value={initial.id} />}
       <input type="hidden" name="listingType" value={type} />
-      <input type="hidden" name="startMode" value={startMode} />
-      <input type="hidden" name="startsAt" value={startLocal ? new Date(startLocal).toISOString() : ""} />
       {keep.map((k) => <input key={k} type="hidden" name="keep" value={k} />)}
 
       <fieldset>
@@ -131,12 +122,7 @@ export function SellForm({ brands, defaultType, initial }: { brands: string[]; d
         </L>
         <div>
           <span className="mb-1.5 block text-[10px] uppercase tracking-[0.2em] text-mist">Bidding opens</span>
-          <div className="flex overflow-hidden border border-white/15" style={{ borderRadius: "var(--radius)" }}>
-            {([["asap", "Soon after approval"], ["scheduled", "Pick a date"]] as const).map(([k, t]) => (
-              <button key={k} type="button" onClick={() => setStartMode(k)} className={`flex-1 px-3 py-2.5 text-[11px] uppercase tracking-[0.15em] ${startMode === k ? "bg-gold text-ink" : "text-mist hover:text-ivory"}`}>{t}</button>
-            ))}
-          </div>
-          {startMode === "scheduled" && <input type="datetime-local" value={startLocal} onChange={(e) => setStartLocal(e.target.value)} className="field mt-2 [color-scheme:dark]" />}
+          <p className="border border-white/10 px-4 py-3 text-sm text-mist" style={{ borderRadius: "var(--radius)" }}>Live the moment our team approves your listing.</p>
         </div>
       </fieldset>
 

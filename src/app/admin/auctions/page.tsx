@@ -4,7 +4,7 @@ import { formatPrice } from "@/lib/format";
 import { phaseOf } from "@/lib/auctions";
 import { imageUrl, parseIds } from "@/lib/uploads";
 import { conditionLabel, listingTypeLabel } from "@/lib/types";
-import { reviewListing } from "../actions";
+import { approveListing, rejectListing } from "../actions";
 import { Notice, PageHead, Table, td, fmtDate } from "../ui";
 
 const carName = (a: { car: { model: string; brand: { name: string } } | null; make: string | null; model: string | null }) =>
@@ -50,11 +50,12 @@ export default async function AdminAuctions({ searchParams }: { searchParams: Pr
                   <p className="text-mist">{fmtDate(a.startsAt)} → {fmtDate(a.endsAt)}</p>
                   {a.description && <p className="mt-3 line-clamp-4 whitespace-pre-wrap text-ivory/80">{a.description}</p>}
                 </div>
-                <form action={reviewListing} className="flex flex-col gap-2">
+                <form action={approveListing} className="flex flex-col gap-2">
                   <input type="hidden" name="id" value={a.id} />
-                  <textarea name="note" rows={3} placeholder="Note to the seller (required if rejecting)" className="field text-xs" />
-                  <button name="decision" value="approve" className="btn btn-primary">Approve & schedule</button>
-                  <button name="decision" value="reject" className="btn btn-ghost !text-red-300">Reject</button>
+                  <textarea name="note" rows={3} placeholder="Note to the seller (optional)" className="field text-xs" />
+                  <button type="submit" className="btn btn-primary">Approve & go live</button>
+                  <button type="submit" formAction={rejectListing} className="btn btn-ghost !text-red-300">Reject</button>
+                  <p className="text-[10px] text-mist">Approving opens bidding immediately for {Math.round((a.endsAt.getTime() - a.startsAt.getTime()) / 864e5)} day(s).</p>
                 </form>
               </div>
             );

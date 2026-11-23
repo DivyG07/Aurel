@@ -241,27 +241,42 @@ export async function deleteAuction(f: FormData) {
 
 // ─── Member-submitted lots ───────────────────────────────────────────────────
 
-export async function reviewListing(f: FormData) {
+/*
+ * Member listing review. Approve and Reject are separate actions (each button has its own
+ * formAction) — a single action reading the clicked button's value turned approvals into
+ * rejections when that value didn't arrive.
+ */
+async function pendingListing(f: FormData) {
   const admin = await requireAdmin();
   const id = str(f, "id");
-  const decision = str(f, "decision");
   const note = str(f, "note").slice(0, 500) || null;
   const a = await db.auction.findUnique({ where: { id } });
   if (!a || a.status !== "PENDING_REVIEW") redirect("/admin/auctions");
-  if (decision === "approve") {
-    // If the requested start has already passed while waiting for review, open it now and keep the duration.
-    const now = Date.now();
-    const duration = a.endsAt.getTime() - a.startsAt.getTime();
-    const startsAt = a.startsAt.getTime() < now ? new Date(now) : a.startsAt;
-    const endsAt = new Date(startsAt.getTime() + duration);
-    await db.auction.update({ where: { id }, data: { status: "SCHEDULED", reviewNote: note, startsAt, endsAt } });
-    if (a.sellerId) await db.notification.create({ data: { userId: a.sellerId, type: "SYSTEM", title: "Your car was approved for auction", body: `${a.title} goes live ${startsAt.toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })}.`, href: `/auctions/${id}` } });
-  } else {
-    await db.auction.update({ where: { id }, data: { status: "REJECTED", reviewNote: note ?? "Not approved." } });
-    if (a.sellerId) await db.notification.create({ data: { userId: a.sellerId, type: "SYSTEM", title: "Your auction listing wasn't approved", body: note ?? "See your account for details.", href: "/account#listings" } });
-  }
-  await audit(admin.id, decision === "approve" ? "listing.approve" : "listing.reject", "Auction", id, { note });
-  mirror("Auctions", { id, title: a.title, type: a.listingType, status: decision === "approve" ? "SCHEDULED" : "REJECTED" }, "id");
+  return { admin, id, note, a };
+}
+
+export async function approveListing(f: FormData) {
+  const { admin, id, note, a } = await pendingListing(f);
+  // Goes live immediately, for the length the seller asked for (1–7 days).
+  const duration = Math.max(864e5, Math.min(7 * 864e5, a.endsAt.getTime() - a.startsAt.getTime()));
+  const startsAt = new Date();
+  const endsAt = new Date(startsAt.getTime() + duration);
+  await db.auction.update({ where: { id }, data: { status: "LIVE", reviewNote: note, startsAt, endsAt } });
+  if (a.sellerId) await db.notification.create({ data: { userId: a.sellerId, type: "SYSTEM", title: "Your car is live at auction", body: `${a.title} was approved and bidding is open until ${endsAt.toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })}.`, href: `/auctions/${id}` } });
+  await audit(admin.id, "listing.approve", "Auction", id, { note, startsAt: startsAt.toISOString(), endsAt: endsAt.toISOString() });
+  mirror("Auctions", { id, title: a.title, type: a.listingType, status: "LIVE", startsAt, endsAt }, "id");
+  await broadcast(id);
+  revalidatePath("/auctions");
+  revalidatePath("/admin/auctions");
+  redirect(`/admin/auctions?saved=${encodeURIComponent(`${a.title} is live`)}`);
+}
+
+export async function rejectListing(f: FormData) {
+  const { admin, id, note, a } = await pendingListing(f);
+  await db.auction.update({ where: { id }, data: { status: "REJECTED", reviewNote: note ?? "Not approved." } });
+  if (a.sellerId) await db.notification.create({ data: { userId: a.sellerId, type: "SYSTEM", title: "Your auction listing wasn't approved", body: note ?? "See your account for details.", href: "/account#listings" } });
+  await audit(admin.id, "listing.reject", "Auction", id, { note });
+  mirror("Auctions", { id, title: a.title, type: a.listingType, status: "REJECTED" }, "id");
   revalidatePath("/auctions");
   revalidatePath("/admin/auctions");
   redirect("/admin/auctions");
