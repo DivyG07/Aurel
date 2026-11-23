@@ -14,6 +14,7 @@ export function LoginForm({ next, googleEnabled, initialError }: { next: string;
   const [resetKey, setResetKey] = useState(0);
   const [error, setError] = useState<string | null>(initialError);
   const [busy, setBusy] = useState<"form" | "google" | null>(null);
+  const [accountType, setAccountType] = useState<"COLLECTOR" | "DEALER">("COLLECTOR");
 
   const fail = (msg: string) => {
     setError(msg);
@@ -40,7 +41,7 @@ export function LoginForm({ next, googleEnabled, initialError }: { next: string;
     const password = String(f.get("password"));
     setBusy("form");
     if (mode === "signup") {
-      const r = await register({ name: String(f.get("name") ?? ""), email, password, token });
+      const r = await register({ name: String(f.get("name") ?? ""), email, password, token, accountType });
       if (!r.ok) return fail(r.message);
     } else {
       const r = await verifyHuman(token);
@@ -76,6 +77,17 @@ export function LoginForm({ next, googleEnabled, initialError }: { next: string;
         <AnimatePresence initial={false}>
           {mode === "signup" && (
             <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
+              <div className="mb-3 grid grid-cols-2 gap-2">
+                {([
+                  ["COLLECTOR", "Collector", "I buy & collect"],
+                  ["DEALER", "Dealer", "I sell professionally"],
+                ] as const).map(([k, t, d]) => (
+                  <button key={k} type="button" onClick={() => setAccountType(k)} className={`border px-4 py-3 text-left transition ${accountType === k ? "border-gold bg-gold/[0.08]" : "border-white/15 hover:border-white/30"}`} style={{ borderRadius: "var(--radius)" }}>
+                    <span className="block text-sm">{t}</span>
+                    <span className="block text-[11px] text-mist">{d}</span>
+                  </button>
+                ))}
+              </div>
               <input name="name" required placeholder="Full name" autoComplete="name" className="field" />
             </motion.div>
           )}

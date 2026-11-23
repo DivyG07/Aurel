@@ -68,6 +68,57 @@ async function main() {
     });
   }
 
+  // Additional researched cars & brands (src/data/new-cars.json): photos, 360° model and specs in one file.
+  const newPath = join(__dirname, "..", "src", "data", "new-cars.json");
+  if (existsSync(newPath)) {
+    type NewCar = {
+      slug: string; brand: string; model: string; year: number; tagline: string; description: string; bodyType: string; priceFrom: number;
+      engine: string; powerHp: number; torqueNm: number; zeroToHundred: number; topSpeedKmh: number; drivetrain: string; transmission: string; seats: number; weightKg?: number;
+      exterior: { name: string; hex: string; finish?: string; priceDelta?: number }[]; variants: { name: string; priceDelta: number; note?: string }[];
+      photos: Photo[]; sketchfab: SketchModel | null; configuratorUrl?: string;
+    };
+    const extra = JSON.parse(readFileSync(newPath, "utf8").replace(/^﻿/, "")) as { brands: { slug: string; name: string; country: string; founded: number; accentHex: string; tagline: string }[]; cars: NewCar[] };
+    for (const b of extra.brands) await prisma.brand.upsert({ where: { slug: b.slug }, update: b, create: b });
+    for (const c of extra.cars) {
+      const brand = await prisma.brand.findUniqueOrThrow({ where: { slug: c.brand } });
+      const data = {
+        slug: c.slug, model: c.model, year: c.year, tagline: c.tagline, description: c.description, bodyType: c.bodyType, priceFrom: Math.round(c.priceFrom),
+        engine: c.engine, powerHp: c.powerHp, torqueNm: c.torqueNm, zeroToHundred: c.zeroToHundred, topSpeedKmh: c.topSpeedKmh, drivetrain: c.drivetrain, transmission: c.transmission, seats: c.seats, weightKg: c.weightKg ?? null,
+        heroImage: c.photos[0]?.url ?? null,
+        heroCredit: c.photos[0] ? `${c.photos[0].author} · ${c.photos[0].license} · Wikimedia Commons` : null,
+        sketchfabUid: c.sketchfab?.uid ?? null,
+        sketchfabCredit: c.sketchfab ? `“${c.sketchfab.name}” by ${c.sketchfab.author} on Sketchfab` : null,
+        sketchfabPaint: paint[c.slug] ?? null,
+        configuratorUrl: c.configuratorUrl ?? null,
+        status: "AVAILABLE", featured: false, brandId: brand.id,
+      };
+      const car = await prisma.car.upsert({ where: { slug: c.slug }, update: data, create: data });
+      await prisma.carColor.deleteMany({ where: { carId: car.id } });
+      await prisma.carVariant.deleteMany({ where: { carId: car.id } });
+      await prisma.carMedia.deleteMany({ where: { carId: car.id } });
+      await prisma.priceHistory.deleteMany({ where: { carId: car.id } });
+      await prisma.carColor.createMany({
+        data: [
+          ...c.exterior.map((x, i) => ({ name: x.name, hex: x.hex, finish: x.finish ?? "GLOSS", priceDelta: x.priceDelta ?? 0, kind: "EXTERIOR", sortOrder: i, carId: car.id })),
+          ...interiorPalette.map((x, i) => ({ name: x.name, hex: x.hex, priceDelta: x.priceDelta ?? 0, kind: "INTERIOR", sortOrder: i, carId: car.id })),
+          ...caliperPalette.map((x, i) => ({ name: x.name, hex: x.hex, priceDelta: x.priceDelta ?? 0, kind: "CALIPER", sortOrder: i, carId: car.id })),
+        ],
+      });
+      const variants = c.variants.length ? c.variants : [{ name: "Standard", priceDelta: 0 }];
+      await prisma.carVariant.createMany({ data: variants.map((v, i) => ({ name: v.name, priceDelta: Math.round(v.priceDelta), note: v.note ?? null, sortOrder: i, carId: car.id })) });
+      await prisma.carMedia.createMany({ data: c.photos.map((p, i) => ({ carId: car.id, type: "IMAGE", url: p.url, alt: `${brand.name} ${c.model}`, credit: `${p.author} · ${p.license} · ${p.page}`, sortOrder: i })) });
+      await prisma.priceHistory.createMany({
+        data: Array.from({ length: 12 }, (_, i) => {
+          const d = new Date();
+          d.setMonth(d.getMonth() - (11 - i));
+          const drift = 1 + Math.sin(i / 2 + c.priceFrom / 1e5) * 0.035 + i * 0.002;
+          return { carId: car.id, priceUsd: Math.round((c.priceFrom * drift) / 1000) * 1000, recordedAt: d, source: "seed" };
+        }),
+      });
+    }
+    console.log(`Seeded ${extra.brands.length} extra brands and ${extra.cars.length} extra cars.`);
+  }
+
   // Icons & their cars — every claim carries a public source URL. Rebuilt each run.
   const celebPath = join(__dirname, "..", "src", "data", "celebrities.json");
   if (existsSync(celebPath)) {

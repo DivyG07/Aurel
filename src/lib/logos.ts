@@ -1,4 +1,4 @@
-import { siAstonmartin, siBentley, siBugatti, siFerrari, siLamborghini, siMclaren, siPorsche, siRollsroyce } from "simple-icons";
+import { siAstonmartin, siBentley, siBugatti, siFerrari, siKoenigsegg, siLamborghini, siMaserati, siMclaren, siPorsche, siRollsroyce } from "simple-icons";
 
 // Monochrome brand marks from Simple Icons (CC0 icon data; the marks remain
 // trademarks of their owners). Brands without an icon fall back to a wordmark.
@@ -11,6 +11,8 @@ const icons: Record<string, { path: string; title: string }> = {
   "aston-martin": siAstonmartin,
   mclaren: siMclaren,
   porsche: siPorsche,
+  maserati: siMaserati,
+  koenigsegg: siKoenigsegg,
 };
 
 export const logoPath = (slug: string | null | undefined) => (slug ? (icons[slug]?.path ?? null) : null);

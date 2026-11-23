@@ -1,0 +1,652 @@
+{
+  "brands": [
+    {
+      "slug": "maserati",
+      "name": "Maserati",
+      "country": "Italy",
+      "founded": 1914,
+      "accentHex": "#0c2340",
+      "tagline": "The Trident of Modena"
+    },
+    {
+      "slug": "koenigsegg",
+      "name": "Koenigsegg",
+      "country": "Sweden",
+      "founded": 1994,
+      "accentHex": "#c9a227",
+      "tagline": "Engineered in Ängelholm"
+    },
+    {
+      "slug": "pagani",
+      "name": "Pagani",
+      "country": "Italy",
+      "founded": 1992,
+      "accentHex": "#5b6b7a",
+      "tagline": "Art and science, by hand"
+    }
+  ],
+  "cars": [
+    {
+      "slug": "maserati-mc20",
+      "brand": "maserati",
+      "model": "MC20",
+      "year": 2024,
+      "tagline": "A carbon-tub coupé built around the Nettuno V6.",
+      "description": "The MC20 pairs a carbon-fibre monocoque with Maserati's in-house 3.0-litre Nettuno V6, which uses Formula 1-derived pre-chamber combustion. Butterfly doors, a dry weight under 1,500 kg and an 8-speed dual-clutch gearbox make it the marque's first mid-engined supercar since the MC12.",
+      "bodyType": "HYPER",
+      "priceFrom": 239000,
+      "engine": "3.0L twin-turbo V6 (Nettuno, MTC pre-chamber)",
+      "powerHp": 621,
+      "torqueNm": 730,
+      "zeroToHundred": 2.9,
+      "topSpeedKmh": 325,
+      "drivetrain": "RWD",
+      "transmission": "8-speed dual-clutch",
+      "seats": 2,
+      "weightKg": 1475,
+      "weightType": "dry",
+      "estimated": [],
+      "specNotes": "Power converted from 630 CV x 0.9863 = 621 hp. Top speed is Maserati's \">325 km/h\", 0-100 is \"<2.9 s\". Price is the 2024 US MSRP for the coupé (excl. destination).",
+      "specSource": "https://www.cars.com/research/maserati-mc20-2024/specs/455372",
+      "exterior": [
+        {
+          "name": "Bianco Audace",
+          "hex": "#eeede8",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Nero Enigma",
+          "hex": "#0e0f12",
+          "finish": "METALLIC",
+          "priceDelta": 6000
+        },
+        {
+          "name": "Blu Infinito",
+          "hex": "#1f3c73",
+          "finish": "METALLIC",
+          "priceDelta": 6000
+        },
+        {
+          "name": "Rosso Vincente",
+          "hex": "#9e1622",
+          "finish": "METALLIC",
+          "priceDelta": 6000
+        },
+        {
+          "name": "Giallo Genio",
+          "hex": "#f0c419",
+          "finish": "GLOSS",
+          "priceDelta": 6000
+        },
+        {
+          "name": "Grigio Mistero",
+          "hex": "#8b8e92",
+          "finish": "METALLIC",
+          "priceDelta": 6000
+        }
+      ],
+      "variants": [
+        {
+          "name": "MC20 Cielo",
+          "priceDelta": 34000,
+          "note": "Spyder with electrochromic glass roof (US MSRP $273,000)"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/2023_Maserati_MC20_Black_HCC23.jpg/1920px-2023_Maserati_MC20_Black_HCC23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:2023_Maserati_MC20_Black_HCC23.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1123,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Maserati_MC20_%2853060861852-crop%29.jpg/1920px-Maserati_MC20_%2853060861852-crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Maserati_MC20_(53060861852-crop).jpg",
+          "author": "Alexandre Prevot from Nancy, France",
+          "license": "CC BY-SA 2.0",
+          "width": 1920,
+          "height": 1263,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Maserati_MC20_IAA_2021_1X7A0087.jpg/1920px-Maserati_MC20_IAA_2021_1X7A0087.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Maserati_MC20_IAA_2021_1X7A0087.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1183,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "6811b291cda74d468fab04298029135f",
+        "name": "2021 Maserati MC20",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2021-maserati-mc20-6811b291cda74d468fab04298029135f"
+      },
+      "configuratorUrl": "https://www.maserati.com/us/en/models/mc20",
+      "video": null
+    },
+    {
+      "slug": "koenigsegg-jesko",
+      "brand": "koenigsegg",
+      "model": "Jesko Attack",
+      "year": 2024,
+      "tagline": "A track-focused hypercar with a nine-speed Light Speed Transmission.",
+      "description": "Named after Christian von Koenigsegg's father, the Jesko Attack uses a 5.0-litre twin-turbo flat-plane V8 rated at 1,280 hp on petrol and 1,600 hp on E85. Its active aerodynamics generate up to 1,400 kg of downforce, and production of all Jesko variants is limited to 125 cars.",
+      "bodyType": "HYPER",
+      "priceFrom": 3000000,
+      "engine": "5.0L twin-turbo flat-plane V8",
+      "powerHp": 1600,
+      "torqueNm": 1500,
+      "zeroToHundred": 2.6,
+      "topSpeedKmh": 480,
+      "drivetrain": "RWD",
+      "transmission": "9-speed Light Speed Transmission (multi-clutch)",
+      "seats": 2,
+      "weightKg": 1420,
+      "weightType": "kerb",
+      "estimated": [
+        "zeroToHundred",
+        "topSpeedKmh",
+        "priceFrom"
+      ],
+      "specNotes": "Official: 1,600 hp on E85 (1,280 hp on 95 RON petrol), 1,500 Nm peak at 5,100 rpm, kerb 1,420 kg (dry 1,320 kg). Koenigsegg publishes no 0-100 or top speed for the Attack; 2.6 s is the commonly reported figure and 480 km/h reflects the theoretical figure quoted at the 2019 launch. No list price is published; reported transactions sit around $2.8-3.4M.",
+      "specSource": "https://www.koenigsegg.com/technical-specifications-jesko-attack",
+      "exterior": [
+        {
+          "name": "Naked Carbon",
+          "hex": "#1b1d20",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Crystal White",
+          "hex": "#f3f3f1",
+          "finish": "PEARL",
+          "priceDelta": 0
+        },
+        {
+          "name": "Racing Blue",
+          "hex": "#1f8fd6",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Tang Orange",
+          "hex": "#e4621b",
+          "finish": "PEARL",
+          "priceDelta": 0
+        },
+        {
+          "name": "Graphite Grey",
+          "hex": "#4a4d52",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Jesko Absolut",
+          "priceDelta": 0,
+          "note": "Low-drag, top-speed version; similar indicative price"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Koenigsegg_Jesko_Attack_3.jpg/1920px-Koenigsegg_Jesko_Attack_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Koenigsegg_Jesko_Attack_3.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1323,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Koenigsegg_Jesko_Attack_14.jpg/1920px-Koenigsegg_Jesko_Attack_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Koenigsegg_Jesko_Attack_14.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1167,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/2024_Koenigsegg_Jesko_Attack_4.jpg/1920px-2024_Koenigsegg_Jesko_Attack_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:2024_Koenigsegg_Jesko_Attack_4.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1093,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "18240b21b4d747c7b7e86a404c3a195a",
+        "name": "2023 Koenigsegg Jesko Attack",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2023-koenigsegg-jesko-attack-18240b21b4d747c7b7e86a404c3a195a"
+      },
+      "configuratorUrl": "https://www.koenigsegg.com/model/jesko-attack",
+      "video": null
+    },
+    {
+      "slug": "pagani-utopia",
+      "brand": "pagani",
+      "model": "Utopia",
+      "year": 2024,
+      "tagline": "A V12 hypercar offered with a seven-speed manual gearbox.",
+      "description": "The Utopia is Pagani's third hypercar, built around a bespoke AMG 6.0-litre twin-turbo V12 and a carbo-titanium chassis. It is offered with a seven-speed Xtrac manual or automated manual, and coupé production is limited to 99 cars.",
+      "bodyType": "HYPER",
+      "priceFrom": 2500000,
+      "engine": "6.0L twin-turbo V12 (Mercedes-AMG M158)",
+      "powerHp": 852,
+      "torqueNm": 1100,
+      "zeroToHundred": 2.8,
+      "topSpeedKmh": 350,
+      "drivetrain": "RWD",
+      "transmission": "7-speed Xtrac manual (automated manual optional)",
+      "seats": 2,
+      "weightKg": 1280,
+      "weightType": "dry",
+      "estimated": [
+        "zeroToHundred",
+        "topSpeedKmh",
+        "priceFrom"
+      ],
+      "specNotes": "Power converted from 864 CV x 0.9863 = 852 hp. Pagani does not publish 0-100 or top speed for the coupé; 2.8 s and 350 km/h are widely reported press estimates. Price converted from the EUR 2,180,000 (ex-tax) list price at ~1.15 USD/EUR.",
+      "specSource": "https://www.evo.co.uk/pagani/204841/all-new-pagani-utopia-revealed-with-852bhp-twin-turbocharged-v12",
+      "exterior": [
+        {
+          "name": "Carbonio Nudo",
+          "hex": "#1c1e22",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Argento",
+          "hex": "#b9bec4",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Blu Francia",
+          "hex": "#7ea3c4",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Giallo",
+          "hex": "#f2c21b",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Verde Militare",
+          "hex": "#4e5b45",
+          "finish": "MATTE",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Utopia Roadster",
+          "priceDelta": 400000,
+          "note": "Open-top version, 130 cars; indicative from EUR ~2.5M list"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Silver_Pagani_Utopia_FOS25.jpg/1920px-Silver_Pagani_Utopia_FOS25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Silver_Pagani_Utopia_FOS25.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1005,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/2024_Pagani_Utopia_%28no._26%29_in_Yellow_and_Black%2C_front_right.jpg/1920px-2024_Pagani_Utopia_%28no._26%29_in_Yellow_and_Black%2C_front_right.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:2024_Pagani_Utopia_(no._26)_in_Yellow_and_Black,_front_right.jpg",
+          "author": "Mr.choppers",
+          "license": "CC BY-SA 3.0",
+          "width": 1920,
+          "height": 1118,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Pagani_Utopia_%2855112638385%29.jpg/1920px-Pagani_Utopia_%2855112638385%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Pagani_Utopia_(55112638385).jpg",
+          "author": "Mustang Joe",
+          "license": "CC0",
+          "width": 1920,
+          "height": 1001,
+          "angle": "side"
+        }
+      ],
+      "sketchfab": {
+        "uid": "4787fa901db1454bb971ba83739d1de6",
+        "name": "Pagani Utopia 2023",
+        "author": "ZIRODESIGN",
+        "license": "Standard",
+        "url": "https://sketchfab.com/3d-models/pagani-utopia-2023-4787fa901db1454bb971ba83739d1de6",
+        "note": "Sketchfab Standard (store) licence: embedding is allowed, download/reuse requires purchase"
+      },
+      "configuratorUrl": "https://www.pagani.com/utopia/",
+      "video": null
+    },
+    {
+      "slug": "rolls-royce-spectre",
+      "brand": "rolls-royce",
+      "model": "Spectre",
+      "year": 2026,
+      "tagline": "The first fully electric Rolls-Royce, an ultra-luxury coupé.",
+      "description": "Spectre uses twin electric motors and a 102 kWh battery integrated into the marque's aluminium Architecture of Luxury. At 5.45 metres long with 23-inch wheels and Starlight doors, it is positioned as the spiritual successor to the Phantom Coupé.",
+      "bodyType": "GT",
+      "priceFrom": 397750,
+      "engine": "Dual electric motors, 102 kWh battery",
+      "powerHp": 577,
+      "torqueNm": 900,
+      "zeroToHundred": 4.5,
+      "topSpeedKmh": 250,
+      "drivetrain": "AWD",
+      "transmission": "Single-speed",
+      "seats": 4,
+      "weightKg": 2975,
+      "weightType": "kerb",
+      "estimated": [],
+      "specNotes": "Power converted from 585 PS x 0.9863 = 577 hp. Top speed electronically limited. Price is the 2026 US MSRP as listed by KBB (earlier model years listed at $420,000).",
+      "specSource": "https://www.kbb.com/rolls-royce/spectre/2026/",
+      "exterior": [
+        {
+          "name": "Arctic White",
+          "hex": "#f4f4f2",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Black Diamond",
+          "hex": "#121316",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Gunmetal",
+          "hex": "#4b4f55",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Dark Emerald",
+          "hex": "#1e3b32",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Twilight Purple",
+          "hex": "#3a2a4f",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Chartreuse",
+          "hex": "#9a9a2a",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Black Badge Spectre",
+          "priceDelta": 70000,
+          "note": "659 PS / 1,075 Nm; 2026 US MSRP $467,750"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/2023_Rolls-Royce_Spectre_EV_-_102kWh_%28585PS%29_Electric_-_Wittering_Blue_-_06-2024%2C_Front_Quarter.jpg/1920px-2023_Rolls-Royce_Spectre_EV_-_102kWh_%28585PS%29_Electric_-_Wittering_Blue_-_06-2024%2C_Front_Quarter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:2023_Rolls-Royce_Spectre_EV_-_102kWh_(585PS)_Electric_-_Wittering_Blue_-_06-2024,_Front_Quarter.jpg",
+          "author": "Harvey Bold",
+          "license": "CC0",
+          "width": 1920,
+          "height": 1101,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/2023_Rolls-Royce_Spectre_EV_-_102kWh_%28585PS%29_Electric_-_Wittering_Blue_-_06-2024%2C_Rear.jpg/1920px-2023_Rolls-Royce_Spectre_EV_-_102kWh_%28585PS%29_Electric_-_Wittering_Blue_-_06-2024%2C_Rear.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:2023_Rolls-Royce_Spectre_EV_-_102kWh_(585PS)_Electric_-_Wittering_Blue_-_06-2024,_Rear.jpg",
+          "author": "Harvey Bold",
+          "license": "CC0",
+          "width": 1920,
+          "height": 1360,
+          "angle": "rear-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/2024_Rolls-Royce_Spectre.jpg/1920px-2024_Rolls-Royce_Spectre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:2024_Rolls-Royce_Spectre.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1049,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "3bcee524fb4d4f18a043b0b9d8dbdbe7",
+        "name": "Rolls-Royce Spectre",
+        "author": "panderlaike_design",
+        "license": "CC Attribution",
+        "url": "https://sketchfab.com/3d-models/rolls-royce-spectre-3bcee524fb4d4f18a043b0b9d8dbdbe7",
+        "note": "Very high polygon count (~5.9M faces); slow to load on mobile"
+      },
+      "configuratorUrl": "https://www.rolls-roycemotorcars.com/en_GB/bespoke/configure-your-rolls-royce.html",
+      "video": null
+    },
+    {
+      "slug": "ferrari-purosangue",
+      "brand": "ferrari",
+      "model": "Purosangue",
+      "year": 2025,
+      "tagline": "Four doors, four seats and a naturally aspirated V12.",
+      "description": "The Purosangue is Ferrari's first four-door, four-seat model, powered by a front-mid-mounted 6.5-litre naturally aspirated V12 driving all four wheels. Rear-hinged rear doors and active suspension with Multimatic valves set it apart from conventional performance SUVs.",
+      "bodyType": "SUV",
+      "priceFrom": 398350,
+      "engine": "6.5L naturally aspirated V12",
+      "powerHp": 715,
+      "torqueNm": 716,
+      "zeroToHundred": 3.3,
+      "topSpeedKmh": 310,
+      "drivetrain": "AWD",
+      "transmission": "8-speed dual-clutch",
+      "seats": 4,
+      "weightKg": 2033,
+      "weightType": "dry",
+      "estimated": [],
+      "specNotes": "Power converted from 725 CV x 0.9863 = 715 hp. Price is the launch US MSRP; some later listings quote up to ~$428,000.",
+      "specSource": "https://www.cars.com/research/ferrari-purosangue-2025/specs/",
+      "exterior": [
+        {
+          "name": "Rosso Corsa",
+          "hex": "#c8102e",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Nero Daytona",
+          "hex": "#0f0f12",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Grigio Titanio",
+          "hex": "#6d7075",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Blu Pozzi",
+          "hex": "#1d2c4c",
+          "finish": "METALLIC",
+          "priceDelta": 6500
+        },
+        {
+          "name": "Bianco Cervino",
+          "hex": "#f1f1ee",
+          "finish": "GLOSS",
+          "priceDelta": 6500
+        }
+      ],
+      "variants": [],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Ferrari_Purosangue_IMG_9554.jpg/1920px-Ferrari_Purosangue_IMG_9554.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Ferrari_Purosangue_IMG_9554.jpg",
+          "author": "Alexander-93",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1072,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Ferrari_Purosangue_DSC_7002.jpg/1920px-Ferrari_Purosangue_DSC_7002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Ferrari_Purosangue_DSC_7002.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1094,
+          "angle": "rear-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Ferrari_Purosangue_2025.jpg/1920px-Ferrari_Purosangue_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Ferrari_Purosangue_2025.jpg",
+          "author": "Calreyn88",
+          "license": "CC BY 4.0",
+          "width": 1920,
+          "height": 1238,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "541dc84c37174356a7b0efd44904593d",
+        "name": "2023 Ferrari Purosangue",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2023-ferrari-purosangue-541dc84c37174356a7b0efd44904593d"
+      },
+      "configuratorUrl": "https://carconfigurator.ferrari.com/en_EN/ferrari_car_configurator/purosangue",
+      "video": null
+    },
+    {
+      "slug": "lamborghini-temerario",
+      "brand": "lamborghini",
+      "model": "Temerario",
+      "year": 2026,
+      "tagline": "A 10,000 rpm twin-turbo V8 plug-in hybrid.",
+      "description": "The Temerario replaces the Huracán with a 4.0-litre twin-turbo V8 that revs to 10,000 rpm, assisted by three electric motors for a combined 920 CV. It is the second model in Lamborghini's High Performance Electrified Vehicle range, after the Revuelto.",
+      "bodyType": "HYPER",
+      "priceFrom": 357621,
+      "engine": "4.0L twin-turbo V8 + 3 electric motors (PHEV)",
+      "powerHp": 907,
+      "torqueNm": 800,
+      "zeroToHundred": 2.7,
+      "topSpeedKmh": 343,
+      "drivetrain": "AWD",
+      "transmission": "8-speed dual-clutch",
+      "seats": 2,
+      "weightKg": 1690,
+      "weightType": "dry",
+      "estimated": [],
+      "specNotes": "Power converted from 920 CV (system) x 0.9863 = 907 hp. 800 Nm is system torque (engine alone 730 Nm). Price is the US base before the $3,995 destination fee ($361,616 delivered).",
+      "specSource": "https://www.lamborghini.com/en-en/models/temerario-models/temerario",
+      "exterior": [
+        {
+          "name": "Verde Mantis",
+          "hex": "#5fb32e",
+          "finish": "PEARL",
+          "priceDelta": 0
+        },
+        {
+          "name": "Giallo Inti",
+          "hex": "#f6c400",
+          "finish": "PEARL",
+          "priceDelta": 0
+        },
+        {
+          "name": "Arancio Borealis",
+          "hex": "#e8621c",
+          "finish": "PEARL",
+          "priceDelta": 0
+        },
+        {
+          "name": "Nero Noctis",
+          "hex": "#0d0d0f",
+          "finish": "GLOSS",
+          "priceDelta": 0
+        },
+        {
+          "name": "Grigio Telesto",
+          "hex": "#7d8186",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        },
+        {
+          "name": "Blu Cepheus",
+          "hex": "#1b2f6b",
+          "finish": "METALLIC",
+          "priceDelta": 0
+        }
+      ],
+      "variants": [
+        {
+          "name": "Alleggerita package",
+          "priceDelta": 45000,
+          "note": "Lightweight package with carbon aero; $78,600 with livery paint"
+        }
+      ],
+      "photos": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Lamborghini_Temerario_IMG_5361.jpg/1920px-Lamborghini_Temerario_IMG_5361.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Lamborghini_Temerario_IMG_5361.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 896,
+          "angle": "front-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Lamborghini_Temerario_IMG_5364.jpg/1920px-Lamborghini_Temerario_IMG_5364.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:Lamborghini_Temerario_IMG_5364.jpg",
+          "author": "Alexander Migl",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1278,
+          "angle": "rear-3/4"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/2025_Lamborghini_Temerario.jpg/1920px-2025_Lamborghini_Temerario.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "page": "https://commons.wikimedia.org/wiki/File:2025_Lamborghini_Temerario.jpg",
+          "author": "MrWalkr",
+          "license": "CC BY-SA 4.0",
+          "width": 1920,
+          "height": 1043,
+          "angle": "front-3/4"
+        }
+      ],
+      "sketchfab": {
+        "uid": "223504eacee54eaf9169cc60db1c0a70",
+        "name": "2025 Lamborghini Temerario",
+        "author": "Ddiaz Design",
+        "license": "CC Attribution-NonCommercial-ShareAlike",
+        "url": "https://sketchfab.com/3d-models/2025-lamborghini-temerario-223504eacee54eaf9169cc60db1c0a70"
+      },
+      "configuratorUrl": "https://www.lamborghini.com/en-en/models/temerario-models/temerario",
+      "video": null
+    }
+  ]
+}

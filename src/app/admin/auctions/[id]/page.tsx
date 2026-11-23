@@ -30,10 +30,16 @@ export default async function ManageAuction({ params }: { params: Promise<{ id: 
           </div>
         }
       />
-      <AuctionForm
-        cars={cars.map((c) => ({ id: c.id, label: `${c.year} ${c.brand.name} ${c.model}`, price: c.priceFrom }))}
-        values={{ ...a, startsAt: a.startsAt.toISOString(), endsAt: a.endsAt.toISOString() }}
-      />
+      {a.carId ? (
+        <AuctionForm
+          cars={cars.map((c) => ({ id: c.id, label: `${c.year} ${c.brand.name} ${c.model}`, price: c.priceFrom }))}
+          values={{ ...a, carId: a.carId, startsAt: a.startsAt.toISOString(), endsAt: a.endsAt.toISOString() }}
+        />
+      ) : (
+        <p className="max-w-2xl border border-white/10 bg-onyx p-5 text-sm text-mist">
+          This is a member-submitted lot ({a.make} {a.model}). Its details belong to the seller, who can edit them until bidding opens. You can cancel or delete it above.
+        </p>
+      )}
       <h2 className="eyebrow mb-4 mt-14">Bids</h2>
       <Table head={["Time", "Bidder", "Amount"]} empty={!a.bids.length}>
         {a.bids.map((b, i) => (

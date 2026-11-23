@@ -9,6 +9,8 @@ import { IntroLoader } from "@/components/site/IntroLoader";
 import { CompareTray } from "@/components/compare/CompareTray";
 import { Toaster } from "@/components/ui/Toaster";
 import { BrandMark } from "@/components/site/BrandMark";
+import { OnboardingGate } from "@/components/site/OnboardingGate";
+import { ZapierChatbot } from "@/components/site/ZapierChatbot";
 import { site } from "@/lib/site";
 import { COOKIE, themeFor, themeVars } from "@/lib/themes";
 import { currentUser } from "@/lib/session";
@@ -70,6 +72,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <main>{children}</main>
           <Footer />
           <CompareTray />
+          <OnboardingGate needed={!!user && !user.onboarded} />
+          <ZapierChatbot />
           <Toaster />
         </SmoothScroll>
       </body>

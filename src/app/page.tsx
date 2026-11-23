@@ -9,6 +9,9 @@ import { getBrands, getCars } from "@/lib/cars";
 import { getAuctions } from "@/lib/auctions";
 import { COOKIE } from "@/lib/themes";
 import { getHeroVideos } from "@/lib/media";
+import { currentUser } from "@/lib/session";
+import { db } from "@/lib/db";
+import { parseList } from "@/lib/prefs";
 
 export const dynamic = "force-dynamic";
 
@@ -20,7 +23,11 @@ export default async function Home() {
     if (exists) redirect(`/brands/${world}`);
   }
 
-  const [cars, brands, auctions] = await Promise.all([getCars(), getBrands(), getAuctions()]);
+  const [cars, brands, auctions, user] = await Promise.all([getCars(), getBrands(), getAuctions(), currentUser()]);
+  // Personalised row from the member's onboarding answers (top 3 marques).
+  const me = user ? await db.user.findUnique({ where: { id: user.id }, select: { favoriteBrands: true, name: true } }) : null;
+  const favs = parseList(me?.favoriteBrands);
+  const picked = favs.length ? cars.filter((c) => favs.includes(c.brand.slug)).sort((a, b) => favs.indexOf(a.brand.slug) - favs.indexOf(b.brand.slug)).slice(0, 6) : [];
   const featured = cars.filter((c) => c.featured);
   const live = auctions.filter((a) => a.phase === "LIVE");
 
@@ -29,6 +36,21 @@ export default async function Home() {
       <Hero cars={featured.length ? featured : cars.slice(0, 6)} videos={getHeroVideos()} cutEveryMs={4000} eyebrow="Private Collection · Virtual Showroom" title={["Where icons", "find their keepers"]} />
       <Marquee items={brands.map((b) => b.name)} />
       {live[0] && <LiveAuctionStrip auction={live[0]} />}
+
+      {picked.length > 0 && (
+        <section className="mx-auto max-w-[1480px] px-5 pt-24 md:px-10">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="eyebrow">Picked for you{me?.name ? `, ${me.name.split(" ")[0]}` : ""}</p>
+              <h2 className="mt-4 font-display text-4xl md:text-6xl">From your favourite marques</h2>
+            </div>
+            <Link href="/account#preferences" className="text-[11px] uppercase tracking-[0.25em] text-gold hover:text-gold-soft">Change preferences →</Link>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {picked.map((car) => <CarCard key={car.id} car={car} />)}
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-[1480px] px-5 py-24 md:px-10">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">

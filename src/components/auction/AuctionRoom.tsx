@@ -12,7 +12,8 @@ import { toast } from "@/lib/stores";
 import { Countdown, useNow } from "@/components/ui/Countdown";
 import { Counter } from "@/components/ui/Counter";
 import { Viewer360 } from "@/components/car/Viewer360";
-import { PhaseBadge } from "./AuctionCard";
+import { ListingTypeBadge, PhaseBadge } from "./AuctionCard";
+import { conditionLabel } from "@/lib/types";
 
 const POLL_ONLY = process.env.NEXT_PUBLIC_REALTIME === "poll";
 
@@ -23,6 +24,7 @@ export function AuctionRoom({ initial, userId }: { initial: AuctionView; userId:
   const [watching, setWatching] = useState(1);
   const [connected, setConnected] = useState(false);
   const [view, setView] = useState<"photo" | "360">("photo");
+  const [photo, setPhoto] = useState(0);
   const [amount, setAmount] = useState(initial.nextMinBid);
   const [pending, start] = useTransition();
   const [flash, setFlash] = useState(0);
@@ -97,7 +99,7 @@ export function AuctionRoom({ initial, userId }: { initial: AuctionView; userId:
             {view === "360" && a.car.sketchfabUid ? (
               <Viewer360 uid={a.car.sketchfabUid} title={a.car.model} credit={a.car.sketchfabCredit} />
             ) : (
-              a.car.heroImage && <Image src={a.car.heroImage} alt={a.car.model} fill priority sizes="60vw" className="animate-kenburns object-cover" />
+              (a.images[photo] ?? a.car.heroImage) && <Image key={a.images[photo] ?? a.car.heroImage} src={(a.images[photo] ?? a.car.heroImage)!} alt={a.car.model} fill priority sizes="60vw" className="object-cover" />
             )}
             <div className="absolute left-4 top-4 flex items-center gap-2">
               <PhaseBadge phase={phase} />
@@ -118,22 +120,50 @@ export function AuctionRoom({ initial, userId }: { initial: AuctionView; userId:
           </div>
           {view === "photo" && a.car.heroCredit && <p className="mt-2 text-[10px] text-mist">Photo: {a.car.heroCredit}</p>}
 
-          <p className="eyebrow mt-10">{a.car.brand} · {a.car.year}</p>
+          {a.images.length > 1 && (
+            <div className="mt-3 flex gap-2 overflow-x-auto" data-lenis-prevent>
+              {a.images.map((src, n) => (
+                <button key={src} onClick={() => { setView("photo"); setPhoto(n); }} className={`relative h-16 w-24 shrink-0 overflow-hidden border ${photo === n ? "border-gold" : "border-white/15 opacity-70 hover:opacity-100"}`}>
+                  <Image src={src} alt="" fill sizes="96px" className="object-cover" />
+                </button>
+              ))}
+            </div>
+          )}
+
+          <div className="mt-10 flex flex-wrap items-center gap-2">
+            <ListingTypeBadge type={a.listingType} />
+            {a.seller && <span className="text-xs text-mist">Listed by {a.seller.name}</span>}
+          </div>
+          <p className="eyebrow mt-4">{a.car.brand}{a.car.year ? ` · ${a.car.year}` : ""}</p>
           <h1 className="mt-3 font-display text-4xl leading-tight md:text-6xl">{a.title}</h1>
           <div className="mt-8 grid grid-cols-2 gap-px bg-white/5 sm:grid-cols-4">
-            {[
-              ["Power", `${a.car.specs.powerHp} hp`],
-              ["0–100", `${a.car.specs.zeroToHundred}s`],
-              ["Top speed", `${a.car.specs.topSpeedKmh} km/h`],
-              ["Drivetrain", a.car.specs.drivetrain],
-            ].map(([k, v]) => (
+            {(a.car.specs
+              ? [
+                  ["Power", `${a.car.specs.powerHp} hp`],
+                  ["0–100", `${a.car.specs.zeroToHundred}s`],
+                  ["Top speed", `${a.car.specs.topSpeedKmh} km/h`],
+                  ["Drivetrain", a.car.specs.drivetrain],
+                ]
+              : [
+                  ["Year", a.car.year ? String(a.car.year) : "—"],
+                  ["Mileage", a.details.mileageKm != null ? `${a.details.mileageKm.toLocaleString()} km` : "—"],
+                  ["Condition", a.details.condition ? (conditionLabel[a.details.condition] ?? a.details.condition) : "—"],
+                  ["Location", a.details.location ?? "—"],
+                ]
+            ).map(([k, v]) => (
               <div key={k} className="bg-ink p-5">
                 <p className="text-[9px] uppercase tracking-[0.25em] text-mist">{k}</p>
                 <p className="mt-1 text-lg">{v}</p>
               </div>
             ))}
           </div>
-          <Link href={`/cars/${a.car.slug}`} className="btn btn-ghost mt-6">Full specification →</Link>
+          {a.details.description && (
+            <div className="mt-8">
+              <p className="eyebrow">From the seller</p>
+              <p className="mt-3 whitespace-pre-wrap leading-relaxed text-ivory/85">{a.details.description}</p>
+            </div>
+          )}
+          {a.car.slug && <Link href={`/cars/${a.car.slug}`} className="btn btn-ghost mt-6">Full specification →</Link>}
         </div>
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
@@ -166,7 +196,10 @@ export function AuctionRoom({ initial, userId }: { initial: AuctionView; userId:
               </p>
             )}
 
-            {live && (
+            {userId && a.seller?.id === userId && (
+              <p className="mt-6 border border-white/10 px-3 py-3 text-sm text-mist">This is your listing — you can watch bids come in, but you can&apos;t bid on it.</p>
+            )}
+            {live && a.seller?.id !== userId && (
               userId ? (
                 <div className="mt-6 space-y-3">
                   <div className="flex gap-2">

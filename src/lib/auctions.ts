@@ -2,6 +2,7 @@ import "server-only";
 import { EventEmitter } from "node:events";
 import { db } from "./db";
 import { mirror } from "./sheets";
+import { imageUrl, parseIds } from "./uploads";
 import type { AuctionPhase, AuctionView } from "./types";
 
 // ─── Live event bus (single Node process; swap for Redis/Ably when scaling out) ──
@@ -11,13 +12,19 @@ export const watchers = g.auctionWatchers ?? (g.auctionWatchers = new Map());
 
 const include = {
   car: { include: { brand: true } },
+  seller: { select: { id: true, name: true, email: true } },
   bids: { orderBy: { amount: "desc" as const }, take: 30, include: { user: { select: { name: true, email: true } } } },
   _count: { select: { bids: true } },
 };
 type Row = NonNullable<Awaited<ReturnType<typeof loadRow>>>;
 const loadRow = (id: string) => db.auction.findUnique({ where: { id }, include });
 
+/** Statuses a member's submission passes through before it becomes a real lot. */
+export const REVIEW_STATUSES = ["PENDING_REVIEW", "REJECTED"];
+
 export function phaseOf(a: { status: string; startsAt: Date; endsAt: Date }, now = Date.now()): AuctionPhase {
+  if (a.status === "PENDING_REVIEW") return "PENDING";
+  if (a.status === "REJECTED") return "REJECTED";
   if (a.status === "CANCELLED") return "CANCELLED";
   if (now < a.startsAt.getTime()) return "UPCOMING";
   if (now < a.endsAt.getTime()) return "LIVE";
@@ -31,9 +38,13 @@ export function maskName(name?: string | null, email?: string | null) {
   return last ? `${f} ${last[0]}.` : f;
 }
 
+const brandSlugFor = (make: string | null) => (make ? make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") : null);
+
 export function toAuctionView(a: Row): AuctionView {
   const top = a.bids[0];
   const current = top?.amount ?? null;
+  const images = parseIds(a.imageIds).map(imageUrl);
+  const c = a.car;
   return {
     id: a.id,
     title: a.title,
@@ -48,28 +59,35 @@ export function toAuctionView(a: Row): AuctionView {
     nextMinBid: current == null ? a.startingBid : current + a.bidIncrement,
     bidCount: a._count.bids,
     bids: a.bids.map((b) => ({ id: b.id, amount: b.amount, bidder: maskName(b.user.name, b.user.email), userId: b.userId, at: b.createdAt.toISOString() })),
-    car: {
-      slug: a.car.slug,
-      model: a.car.model,
-      year: a.car.year,
-      brand: a.car.brand.name,
-      brandSlug: a.car.brand.slug,
-      heroImage: a.car.heroImage,
-      heroCredit: a.car.heroCredit,
-      sketchfabUid: a.car.sketchfabUid,
-      sketchfabCredit: a.car.sketchfabCredit,
-      specs: {
-        engine: a.car.engine,
-        powerHp: a.car.powerHp,
-        torqueNm: a.car.torqueNm,
-        zeroToHundred: a.car.zeroToHundred,
-        topSpeedKmh: a.car.topSpeedKmh,
-        drivetrain: a.car.drivetrain,
-        transmission: a.car.transmission,
-        seats: a.car.seats,
-        weightKg: a.car.weightKg,
-      },
-    },
+    listingType: (a.listingType as AuctionView["listingType"]) ?? "HOUSE",
+    seller: a.seller ? { id: a.seller.id, name: maskName(a.seller.name, a.seller.email) } : null,
+    details: { mileageKm: a.mileageKm, condition: a.condition, description: a.description, location: a.location },
+    images,
+    car: c
+      ? {
+          slug: c.slug,
+          model: c.model,
+          year: a.year ?? c.year,
+          brand: c.brand.name,
+          brandSlug: c.brand.slug,
+          heroImage: images[0] ?? c.heroImage,
+          heroCredit: images[0] ? null : c.heroCredit,
+          sketchfabUid: c.sketchfabUid,
+          sketchfabCredit: c.sketchfabCredit,
+          specs: { engine: c.engine, powerHp: c.powerHp, torqueNm: c.torqueNm, zeroToHundred: c.zeroToHundred, topSpeedKmh: c.topSpeedKmh, drivetrain: c.drivetrain, transmission: c.transmission, seats: c.seats, weightKg: c.weightKg },
+        }
+      : {
+          slug: null,
+          model: a.model ?? "Unnamed car",
+          year: a.year,
+          brand: a.make ?? "—",
+          brandSlug: brandSlugFor(a.make),
+          heroImage: images[0] ?? null,
+          heroCredit: null,
+          sketchfabUid: null,
+          sketchfabCredit: null,
+          specs: null,
+        },
   };
 }
 
@@ -82,6 +100,11 @@ async function settle(a: Row) {
   if (won) {
     await db.notification.create({ data: { userId: top.userId, type: "SYSTEM", title: "You won the auction", body: `${a.title} — winning bid $${top.amount.toLocaleString()}. Your advisor will be in touch.`, href: `/auctions/${a.id}` } });
   }
+  if (a.sellerId) {
+    await db.notification.create({
+      data: { userId: a.sellerId, type: "SYSTEM", title: won ? "Your car sold" : "Your auction closed", body: won ? `${a.title} sold for $${top!.amount.toLocaleString()}.` : `${a.title} ended without meeting the reserve.`, href: `/auctions/${a.id}` },
+    });
+  }
   mirror("Auctions", { id: a.id, title: a.title, status: won ? "SETTLED" : "ENDED", winningBid: top?.amount ?? "", winner: top?.user.email ?? "" }, "id");
 }
 
@@ -92,12 +115,18 @@ export async function getAuction(id: string) {
   return toAuctionView(row);
 }
 
+/** Public lots only — submissions awaiting review (or rejected) never appear here. */
 export async function getAuctions() {
-  const rows = await db.auction.findMany({ include, orderBy: { startsAt: "asc" } });
+  const rows = await db.auction.findMany({ where: { status: { notIn: REVIEW_STATUSES } }, include, orderBy: { startsAt: "asc" } });
   await Promise.all(rows.map(settle));
   return rows.map(toAuctionView);
 }
 
+/** A member's own submissions and lots, any status. */
+export async function getMyListings(userId: string) {
+  const rows = await db.auction.findMany({ where: { sellerId: userId }, include, orderBy: { createdAt: "desc" } });
+  return rows.map((r) => ({ ...toAuctionView(r), status: r.status, reviewNote: r.reviewNote }));
+}
 export class BidError extends Error {}
 
 export async function placeBid(auctionId: string, userId: string, amount: number) {
@@ -107,6 +136,8 @@ export async function placeBid(auctionId: string, userId: string, amount: number
     if (!a) throw new BidError("Auction not found.");
     const now = Date.now();
     const phase = phaseOf(a, now);
+    if (phase === "PENDING" || phase === "REJECTED") throw new BidError("This lot isn't open for bidding.");
+    if (a.sellerId === userId) throw new BidError("You can't bid on your own car.");
     if (phase === "UPCOMING") throw new BidError("Bidding hasn't opened yet.");
     if (phase !== "LIVE") throw new BidError("This auction has closed.");
     const top = a.bids[0];

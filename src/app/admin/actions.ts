@@ -229,6 +229,34 @@ export async function deleteAuction(f: FormData) {
   redirect("/admin/auctions");
 }
 
+// ─── Member-submitted lots ───────────────────────────────────────────────────
+
+export async function reviewListing(f: FormData) {
+  const admin = await requireAdmin();
+  const id = str(f, "id");
+  const decision = str(f, "decision");
+  const note = str(f, "note").slice(0, 500) || null;
+  const a = await db.auction.findUnique({ where: { id } });
+  if (!a || a.status !== "PENDING_REVIEW") redirect("/admin/auctions");
+  if (decision === "approve") {
+    // If the requested start has already passed while waiting for review, open it now and keep the duration.
+    const now = Date.now();
+    const duration = a.endsAt.getTime() - a.startsAt.getTime();
+    const startsAt = a.startsAt.getTime() < now ? new Date(now) : a.startsAt;
+    const endsAt = new Date(startsAt.getTime() + duration);
+    await db.auction.update({ where: { id }, data: { status: "SCHEDULED", reviewNote: note, startsAt, endsAt } });
+    if (a.sellerId) await db.notification.create({ data: { userId: a.sellerId, type: "SYSTEM", title: "Your car was approved for auction", body: `${a.title} goes live ${startsAt.toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })}.`, href: `/auctions/${id}` } });
+  } else {
+    await db.auction.update({ where: { id }, data: { status: "REJECTED", reviewNote: note ?? "Not approved." } });
+    if (a.sellerId) await db.notification.create({ data: { userId: a.sellerId, type: "SYSTEM", title: "Your auction listing wasn't approved", body: note ?? "See your account for details.", href: "/account#listings" } });
+  }
+  await audit(admin.id, decision === "approve" ? "listing.approve" : "listing.reject", "Auction", id, { note });
+  mirror("Auctions", { id, title: a.title, type: a.listingType, status: decision === "approve" ? "SCHEDULED" : "REJECTED" }, "id");
+  revalidatePath("/auctions");
+  revalidatePath("/admin/auctions");
+  redirect("/admin/auctions");
+}
+
 // ─── Users ───────────────────────────────────────────────────────────────────
 
 export async function setBanned(f: FormData) {
@@ -336,7 +364,7 @@ export async function syncSheets(): Promise<ActionState> {
     replaceSheet("Users", users.map((u) => ({ id: u.id, email: u.email, name: u.name, role: u.role, provider: u.accounts.map((a) => a.provider).join(", ") || (u.passwordHash ? "credentials" : ""), created: u.createdAt, lastLogin: u.lastLoginAt, logins: u.loginCount, banned: u.banned }))),
     replaceSheet("Logins", logins.map((l) => ({ id: l.id, time: l.createdAt, email: l.email, provider: l.provider, kind: l.kind, ip: l.ip, userAgent: l.userAgent }))),
     replaceSheet("Listings", cars.map((c) => ({ id: c.id, slug: c.slug, brand: c.brand.name, model: c.model, year: c.year, priceUsd: c.priceFrom, status: c.status, featured: c.featured, updated: c.updatedAt }))),
-    replaceSheet("Auctions", auctions.map((a) => ({ id: a.id, title: a.title, car: `${a.car.brand.name} ${a.car.model}`, startsAt: a.startsAt, endsAt: a.endsAt, startingBid: a.startingBid, reserve: a.reservePrice, increment: a.bidIncrement, status: a.status }))),
+    replaceSheet("Auctions", auctions.map((a) => ({ id: a.id, title: a.title, car: a.car ? `${a.car.brand.name} ${a.car.model}` : `${a.make ?? ""} ${a.model ?? ""}`.trim(), type: a.listingType, startsAt: a.startsAt, endsAt: a.endsAt, startingBid: a.startingBid, reserve: a.reservePrice, increment: a.bidIncrement, status: a.status }))),
     replaceSheet("Bids", bids.map((b) => ({ id: b.id, time: b.createdAt, auctionId: b.auctionId, auction: b.auction.title, bidder: b.user.email, amount: b.amount }))),
     replaceSheet("Inquiries", inquiries.map((i) => ({ id: i.id, time: i.createdAt, type: i.type, status: i.status, name: i.name, email: i.email, phone: i.phone, car: i.car?.model, message: i.message }))),
     replaceSheet("Subscribers", subscribers.map((s) => ({ id: s.id, time: s.createdAt, email: s.email }))),

@@ -59,6 +59,7 @@ export function Header({ user, brands, activeBrand, montage }: Props) {
     { label: "Collection", href: "/cars" },
     { label: "Marques", onClick: () => setWorlds(true) },
     { label: "Auctions", href: "/auctions", live: true },
+    { label: "Forum", href: "/forum" },
     { label: "Icons", href: "/icons" },
     { label: "Compare", href: "/compare", count: mounted ? compareCount : 0 },
     { label: "Concierge", href: "/concierge" },
@@ -88,7 +89,7 @@ export function Header({ user, brands, activeBrand, montage }: Props) {
             )}
           </div>
 
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
             {nav.map((n) => {
               const inner = (
                 <>
@@ -128,7 +129,9 @@ export function Header({ user, brands, activeBrand, montage }: Props) {
                     <motion.div initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} className="absolute right-0 mt-2 w-56 border border-white/10 bg-onyx p-2 shadow-2xl" style={{ borderRadius: "var(--radius)" }}>
                       <p className="truncate px-3 py-2 text-xs text-mist">{user.email}</p>
                       {user.role === "ADMIN" && <MenuLink href="/admin" label="Admin console" accent />}
-                      <MenuLink href="/account" label="My bids & account" />
+                      <MenuLink href="/account" label="My account" />
+                      <MenuLink href="/auctions/sell" label="Sell a car" />
+                      <MenuLink href="/forum/new" label="New forum post" />
                       <MenuLink href="/wishlist" label="Wishlist" />
                       <MenuLink href="/compare" label="Compare" />
                       <button onClick={() => signOut({ redirectTo: "/" })} className="w-full px-3 py-2 text-left text-sm text-ivory/80 hover:bg-white/5 hover:text-ivory">

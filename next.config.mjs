@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Forum posts and auction listings upload a few compressed photos through server actions.
+  experimental: { serverActions: { bodySizeLimit: "5mb" } },
   env: {
     // Netlify sets NETLIFY=true at build time. Serverless functions don't share memory,
     // so the auction room polls there instead of using the in-process SSE bus.

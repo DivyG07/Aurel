@@ -10,7 +10,7 @@ import { clientIp, isHuman } from "@/lib/human";
 
 declare module "next-auth" {
   interface Session {
-    user: { id: string; role: string } & DefaultSession["user"];
+    user: { id: string; role: string; onboarded: boolean } & DefaultSession["user"];
   }
 }
 
@@ -75,17 +75,19 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       const id = (user?.id ?? token.sub) as string | undefined;
       if (!id) return token;
       // Re-read every time so bans and role changes apply immediately.
-      const row = await db.user.findUnique({ where: { id }, select: { role: true, banned: true, email: true, name: true, image: true } });
+      const row = await db.user.findUnique({ where: { id }, select: { role: true, banned: true, email: true, name: true, image: true, onboardedAt: true } });
       if (!row || row.banned) return null;
       token.sub = id;
       token.role = isAdminEmail(row.email) ? "ADMIN" : row.role === "ADMIN" || row.role === "SUPERADMIN" ? "COLLECTOR" : row.role;
       token.name = row.name;
       token.picture = row.image;
+      token.onboarded = !!row.onboardedAt;
       return token;
     },
     async session({ session, token }) {
       session.user.id = token.sub as string;
       session.user.role = (token.role as string) ?? "COLLECTOR";
+      session.user.onboarded = token.onboarded !== false;
       return session;
     },
   },

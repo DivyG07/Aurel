@@ -31,10 +31,22 @@ model User {
   banned        Boolean   @default(false)
   lastLoginAt   DateTime?
   loginCount    Int       @default(0)
+  // Onboarding answers (asked once after first sign-in)
+  favoriteBrands String? // JSON array of up to 3 brand slugs
+  budget        String? // UNDER_250K | 250K_500K | 500K_1M | OVER_1M
+  interests     String? // JSON array: BUYING | SELLING | AUCTIONS | COLLECTING | JUST_LOOKING
+  carsOwned     String? // NONE | ONE_TO_THREE | FOUR_TO_TEN | TEN_PLUS
+  bio           String?
+  onboardedAt   DateTime?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
   loginEvents   LoginEvent[]
+  posts         ForumPost[]
+  comments      ForumComment[]
+  votes         ForumVote[]
+  uploads       Upload[]
+  auctionsListed Auction[] @relation("SellerAuctions")
   accounts      Account[]
   sessions      Session[]
   wishlist      WishlistItem[]
@@ -149,6 +161,7 @@ model Car {
   media         CarMedia[]
   wishlistItems WishlistItem[]
   auctions      Auction[]
+  forumPosts    ForumPost[]
   celebrityCars CelebrityCar[]
   inquiries     Inquiry[]
   priceHistory  PriceHistory[]
@@ -264,8 +277,21 @@ model GarageCar {
 
 model Auction {
   id            String   @id @default(cuid())
-  carId         String
-  car           Car      @relation(fields: [carId], references: [id])
+  // House lots link a catalog car. Member-submitted lots describe their own car below instead.
+  carId         String?
+  car           Car?     @relation(fields: [carId], references: [id])
+  listingType   String   @default("HOUSE") // HOUSE | DEALER (first-hand) | COLLECTOR (second-hand)
+  sellerId      String?
+  seller        User?    @relation("SellerAuctions", fields: [sellerId], references: [id], onDelete: SetNull)
+  make          String?
+  model         String?
+  year          Int?
+  mileageKm     Int?
+  condition     String? // NEW | EXCELLENT | VERY_GOOD | GOOD | PROJECT
+  description   String?
+  location      String?
+  imageIds      String? // JSON array of Upload ids
+  reviewNote    String? // admin's note when rejecting
   title         String
   startingBid   Int
   reservePrice  Int?
@@ -274,7 +300,7 @@ model Auction {
   startsAt      DateTime
   endsAt        DateTime
   antiSnipeSecs Int      @default(120) // extend end time when a bid lands in the final window
-  status        String   @default("SCHEDULED") // SCHEDULED | LIVE | ENDED | CANCELLED | SETTLED
+  status        String   @default("SCHEDULED") // PENDING_REVIEW | REJECTED | SCHEDULED | LIVE | ENDED | CANCELLED | SETTLED
   winnerBidId   String?
   createdAt     DateTime @default(now())
   bids          Bid[]
@@ -291,6 +317,80 @@ model Bid {
   createdAt DateTime @default(now())
 
   @@index([auctionId, amount])
+}
+
+// ─── Uploads (images stored in Postgres; served by /api/uploads/[id]) ────────
+
+model Upload {
+  id        String   @id @default(cuid())
+  ownerId   String
+  owner     User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  mime      String
+  size      Int
+  width     Int?
+  height    Int?
+  data      Bytes
+  createdAt DateTime @default(now())
+}
+
+// ─── Community forum ─────────────────────────────────────────────────────────
+
+model ForumPost {
+  id           String         @id @default(cuid())
+  authorId     String
+  author       User           @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  title        String
+  body         String
+  flair        String         @default("DISCUSSION") // DISCUSSION | COMPARISON | QUESTION | REVIEW | SPOTTED | NEWS
+  carId        String?
+  car          Car?           @relation(fields: [carId], references: [id], onDelete: SetNull)
+  imageIds     String? // JSON array of Upload ids
+  score        Int            @default(0)
+  commentCount Int            @default(0)
+  pinned       Boolean        @default(false)
+  locked       Boolean        @default(false)
+  editedAt     DateTime?
+  deletedAt    DateTime? // soft delete keeps the thread readable
+  createdAt    DateTime       @default(now())
+  comments     ForumComment[]
+  votes        ForumVote[]
+
+  @@index([createdAt])
+  @@index([score])
+}
+
+model ForumComment {
+  id        String         @id @default(cuid())
+  postId    String
+  post      ForumPost      @relation(fields: [postId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User           @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  parentId  String?
+  parent    ForumComment?  @relation("Replies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies   ForumComment[] @relation("Replies")
+  body      String
+  imageIds  String?
+  score     Int            @default(0)
+  editedAt  DateTime?
+  deletedAt DateTime?
+  createdAt DateTime       @default(now())
+  votes     ForumVote[]
+
+  @@index([postId, createdAt])
+}
+
+model ForumVote {
+  id        String        @id @default(cuid())
+  userId    String
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  postId    String?
+  post      ForumPost?    @relation(fields: [postId], references: [id], onDelete: Cascade)
+  commentId String?
+  comment   ForumComment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  value     Int // +1 or -1
+
+  @@unique([userId, postId])
+  @@unique([userId, commentId])
 }
 
 // ─── Icons & their cars ──────────────────────────────────────────────────────

@@ -64,7 +64,7 @@ export interface CarView {
   priceHistory: { date: string; priceUsd: number }[];
 }
 
-export type AuctionPhase = "UPCOMING" | "LIVE" | "ENDED" | "CANCELLED";
+export type AuctionPhase = "UPCOMING" | "LIVE" | "ENDED" | "CANCELLED" | "PENDING" | "REJECTED";
 
 export interface BidView {
   id: string;
@@ -88,8 +88,38 @@ export interface AuctionView {
   nextMinBid: number;
   bidCount: number;
   bids: BidView[];
-  car: Pick<CarView, "slug" | "model" | "year" | "heroImage" | "heroCredit" | "sketchfabUid" | "sketchfabCredit" | "specs"> & { brand: string; brandSlug: string };
+  /** HOUSE = AUREL's own lot; DEALER = first-hand (new) from a dealer; COLLECTOR = second-hand from a private owner. */
+  listingType: "HOUSE" | "DEALER" | "COLLECTOR";
+  seller: { id: string; name: string } | null;
+  details: { mileageKm: number | null; condition: string | null; description: string | null; location: string | null };
+  images: string[];
+  car: {
+    slug: string | null; // null for member-listed cars that aren't in the catalogue
+    model: string;
+    year: number | null;
+    brand: string;
+    brandSlug: string | null;
+    heroImage: string | null;
+    heroCredit: string | null;
+    sketchfabUid: string | null;
+    sketchfabCredit: string | null;
+    specs: CarView["specs"] | null;
+  };
 }
+
+export const listingTypeLabel: Record<AuctionView["listingType"], string> = {
+  HOUSE: "AUREL House Sale",
+  DEALER: "Dealer · First-hand",
+  COLLECTOR: "Collector · Pre-owned",
+};
+
+export const conditionLabel: Record<string, string> = {
+  NEW: "New / delivery miles",
+  EXCELLENT: "Excellent",
+  VERY_GOOD: "Very good",
+  GOOD: "Good",
+  PROJECT: "Project / needs work",
+};
 
 export const bodyTypeLabel: Record<BodyType, string> = {
   HYPER: "Hypercar",
