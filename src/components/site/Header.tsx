@@ -89,17 +89,17 @@ export function Header({ user, brands, activeBrand, montage }: Props) {
             )}
           </div>
 
-          <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
+          <nav className="hidden items-center gap-5 xl:gap-8 lg:flex">
             {nav.map((n) => {
               const inner = (
                 <>
-                  {n.live && <span className="mr-1.5 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-red-500 align-middle" />}
+                  {n.live && <span aria-hidden className="mr-2 h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-red-500" />}
                   {n.label}
                   {!!n.count && <sup className="ml-1 text-[9px] text-gold">{n.count}</sup>}
                   <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-500 ease-lux group-hover:w-full" />
                 </>
               );
-              const cls = `group relative text-[11px] uppercase tracking-[0.28em] transition hover:text-ivory ${n.href && pathname.startsWith(n.href) ? "text-gold" : "text-ivory/75"}`;
+              const cls = `group relative inline-flex items-center whitespace-nowrap text-[11px] uppercase tracking-[0.22em] xl:tracking-[0.28em] transition hover:text-ivory ${n.href && pathname.startsWith(n.href) ? "text-gold" : "text-ivory/75"}`;
               return n.href ? (
                 <Link key={n.label} href={n.href} className={cls}>{inner}</Link>
               ) : (

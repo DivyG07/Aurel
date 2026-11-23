@@ -122,7 +122,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
               {bidderStatus?.verifiedBidder ? (
                 <span className="border border-emerald-300/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-emerald-300">✓ Verified bidder</span>
               ) : razorpayConfigured() ? (
-                <RazorpayButton purpose="BIDDER_DEPOSIT" label="Become a verified bidder · ₹5,000" className="btn btn-ghost !px-4 !py-2" />
+                <RazorpayButton purpose="BIDDER_DEPOSIT" label="Become a verified bidder · ₹5,000" className="btn btn-ghost !whitespace-normal !px-4 !py-2" />
               ) : null}
             </div>
             <ul className="space-y-2">

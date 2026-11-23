@@ -231,7 +231,7 @@ export function CarExperience({ car, initial, paymentsEnabled = false }: { car: 
             </a>
             {paymentsEnabled && car.status === "AVAILABLE" && (
               <div className="mt-3 border-t border-white/10 pt-3">
-                <RazorpayButton purpose="CAR_RESERVATION" carSlug={car.slug} label="Reserve this car · ₹1,00,000 refundable" className="btn btn-ghost w-full !text-[10px]" />
+                <RazorpayButton purpose="CAR_RESERVATION" carSlug={car.slug} label="Reserve this car · ₹1,00,000 refundable" className="btn btn-ghost w-full !whitespace-normal !text-[10px]" />
                 <p className="mt-1.5 text-center text-[10px] text-mist">Holds the car for you while an advisor prepares the paperwork.</p>
               </div>
             )}

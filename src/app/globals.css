@@ -144,6 +144,7 @@ html.lenis, html.lenis body { height: auto; }
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
+  white-space: nowrap;
   transition: all 0.35s var(--ease-lux);
   &:disabled { opacity: 0.5; pointer-events: none; }
 }

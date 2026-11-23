@@ -204,7 +204,7 @@ export function AuctionRoom({ initial, userId, needsDeposit = false }: { initial
               <div className="mt-6 border border-gold/40 bg-gold/[0.06] p-4">
                 <p className="text-sm text-ivory">Become a verified bidder</p>
                 <p className="mt-1 text-xs leading-relaxed text-mist">A one-time refundable deposit of ₹5,000 unlocks bidding in every auction. Refunded on request if you don&apos;t win.</p>
-                <RazorpayButton purpose="BIDDER_DEPOSIT" label="Pay ₹5,000 deposit & bid" className="btn btn-primary mt-4 w-full" />
+                <RazorpayButton purpose="BIDDER_DEPOSIT" label="Pay ₹5,000 deposit & bid" className="btn btn-primary mt-4 w-full !whitespace-normal" />
               </div>
             )}
             {live && a.seller?.id !== userId && !needsDeposit && (
