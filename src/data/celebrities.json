@@ -1,5 +1,26 @@
 [
   {
+    "slug": "saurabh-kumar",
+    "name": "Saurabh Kumar",
+    "profession": "Professor",
+    "country": "India",
+    "bio": "Professor and BYD Seal owner — and one of the first members of the AUREL community.",
+    "imageUrl": "/icons/saurabh-kumar.webp",
+    "imageCredit": "Photo shared by Saurabh Kumar",
+    "imageFocus": "top",
+    "cars": [
+      {
+        "make": "BYD",
+        "model": "Seal (Cosmos Black)",
+        "year": null,
+        "story": "Drives a black BYD Seal — BYD's all-electric performance saloon, in Cosmos Black.",
+        "sourceUrl": null,
+        "sourceName": "Shared by the owner",
+        "catalogSlug": "byd-seal"
+      }
+    ]
+  },
+  {
     "slug": "cristiano-ronaldo",
     "name": "Cristiano Ronaldo",
     "profession": "Footballer",

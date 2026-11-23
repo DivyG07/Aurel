@@ -45,7 +45,14 @@ export function IconsClient({ icons }: { icons: IconView[] }) {
                     <div className="absolute inset-0" style={{ background: "radial-gradient(80% 80% at 30% 20%, color-mix(in oklab, var(--accent) 25%, transparent), transparent 70%)" }} />
                   )}
                   <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" />
-                  <span className="absolute bottom-4 left-5 grid h-14 w-14 place-items-center rounded-full border border-gold/60 bg-black/60 font-display text-xl text-gold backdrop-blur">{initials(p.name)}</span>
+                  <span className="absolute bottom-3 left-5 grid h-20 w-20 place-items-center overflow-hidden rounded-full border-2 border-gold/70 bg-ink font-display text-2xl text-gold shadow-xl">
+                    {p.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={p.photo.url} alt={p.name} loading="lazy" className={`h-full w-full object-cover ${p.photo.focus === "top" ? "object-top" : ""}`} />
+                    ) : (
+                      initials(p.name)
+                    )}
+                  </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <p className="text-[10px] uppercase tracking-[0.25em] text-mist">{p.profession}{p.country ? ` · ${p.country}` : ""}</p>

@@ -412,6 +412,8 @@ model Celebrity {
   country    String?
   bio        String?
   imageUrl   String?
+  imageCredit String? // attribution for the portrait
+  imageFocus  String? // "top" | "center" crop hint
   cars       CelebrityCar[]
 }
 
@@ -425,7 +427,7 @@ model CelebrityCar {
   model       String
   year        Int?
   story       String?
-  sourceUrl   String // public source for the ownership claim; required
+  sourceUrl   String? // public source for the ownership claim (null only for owner-shared entries)
   sourceName  String?
   sortOrder   Int       @default(0)
 }

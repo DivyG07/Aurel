@@ -31,11 +31,16 @@ export function timeAgo(iso: string) {
   return "just now";
 }
 
-export function AuthorBadge({ name, role }: { name: string; role: string }) {
+export function AuthorBadge({ name, role, image }: { name: string; role: string; image?: string | null }) {
   const tag = role === "ADMIN" ? { t: "Staff", c: "text-gold border-gold/50" } : role === "DEALER" ? { t: "Dealer", c: "text-sky-300 border-sky-300/40" } : { t: "Collector", c: "text-mist border-white/15" };
   return (
     <span className="inline-flex items-center gap-1.5">
-      <span className="grid h-5 w-5 place-items-center rounded-full bg-gold/20 text-[10px] font-semibold text-gold">{name[0]?.toUpperCase()}</span>
+      {image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={image} alt="" className="h-5 w-5 rounded-full object-cover" />
+      ) : (
+        <span className="grid h-5 w-5 place-items-center rounded-full bg-gold/20 text-[10px] font-semibold text-gold">{name[0]?.toUpperCase()}</span>
+      )}
       <span className="text-ivory/85">{name}</span>
       <span className={`rounded border px-1 text-[8px] uppercase tracking-[0.15em] ${tag.c}`}>{tag.t}</span>
     </span>

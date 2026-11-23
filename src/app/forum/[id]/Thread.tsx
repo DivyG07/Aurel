@@ -76,7 +76,7 @@ function Comment({ c, postId, me, depth, locked }: { c: CommentView; postId: str
           <button onClick={() => setCollapsed((x) => !x)} className="font-mono text-mist hover:text-ivory" aria-label={collapsed ? "Expand thread" : "Collapse thread"}>
             [{collapsed ? "+" : "−"}]
           </button>
-          {c.deleted ? <span className="italic">[deleted]</span> : <AuthorBadge name={c.author.name} role={c.author.role} />}
+          {c.deleted ? <span className="italic">[deleted]</span> : <AuthorBadge name={c.author.name} role={c.author.role} image={c.author.image} />}
           <span suppressHydrationWarning>· {timeAgo(c.createdAt)}</span>
           {c.editedAt && !c.deleted && <span>· edited</span>}
           {collapsed && <span>· {c.children.length} hidden {c.children.length === 1 ? "reply" : "replies"}</span>}
@@ -154,7 +154,7 @@ export function Thread({ post, comments, me }: { post: PostView; comments: Comme
           <div className="flex flex-wrap items-center gap-2 text-[11px] text-mist">
             {post.pinned && <span className="text-gold">📌 Pinned</span>}
             <FlairTag flair={post.flair} />
-            {post.deleted ? <span className="italic">[deleted]</span> : <AuthorBadge name={post.author.name} role={post.author.role} />}
+            {post.deleted ? <span className="italic">[deleted]</span> : <AuthorBadge name={post.author.name} role={post.author.role} image={post.author.image} />}
             <span suppressHydrationWarning>· {timeAgo(post.createdAt)}</span>
             {post.editedAt && <span>· edited</span>}
             {post.locked && <span>· 🔒 locked</span>}

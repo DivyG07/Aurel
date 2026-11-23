@@ -31,13 +31,29 @@ export default async function CarPage({ params, searchParams }: Params) {
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {owners.map((o) => (
               <div key={o.slug + o.model} className="border border-white/[0.07] bg-onyx p-6" style={{ borderRadius: "var(--radius)" }}>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-mist">{o.profession}</p>
-                <Link href={`/icons/${o.slug}`} className="mt-1 block font-display text-2xl hover:text-gold">{o.name}</Link>
+                <div className="flex items-center gap-4">
+                  <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-gold/50 bg-gold/15">
+                    {o.image ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={o.image} alt="" className={`h-full w-full object-cover ${o.imageFocus === "top" ? "object-top" : ""}`} />
+                    ) : (
+                      <span className="grid h-full w-full place-items-center font-display text-lg text-gold">{o.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("")}</span>
+                    )}
+                  </span>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-mist">{o.profession}</p>
+                    <Link href={`/icons/${o.slug}`} className="mt-0.5 block font-display text-2xl hover:text-gold">{o.name}</Link>
+                  </div>
+                </div>
                 <p className="mt-1 text-xs text-gold">{o.model}</p>
                 {o.story && <p className="mt-3 text-sm leading-relaxed text-ivory/75">{o.story}</p>}
-                <a href={o.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-3 inline-block text-[11px] text-mist underline decoration-white/20 underline-offset-4 hover:text-gold">
-                  Source: {o.sourceName ?? "press report"} ↗
-                </a>
+                {o.sourceUrl ? (
+                  <a href={o.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-3 inline-block text-[11px] text-mist underline decoration-white/20 underline-offset-4 hover:text-gold">
+                    Source: {o.sourceName ?? "press report"} ↗
+                  </a>
+                ) : (
+                  <p className="mt-3 text-[11px] text-mist">{o.sourceName ?? "Shared by the owner"}</p>
+                )}
               </div>
             ))}
           </div>

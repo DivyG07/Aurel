@@ -35,7 +35,8 @@ export function ProfileForm({ initial }: { initial: { name: string; bio: string;
           )}
         </div>
         <div>
-          <ImagePicker name="avatar" max={1} label="Photo" resetKey={reset} />
+          <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-mist">Profile photo</p>
+          <ImagePicker name="avatar" max={1} label={initial.image ? "Change photo" : "Upload photo"} resetKey={reset} />
           {initial.image && (
             <label className="mt-2 flex items-center gap-2 text-xs text-mist">
               <input type="checkbox" name="removeAvatar" checked={removeAvatar} onChange={(e) => setRemoveAvatar(e.target.checked)} className="accent-[var(--accent)]" /> Remove current photo

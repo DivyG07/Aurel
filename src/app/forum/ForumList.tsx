@@ -16,7 +16,7 @@ export function ForumList({ posts, signedIn }: { posts: PostView[]; signedIn: bo
               <div className="flex flex-wrap items-center gap-2 text-[11px] text-mist">
                 {p.pinned && <span className="text-gold">📌 Pinned</span>}
                 <FlairTag flair={p.flair} />
-                <AuthorBadge name={p.author.name} role={p.author.role} />
+                <AuthorBadge name={p.author.name} role={p.author.role} image={p.author.image} />
                 <span suppressHydrationWarning>· {timeAgo(p.createdAt)}</span>
                 {p.locked && <span>· 🔒 locked</span>}
               </div>

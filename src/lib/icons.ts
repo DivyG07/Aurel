@@ -23,7 +23,7 @@ export interface IconCar {
   model: string;
   year: number | null;
   story: string | null;
-  sourceUrl: string;
+  sourceUrl: string | null;
   sourceName: string | null;
   brandSlug: string | null;
   catalog: { slug: string; model: string; heroImage: string | null; brand: string } | null;
@@ -36,6 +36,7 @@ export interface IconView {
   bio: string | null;
   cars: IconCar[];
   cover: string | null; // photo of one of their cars we stock
+  photo: { url: string; credit: string | null; focus: string } | null; // portrait for the profile circle
 }
 
 const include = { cars: { orderBy: { sortOrder: "asc" as const }, include: { car: { include: { brand: true } } } } };
@@ -54,7 +55,7 @@ function toView(p: Row): IconView {
     brandSlug: brandSlugForMake(c.make),
     catalog: c.car ? { slug: c.car.slug, model: c.car.model, heroImage: c.car.heroImage, brand: c.car.brand.name } : null,
   }));
-  return { slug: p.slug, name: p.name, profession: p.profession, country: p.country, bio: p.bio, cars, cover: cars.find((c) => c.catalog?.heroImage)?.catalog?.heroImage ?? null };
+  return { slug: p.slug, name: p.name, profession: p.profession, country: p.country, bio: p.bio, cars, cover: cars.find((c) => c.catalog?.heroImage)?.catalog?.heroImage ?? null, photo: p.imageUrl ? { url: p.imageUrl, credit: p.imageCredit, focus: p.imageFocus ?? "center" } : null };
 }
 
 export async function getIcons() {
@@ -70,5 +71,5 @@ export async function getIcon(slug: string) {
 /** Famous owners of a catalog car (exact model match). */
 export async function getOwnersOfCar(carId: string) {
   const rows = await db.celebrityCar.findMany({ where: { carId }, include: { celebrity: true } });
-  return rows.map((r) => ({ slug: r.celebrity.slug, name: r.celebrity.name, profession: r.celebrity.profession, model: r.model, story: r.story, sourceUrl: r.sourceUrl, sourceName: r.sourceName }));
+  return rows.map((r) => ({ slug: r.celebrity.slug, name: r.celebrity.name, profession: r.celebrity.profession, image: r.celebrity.imageUrl, imageFocus: r.celebrity.imageFocus, model: r.model, story: r.story, sourceUrl: r.sourceUrl, sourceName: r.sourceName }));
 }

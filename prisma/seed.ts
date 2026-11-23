@@ -122,7 +122,8 @@ async function main() {
   // Icons & their cars — every claim carries a public source URL. Rebuilt each run.
   const celebPath = join(__dirname, "..", "src", "data", "celebrities.json");
   if (existsSync(celebPath)) {
-    type Celeb = { slug: string; name: string; profession: string; country?: string; bio?: string; cars: { make: string; model: string; year?: number | null; story?: string; sourceUrl: string; sourceName?: string; catalogSlug?: string | null }[] };
+    type Celeb = { slug: string; name: string; profession: string; country?: string; bio?: string; imageUrl?: string; imageCredit?: string; imageFocus?: string; cars: { make: string; model: string; year?: number | null; story?: string; sourceUrl: string | null; sourceName?: string; catalogSlug?: string | null }[] };
+    const portraits = readJson<{ url: string; author: string; license: string; focus?: string }>("icon-photos.json");
     const celebs: Celeb[] = JSON.parse(readFileSync(celebPath, "utf8").replace(/^﻿/, ""));
     // Only the seeded people are replaced; icons added in the admin survive a reseed.
     await prisma.celebrity.deleteMany({ where: { slug: { in: celebs.map((p) => p.slug) } } });
@@ -135,6 +136,9 @@ async function main() {
           profession: p.profession,
           country: p.country ?? null,
           bio: p.bio ?? null,
+          imageUrl: p.imageUrl ?? portraits[p.slug]?.url ?? null,
+          imageCredit: p.imageCredit ?? (portraits[p.slug] ? `${portraits[p.slug].author} · ${portraits[p.slug].license} · Wikimedia Commons` : null),
+          imageFocus: p.imageFocus ?? portraits[p.slug]?.focus ?? null,
           cars: { create: p.cars.map((c, i) => ({ make: c.make, model: c.model, year: c.year ?? null, story: c.story ?? null, sourceUrl: c.sourceUrl, sourceName: c.sourceName ?? null, sortOrder: i, carId: catalog.find((x) => x.slug === c.catalogSlug)?.id ?? null })) },
         },
       });

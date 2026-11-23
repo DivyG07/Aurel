@@ -20,9 +20,21 @@ export default async function IconPage({ params }: Params) {
   return (
     <div className="mx-auto max-w-[1200px] px-5 pb-28 pt-32 md:px-10">
       <Link href="/icons" className="text-[11px] uppercase tracking-[0.25em] text-mist hover:text-gold">← All icons</Link>
-      <p className="eyebrow mt-8">{p.profession}{p.country ? ` · ${p.country}` : ""}</p>
-      <h1 className="mt-3 font-display text-5xl leading-none md:text-7xl">{p.name}</h1>
-      {p.bio && <p className="mt-5 max-w-2xl text-mist">{p.bio}</p>}
+      <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center">
+        <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-full border-2 border-gold/60 bg-gold/15 shadow-[0_0_40px_-10px_var(--accent)] md:h-40 md:w-40">
+          {p.photo ? (
+            <Image src={p.photo.url} alt={p.name} fill sizes="160px" className={`object-cover ${p.photo.focus === "top" ? "object-top" : "object-center"}`} />
+          ) : (
+            <span className="grid h-full w-full place-items-center font-display text-5xl text-gold">{p.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("")}</span>
+          )}
+        </div>
+        <div>
+          <p className="eyebrow">{p.profession}{p.country ? ` · ${p.country}` : ""}</p>
+          <h1 className="mt-3 font-display text-5xl leading-none md:text-7xl">{p.name}</h1>
+          {p.bio && <p className="mt-4 max-w-2xl text-mist">{p.bio}</p>}
+          {p.photo?.credit && <p className="mt-2 text-[10px] text-mist/70">Photo: {p.photo.credit}</p>}
+        </div>
+      </div>
 
       <div className="mt-14 space-y-5">
         {p.cars.map((c, i) => (
@@ -42,9 +54,13 @@ export default async function IconPage({ params }: Params) {
                 <h2 className="mt-2 font-display text-3xl">{c.model}</h2>
                 {c.story && <p className="mt-3 text-sm leading-relaxed text-ivory/80">{c.story}</p>}
                 <div className="mt-5 flex flex-wrap items-center gap-4 text-xs">
-                  <a href={c.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="text-mist underline decoration-white/20 underline-offset-4 hover:text-gold">
-                    Source: {c.sourceName ?? new URL(c.sourceUrl).hostname.replace("www.", "")} ↗
-                  </a>
+                  {c.sourceUrl ? (
+                    <a href={c.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="text-mist underline decoration-white/20 underline-offset-4 hover:text-gold">
+                      Source: {c.sourceName ?? new URL(c.sourceUrl).hostname.replace("www.", "")} ↗
+                    </a>
+                  ) : (
+                    <span className="text-mist">{c.sourceName ?? "Shared by the owner"}</span>
+                  )}
                   {c.catalog && (
                     <Link href={`/cars/${c.catalog.slug}`} className="btn btn-primary !px-4 !py-2.5">View the {c.catalog.model} in the showroom</Link>
                   )}
