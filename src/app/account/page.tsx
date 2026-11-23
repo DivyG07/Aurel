@@ -8,7 +8,7 @@ import { parseList } from "@/lib/prefs";
 import { PreferencesForm } from "@/components/account/PreferencesForm";
 import { DeleteAccount, MyListings, ProfileForm } from "./AccountClient";
 import { RazorpayButton } from "@/components/payments/RazorpayButton";
-import { inr, PURPOSES, razorpayConfigured, type Purpose } from "@/lib/razorpay";
+import { depositRequired, inr, PURPOSES, type Purpose } from "@/lib/razorpay";
 
 export const metadata: Metadata = { title: "My account" };
 export const dynamic = "force-dynamic";
@@ -121,7 +121,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
               <p className="eyebrow">Payments</p>
               {bidderStatus?.verifiedBidder ? (
                 <span className="border border-emerald-300/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-emerald-300">✓ Verified bidder</span>
-              ) : razorpayConfigured() ? (
+              ) : depositRequired() ? (
                 <RazorpayButton purpose="BIDDER_DEPOSIT" label="Become a verified bidder · ₹5,000" className="btn btn-ghost !whitespace-normal !px-4 !py-2" />
               ) : null}
             </div>

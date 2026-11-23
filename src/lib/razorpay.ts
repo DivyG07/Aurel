@@ -14,8 +14,8 @@ const keySecret = () => process.env.RAZORPAY_KEY_SECRET ?? "";
 
 export const razorpayConfigured = () => Boolean(keyId() && keySecret());
 export const razorpayTestMode = () => keyId().startsWith("rzp_test_");
-/** When payments are configured, bidding requires the deposit (set REQUIRE_BIDDER_DEPOSIT=false to switch off). */
-export const depositRequired = () => razorpayConfigured() && process.env.REQUIRE_BIDDER_DEPOSIT !== "false";
+/** Bidding is open to every signed-in member. The deposit gate is opt-in: set REQUIRE_BIDDER_DEPOSIT=true to require it. */
+export const depositRequired = () => razorpayConfigured() && process.env.REQUIRE_BIDDER_DEPOSIT === "true";
 
 async function api<T>(path: string, init: { method?: string; body?: unknown } = {}): Promise<T> {
   const res = await fetch(`https://api.razorpay.com/v1${path}`, {
