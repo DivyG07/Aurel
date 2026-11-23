@@ -28,7 +28,9 @@ export function ZapierChatbot() {
 
   if (!id || !/^[\w-]+$/.test(id) || pathname.startsWith("/admin")) return null;
   // Lift above the compare tray when it's showing.
-  const lift = mounted && compareOpen && !pathname.startsWith("/compare") ? "bottom-28" : "bottom-6";
+  // Sits above Netlify's corner badge (bottom-right), and above the compare tray when it's showing.
+  const lifted = mounted && compareOpen && !pathname.startsWith("/compare");
+  const lift = lifted ? "bottom-36" : "bottom-20";
 
   return (
     <>
@@ -41,7 +43,7 @@ export function ZapierChatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className={`fixed inset-x-0 bottom-0 z-[60] flex h-[85svh] flex-col overflow-hidden border border-white/10 bg-onyx/95 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl sm:inset-x-auto sm:right-6 sm:h-[600px] sm:max-h-[calc(100svh-220px)] sm:w-[400px] ${lift === "bottom-28" ? "sm:bottom-44" : "sm:bottom-24"}`}
+            className={`fixed inset-x-0 bottom-0 z-[60] flex h-[85svh] flex-col overflow-hidden border border-white/10 bg-onyx/95 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl sm:inset-x-auto sm:right-6 sm:h-[600px] sm:max-h-[calc(100svh-260px)] sm:w-[400px] ${lifted ? "sm:bottom-52" : "sm:bottom-36"}`}
             style={{ borderRadius: "max(var(--radius), 14px)" }}
             data-lenis-prevent
           >
