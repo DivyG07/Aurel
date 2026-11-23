@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { CarPhoto } from "./CarPhoto";
 import type { CarView } from "@/lib/types";
 import { bodyTypeLabel, statusLabel } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
@@ -25,8 +25,14 @@ export function CarCard({ car, priority }: { car: CarView; priority?: boolean; i
       <div className="relative aspect-[16/10] overflow-hidden bg-graphite">
         {car.heroImage ? (
           <>
-            <Image src={car.heroImage} alt={name} fill priority={priority} sizes="(min-width:1280px) 33vw, (min-width:768px) 50vw, 100vw" className={`object-cover transition-opacity duration-700 ease-lux ${second ? "group-hover:opacity-0" : ""}`} />
-            {second && <Image src={second} alt="" fill loading="lazy" sizes="(min-width:1280px) 33vw, 50vw" className="object-cover opacity-0 transition-opacity duration-700 ease-lux group-hover:opacity-100" />}
+            <div className={`absolute inset-0 transition-opacity duration-700 ease-lux ${second ? "group-hover:opacity-0" : ""}`}>
+              <CarPhoto src={car.heroImage} alt={name} ratio={1.6} priority={priority} sizes="(min-width:1280px) 33vw, (min-width:768px) 50vw, 100vw" />
+            </div>
+            {second && (
+              <div className="absolute inset-0 bg-graphite opacity-0 transition-opacity duration-700 ease-lux group-hover:opacity-100">
+                <CarPhoto src={second} alt="" ratio={1.6} loading="lazy" sizes="(min-width:1280px) 33vw, 50vw" />
+              </div>
+            )}
           </>
         ) : (
           <div className="grid h-full place-items-center font-display text-3xl text-white/15">{car.brand.name}</div>

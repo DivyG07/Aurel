@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { CarPhoto } from "@/components/car/CarPhoto";
 import type { CarView } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 
@@ -21,8 +21,8 @@ export function CarStrip({ cars }: { cars: CarView[] }) {
             tabIndex={i >= list.length ? -1 : undefined}
             className="group block w-[78vw] shrink-0 sm:w-[380px]"
           >
-            <div className="relative aspect-[3/2] overflow-hidden bg-graphite" style={{ borderRadius: "var(--radius)" }}>
-              <Image src={car.heroImage!} alt={`${car.brand.name} ${car.model}`} fill sizes="380px" loading={i < 4 ? "eager" : "lazy"} className="object-cover transition-opacity duration-500 group-hover:opacity-85" />
+            <div className="relative aspect-[16/10] overflow-hidden bg-graphite transition-opacity duration-500 group-hover:opacity-85" style={{ borderRadius: "var(--radius)" }}>
+              <CarPhoto src={car.heroImage!} alt={`${car.brand.name} ${car.model}`} ratio={1.6} sizes="380px" loading={i < 4 ? "eager" : "lazy"} />
               <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/[0.06] transition group-hover:ring-gold/40" style={{ borderRadius: "var(--radius)" }} />
             </div>
             <div className="mt-4 flex items-baseline justify-between gap-4">

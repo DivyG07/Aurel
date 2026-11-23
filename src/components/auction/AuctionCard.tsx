@@ -33,7 +33,7 @@ export function AuctionCard({ auction: a }: { auction: AuctionView }) {
     <Link href={`/auctions/${a.id}`} className="group block overflow-hidden border border-white/[0.07] bg-onyx transition hover:border-gold/50" style={{ borderRadius: "var(--radius)" }}>
       <div className="relative aspect-[16/10] overflow-hidden bg-graphite">
         {!a.car.heroImage && <div className="absolute inset-0 grid place-items-center font-display text-3xl text-white/15">{a.car.brand}</div>}
-        {a.car.heroImage && <Image src={a.car.heroImage} alt={a.car.model} fill sizes="(min-width:1280px) 33vw, (min-width:768px) 50vw, 100vw" className="object-cover transition duration-1000 ease-lux group-hover:scale-105" />}
+        {a.car.heroImage && <Image src={a.car.heroImage} alt={a.car.model} fill sizes="(min-width:1280px) 33vw, (min-width:768px) 50vw, 100vw" className="object-cover object-[50%_58%]" />}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-14 bg-gradient-to-b from-black/40 to-transparent" />
         <div className="absolute left-4 top-4 flex flex-wrap gap-2"><PhaseBadge phase={a.phase} /><ListingTypeBadge type={a.listingType} /></div>
         <div className="absolute bottom-4 right-4 rounded-sm bg-black/60 px-3 py-1.5 text-xs backdrop-blur">

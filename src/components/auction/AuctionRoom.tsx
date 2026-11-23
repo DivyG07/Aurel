@@ -12,6 +12,7 @@ import { toast } from "@/lib/stores";
 import { Countdown, useNow } from "@/components/ui/Countdown";
 import { Counter } from "@/components/ui/Counter";
 import { Viewer360 } from "@/components/car/Viewer360";
+import { CarPhoto } from "@/components/car/CarPhoto";
 import { ListingTypeBadge, PhaseBadge } from "./AuctionCard";
 import { RazorpayButton } from "@/components/payments/RazorpayButton";
 import { conditionLabel } from "@/lib/types";
@@ -100,7 +101,7 @@ export function AuctionRoom({ initial, userId, needsDeposit = false }: { initial
             {view === "360" && a.car.sketchfabUid ? (
               <Viewer360 uid={a.car.sketchfabUid} title={a.car.model} credit={a.car.sketchfabCredit} />
             ) : (
-              (a.images[photo] ?? a.car.heroImage) && <Image key={a.images[photo] ?? a.car.heroImage} src={(a.images[photo] ?? a.car.heroImage)!} alt={a.car.model} fill priority sizes="60vw" className="object-cover" />
+              (a.images[photo] ?? a.car.heroImage) && <CarPhoto key={a.images[photo] ?? a.car.heroImage} src={(a.images[photo] ?? a.car.heroImage)!} alt={a.car.model} ratio={1.6} priority sizes="60vw" />
             )}
             <div className="absolute left-4 top-4 flex items-center gap-2">
               <PhaseBadge phase={phase} />

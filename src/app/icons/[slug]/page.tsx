@@ -42,7 +42,7 @@ export default async function IconPage({ params }: Params) {
             <article className="grid overflow-hidden border border-white/[0.07] bg-onyx md:grid-cols-[320px_1fr]" style={{ borderRadius: "var(--radius)" }}>
               <div className="relative aspect-[16/10] bg-graphite md:aspect-auto">
                 {c.catalog?.heroImage ? (
-                  <Image src={c.catalog.heroImage} alt={`${c.make} ${c.model}`} fill sizes="320px" className="object-cover" />
+                  <Image src={c.catalog.heroImage} alt={`${c.make} ${c.model}`} fill sizes="320px" className="object-cover object-[50%_58%]" />
                 ) : (
                   <div className="absolute inset-0 grid place-items-center">
                     {c.brandSlug ? <BrandMark slug={c.brandSlug} name={c.make} className="h-16 w-16 text-[5rem] text-gold/70" /> : <span className="font-display text-3xl text-white/20">{c.make}</span>}

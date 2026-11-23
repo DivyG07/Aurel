@@ -40,7 +40,7 @@ export function IconsClient({ icons }: { icons: IconView[] }) {
               <Link href={`/icons/${p.slug}`} className="group relative flex h-full flex-col overflow-hidden border border-white/[0.07] bg-onyx transition hover:border-gold/40" style={{ borderRadius: "var(--radius)" }}>
                 <div className="relative aspect-[16/9] overflow-hidden bg-graphite">
                   {p.cover ? (
-                    <Image src={p.cover} alt="" fill sizes="(min-width:1280px) 33vw, 50vw" className="object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-100" />
+                    <Image src={p.cover} alt="" fill sizes="(min-width:1280px) 33vw, 50vw" className="object-cover opacity-80 transition-opacity duration-700 group-hover:opacity-100" />
                   ) : (
                     <div className="absolute inset-0" style={{ background: "radial-gradient(80% 80% at 30% 20%, color-mix(in oklab, var(--accent) 25%, transparent), transparent 70%)" }} />
                   )}

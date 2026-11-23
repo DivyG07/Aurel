@@ -233,7 +233,7 @@ function BrandWorlds({ brands, active, onClose }: { brands: HeaderBrand[]; activ
                 className="group relative h-52 overflow-hidden border text-left"
                 style={{ borderColor: b.slug === active ? th.accent : "rgba(255,255,255,0.08)", background: th.bg }}
               >
-                {b.image && <Image src={b.image} alt="" fill sizes="(min-width:1024px) 33vw, 100vw" className="object-cover opacity-45 transition duration-700 group-hover:scale-105 group-hover:opacity-70" />}
+                {b.image && <Image src={b.image} alt="" fill sizes="(min-width:1024px) 33vw, 100vw" className="object-cover opacity-45 transition-opacity duration-700 group-hover:opacity-70" />}
                 <div className="absolute inset-0" style={{ background: `linear-gradient(to top, ${th.bg} 10%, transparent 70%)` }} />
                 <span className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100" style={{ background: th.accent }} />
                 <BrandMark slug={b.slug} name={b.name} color={th.accent} className="absolute right-5 top-5 h-10 w-10 text-[3.5rem] opacity-90 transition duration-500 group-hover:scale-110" />

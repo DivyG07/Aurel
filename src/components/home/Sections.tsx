@@ -36,7 +36,7 @@ export function LiveAuctionStrip({ auction }: { auction: AuctionView }) {
     <Link href={`/auctions/${auction.id}`} className="group relative mx-auto my-20 block max-w-[1480px] overflow-hidden px-5 md:px-10">
       <div className="relative grid overflow-hidden border border-white/10 md:grid-cols-[1.2fr_1fr]" style={{ borderRadius: "var(--radius)" }}>
         <div className="relative aspect-[16/9] md:aspect-auto">
-          {auction.car.heroImage && <Image src={auction.car.heroImage} alt="" fill sizes="60vw" className="object-cover transition duration-[1.5s] ease-lux group-hover:scale-105" />}
+          {auction.car.heroImage && <Image src={auction.car.heroImage} alt="" fill sizes="60vw" className="object-cover object-[50%_58%]" />}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-onyx" />
         </div>
         <div className="bg-onyx p-8 md:p-12">
@@ -103,7 +103,7 @@ export function Experiences({ images }: { images: string[] }) {
             <Link href={e.href} className="group flex h-full flex-col overflow-hidden border border-white/[0.07] bg-onyx transition hover:border-gold/50" style={{ borderRadius: "var(--radius)" }}>
               <div className="relative aspect-[16/10] overflow-hidden bg-graphite">
                 {images[i % Math.max(1, images.length)] && (
-                  <Image src={images[i % images.length]} alt="" fill sizes="(min-width:1024px) 33vw, 50vw" className="object-cover transition duration-1000 ease-lux group-hover:scale-[1.04]" />
+                  <Image src={images[i % images.length]} alt="" fill sizes="(min-width:1024px) 33vw, 50vw" className="object-cover object-[50%_58%] transition-opacity duration-700 group-hover:opacity-90" />
                 )}
               </div>
               <div className="flex flex-1 items-start gap-4 p-6">

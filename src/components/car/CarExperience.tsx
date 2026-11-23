@@ -41,8 +41,8 @@ function Gallery({ car }: { car: CarView }) {
         <motion.div
           key={p.url}
           className="absolute inset-0"
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           drag={photos.length > 1 ? "x" : false}

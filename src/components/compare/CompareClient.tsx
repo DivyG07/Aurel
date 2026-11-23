@@ -103,7 +103,7 @@ export function CompareClient({ cars, initial }: { cars: CarView[]; initial: str
                 <AnimatePresence mode="wait">
                   {slot?.c.heroImage ? (
                     <motion.div key={slot.c.slug} className="absolute inset-0" initial={{ opacity: 0, scale: 1.05 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.6 }}>
-                      <Image src={slot.c.heroImage} alt="" fill sizes="30vw" className="object-cover" />
+                      <Image src={slot.c.heroImage} alt="" fill sizes="30vw" className="object-cover object-[50%_58%]" />
                     </motion.div>
                   ) : (
                     <motion.div key="empty" className="grid h-full place-items-center text-xs uppercase tracking-[0.25em] text-mist" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>Choose a car</motion.div>

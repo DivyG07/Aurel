@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { CarPhoto } from "./CarPhoto";
 import { motion } from "motion/react";
 import type { CarView } from "@/lib/types";
 import { bodyTypeLabel, statusLabel } from "@/lib/types";
@@ -33,7 +33,7 @@ export function CarRow({ car, index }: { car: CarView; index: number }) {
         style={{ borderRadius: "var(--radius)" }}
       >
         <div className="relative aspect-[16/9] overflow-hidden bg-graphite md:aspect-auto md:min-h-[300px]">
-          {car.heroImage && <Image src={car.heroImage} alt={name} fill sizes="(min-width:768px) 55vw, 100vw" className="object-cover transition duration-[1.6s] ease-lux group-hover/card:scale-[1.06]" />}
+          {car.heroImage && <CarPhoto src={car.heroImage} alt={name} ratio={1.7} sizes="(min-width:768px) 55vw, 100vw" loading="lazy" />}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-onyx/90 max-md:hidden" />
           <span className="absolute left-4 top-4 font-display text-6xl leading-none text-white/20">{String(index + 1).padStart(2, "0")}</span>
           <div className="absolute right-4 top-4 flex gap-2 md:hidden">
